@@ -7,12 +7,12 @@
 		<key>CoreGPX-iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>8</integer>
 		</dict>
 		<key>CoreGPX-watchOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>6</integer>
 		</dict>
 		<key>MapCache.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,12 +22,12 @@
 		<key>Pods-AllTrexxTracker-Watch Extension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-AllTrexxTracker.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-OpenGpxTracker-Watch Extension.xcscheme_^#shared#^_</key>
 		<dict>
