@@ -1,19 +1,15 @@
 //
 //  Conversions.swift
 //  CoreGPX
-//
 //  Created by Vincent on 21/3/19.
 //
-
 import Foundation
-
 /// Provides conversions, when required.
 ///
 /// Meant for internal conversions use only. 
 internal final class Convert {
     
     // MARK:- Number conversion
-    
     /// For conversion from optional `String` type to optional `Int` type
     ///
     /// - Parameters:
@@ -27,7 +23,6 @@ internal final class Convert {
         }
         return Int(NonNilString)
     }
-    
     /// For conversion from optional `String` type to optional `Double` type
     ///
     /// - Parameters:
@@ -41,8 +36,6 @@ internal final class Convert {
         }
         return Double(NonNilString)
     }
-    
-    
     
     // MARK:- Date & Time Formatting
 
