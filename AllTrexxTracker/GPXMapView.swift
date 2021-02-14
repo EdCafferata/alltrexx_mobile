@@ -1,8 +1,16 @@
 //
 //  GPXMapView.swift
+<<<<<<< refs/remotes/origin/main
 //  AlltrexxTracker
 //  Created by merlos on 24/09/14.
 //
+=======
+//  OpenGpxTracker
+//
+//  Created by merlos on 24/09/14.
+//
+
+>>>>>>> Initial Commit
 import Foundation
 import UIKit
 import MapKit
