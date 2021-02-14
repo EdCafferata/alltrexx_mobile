@@ -9,7 +9,6 @@ target 'AllTrexxTracker' do
     shared_pods
     pod 'MapCache', '~> 0.9.0'
     #pod 'MapCache', git: 'https://github.com/merlos/MapCache.git' :branch => 'master'
-    
 end
 
 target 'AllTrexxTracker-Watch Extension' do
