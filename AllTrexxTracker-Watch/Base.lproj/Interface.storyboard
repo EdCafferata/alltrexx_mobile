@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OpenGpxTracker_Watch" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="151" alignment="left" layout="vertical" id="qTw-Ao-z8n" userLabel="Main Page">
+                            <items>
+                                <group width="1" height="0.33000000000000002" alignment="left" id="Mna-9L-cW3" userLabel="Top Group">
+                                    <items>
+                                        <group width="0.65000000000000002" height="1" alignment="left" layout="vertical" id="yo4-Oa-aCj" userLabel="Small Info">
+                                            <items>
+                                                <label height="0.5" alignment="center" text="00:00" id="xum-IR-If6">
+                                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                                </label>
+                                                <label height="0.5" alignment="center" text="0m" id="jLD-vq-fZz">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <button width="0.34999999999999998" height="1" alignment="right" title="📍" id="juk-oB-3vV">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" pointSize="30"/>
+                                            <connections>
+                                                <action selector="addPinAtMyLocation" destination="AgC-eL-Hgc" id="j5Q-5h-FZp"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <button width="1" height="0.29999999999999999" alignment="left" verticalAlignment="center" title="Start Tracking" id="exN-t4-It8">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.48513797563195243" green="0.79364292512690349" blue="0.37195783073278693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="trackerButtonTapped" destination="AgC-eL-Hgc" id="CDu-TD-c5P"/>
+                                    </connections>
+                                </button>
+                                <group width="1" height="0.33000000000000002" alignment="left" verticalAlignment="bottom" id="vBs-Bv-q32" userLabel="Handling Group">
+                                    <items>
+                                        <button width="0.5" widthAdjustment="-3" height="0.80000000000000004" alignment="left" title="Save" id="Yfa-t6-5Sk">
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="saveButtonTapped" destination="AgC-eL-Hgc" id="tFe-Pm-Du3"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" widthAdjustment="-3" height="0.80000000000000004" alignment="right" title="Reset" id="g9l-MU-PFV">
+                                            <color key="backgroundColor" red="0.8909026015" green="0.1078473939" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="resetButtonTapped" destination="AgC-eL-Hgc" id="6Sj-6U-Jzd"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <variation key="device=watch40mm" height="162"/>
+                            <variation key="device=watch42mm" height="174"/>
+                            <variation key="device=watch44mm" height="190"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="qC3-2k-9N7" userLabel="Second Page">
+                            <items>
+                                <group width="1" alignment="center" id="EN6-a8-HHf" userLabel="Signal Group">
+                                    <items>
+                                        <group width="0.5" alignment="left" id="gQb-gE-E0c">
+                                            <items>
+                                                <imageView alignment="right" id="MRY-DF-JuJ"/>
+                                            </items>
+                                        </group>
+                                        <label height="0.33000000000000002" alignment="left" verticalAlignment="center" text="signal" id="036-aK-7ie">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="8m4-Vl-flC" userLabel="Coords Group">
+                                    <items>
+                                        <group width="1" alignment="left" layout="vertical" id="7CF-s0-N89" userLabel="Longitude Group">
+                                            <items>
+                                                <label alignment="left" alpha="0.69999999999999996" text="COORDINATES" id="oWE-ge-dGJ">
+                                                    <color key="textColor" red="0.98039215686274506" green="0.97254901960784312" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
+                                                </label>
+                                                <label alignment="left" text="coordinatesLabel" minimumScaleFactor="0.80000000000000004" id="wh4-cP-QA2">
+                                                    <color key="textColor" red="0.98039215686274506" green="0.97254901960784312" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="j5f-yI-Rcd" userLabel="Other info">
+                                    <items>
+                                        <group width="0.40000000000000002" alignment="left" layout="vertical" id="m6P-Pe-Yuc" userLabel="Altitude Group">
+                                            <items>
+                                                <label alignment="left" alpha="0.69999999999999996" text="ALTITUDE" id="sOz-Cs-O7T">
+                                                    <color key="textColor" red="0.59607843137254901" green="1" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
+                                                </label>
+                                                <label alignment="left" text="altValue" id="fLq-xh-Kj9">
+                                                    <color key="textColor" red="0.59607843137254901" green="1" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="0.59999999999999998" alignment="left" layout="vertical" id="qEX-iH-OeS" userLabel="Speed Group">
+                                            <items>
+                                                <label alignment="left" alpha="0.69999999999999996" text="SPEED" id="HGe-sg-FuE">
+                                                    <color key="textColor" red="0.68627450980392157" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
+                                                </label>
+                                                <label alignment="left" text="speedValue" minimumScaleFactor="0.90000000000000002" id="9yb-Lf-Jav">
+                                                    <color key="textColor" red="0.68627450980392157" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" title="View files" id="3QZ-4r-aMl" userLabel="GPX Files">
+                                    <connections>
+                                        <segue destination="77f-od-duZ" kind="push" id="sJU-Es-f2K"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="altitudeLabel" destination="fLq-xh-Kj9" id="nFp-Dr-pQS"/>
+                        <outlet property="coordinatesLabel" destination="wh4-cP-QA2" id="r1M-Sr-y2y"/>
+                        <outlet property="newPinButton" destination="juk-oB-3vV" id="rz4-pG-LHx"/>
+                        <outlet property="resetButton" destination="g9l-MU-PFV" id="Gx7-5m-Amd"/>
+                        <outlet property="saveButton" destination="Yfa-t6-5Sk" id="qwm-ev-821"/>
+                        <outlet property="signalAccuracyLabel" destination="036-aK-7ie" id="puW-q3-aaS"/>
+                        <outlet property="signalImageView" destination="MRY-DF-JuJ" id="eV2-dI-BQ9"/>
+                        <outlet property="speedLabel" destination="9yb-Lf-Jav" id="Tw1-Dz-NY7"/>
+                        <outlet property="timeLabel" destination="xum-IR-If6" id="bWq-z8-ANc"/>
+                        <outlet property="totalTrackedDistanceLabel" destination="jLD-vq-fZz" id="DHA-Fg-fPY"/>
+                        <outlet property="trackerButton" destination="exN-t4-It8" id="pZy-QD-KGQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="5" y="97"/>
+        </scene>
+        <!--File Table Interface Controller-->
+        <scene sceneID="yaQ-0v-lly">
+            <objects>
+                <controller id="77f-od-duZ" customClass="GPXFileTableInterfaceController" customModule="OpenGpxTracker_Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="uQq-74-Od7" userLabel="Progress Group">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" id="sCh-xS-mUi"/>
+                                <group width="1" alignment="left" layout="vertical" id="Dpa-xn-LT3" userLabel="Labels Group">
+                                    <items>
+                                        <label alignment="left" text="Sending" id="AyV-DL-c4U">
+                                            <fontDescription key="font" type="system" weight="light" pointSize="10"/>
+                                        </label>
+                                        <label alignment="left" text="File Name" id="19n-8m-sC5">
+                                            <fontDescription key="font" type="boldSystem" pointSize="11"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <table alignment="left" id="Ueu-eD-023">
+                            <items>
+                                <tableRow identifier="GPXFile" id="cGI-3H-K2G" customClass="GPXFileTableRowController" customModule="OpenGpxTracker_Watch_Extension">
+                                    <group key="rootItem" width="1" height="45" alignment="left" id="ahD-rE-FA3">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="File Name" id="Nkq-Do-muS">
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
+                                                <variation key="device=watch38mm">
+                                                    <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                                                </variation>
+                                                <variation key="device=watch40mm">
+                                                    <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                                                </variation>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="fileLabel" destination="Nkq-Do-muS" id="ejY-OF-2LG"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="fileTable" destination="Ueu-eD-023" id="fBH-uF-QRr"/>
+                        <outlet property="progressFileName" destination="19n-8m-sC5" id="4eo-O7-1lE"/>
+                        <outlet property="progressGroup" destination="uQq-74-Od7" id="GW2-fe-7dh"/>
+                        <outlet property="progressImageView" destination="sCh-xS-mUi" id="F9b-qU-7qM"/>
+                        <outlet property="progressTitle" destination="AyV-DL-c4U" id="4yQ-C2-fK2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="256" y="104"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="OpenGpxTracker_Watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="OpenGpxTracker_Watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.92156862745098034" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

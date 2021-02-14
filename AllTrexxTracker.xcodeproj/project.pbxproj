@@ -1,0 +1,1389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0175AC0123F014C7003323C3 /* LaunchScreen.storyboard */; };
+		120DE71022B274910055C4CB /* GPXSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DE70F22B274910055C4CB /* GPXSession.swift */; };
+		120DE71122B274A40055C4CB /* GPXSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DE70F22B274910055C4CB /* GPXSession.swift */; };
+		12A1A44424D561AC0057ED7A /* CoreDataHelper+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A1A44324D561AC0057ED7A /* CoreDataHelper+FetchRequests.swift */; };
+		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
+		4588D66F230D2476009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D671230D2476009AA75F /* InfoPlist.strings */; };
+		45A430E9230D61240003C2F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A430EB230D61240003C2F2 /* Interface.storyboard */; };
+		6E7431DD25D91DAA00D0E0C1 /* TBXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D2F8FE1DD7FAFF00A52D64 /* TBXML.framework */; };
+		6E7431DE25D91DB100D0E0C1 /* iOS_GPX_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D2F8FC1DD7FAFA00A52D64 /* iOS_GPX_Framework.framework */; };
+		6E7431DF25D91DB400D0E0C1 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D2F8FA1DD7FAF600A52D64 /* CryptoSwift.framework */; };
+		6E7431E025D91DB800D0E0C1 /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D2F8F81DD7FA7700A52D64 /* Cache.framework */; };
+		6E7431E525D91DD800D0E0C1 /* Pods_AllTrexxTracker_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3088B74A230AB1FD234D6F /* Pods_AllTrexxTracker_Watch.framework */; };
+		6E7431E625D91DE800D0E0C1 /* AllTrexxTracker.app in Resources */ = {isa = PBXBuildFile; fileRef = 898EECD519C49B5800B4B207 /* AllTrexxTracker.app */; };
+		6E7431E725D91DEC00D0E0C1 /* AllTrexxTrackerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 898EECED19C49B5800B4B207 /* AllTrexxTrackerTests.xctest */; };
+		6E7431E825D91DF000D0E0C1 /* AllTrexxTracker-Watch.app in Resources */ = {isa = PBXBuildFile; fileRef = BF692F572209AAF900F8A0F1 /* AllTrexxTracker-Watch.app */; };
+		6E7431E925D91DF700D0E0C1 /* AllTrexxTracker-Watch Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = BF692F632209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension.appex */; };
+		8913CD8C1BDB0A9A009EC729 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913CD8B1BDB0A9A009EC729 /* PreferencesTableViewController.swift */; };
+		8913CD8E1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913CD8D1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift */; };
+		893BEC8619C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893BEC8519C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift */; };
+		895F04B41A7143CE004BEE8A /* GPXExtentCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F04B31A7143CE004BEE8A /* GPXExtentCoordinates.swift */; };
+		898EECDB19C49B5800B4B207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EECDA19C49B5800B4B207 /* AppDelegate.swift */; };
+		898EECDE19C49B5800B4B207 /* AllTrexxTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 898EECDC19C49B5800B4B207 /* AllTrexxTracker.xcdatamodeld */; };
+		898EECE019C49B5800B4B207 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EECDF19C49B5800B4B207 /* ViewController.swift */; };
+		898EECE319C49B5800B4B207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898EECE119C49B5800B4B207 /* Main.storyboard */; };
+		898EECE519C49B5800B4B207 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898EECE419C49B5800B4B207 /* Images.xcassets */; };
+		898EECF419C49B5800B4B207 /* AllTrexxTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EECF319C49B5800B4B207 /* AllTrexxTrackerTests.swift */; };
+		898EECFE19C49DC700B4B207 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFD19C49DC700B4B207 /* MapKit.framework */; };
+		898EED0019C4A15E00B4B207 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFF19C4A15E00B4B207 /* CoreLocation.framework */; };
+		898EED3619C6402900B4B207 /* GPXFilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EED3519C6402900B4B207 /* GPXFilesTableViewController.swift */; };
+		899D676C19CD9E9E00C88A0A /* GPXTrackSegment+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D676B19CD9E9E00C88A0A /* GPXTrackSegment+MapKit.swift */; };
+		899D676E19CD9FAF00C88A0A /* GPXTrackPoint+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D676D19CD9FAF00C88A0A /* GPXTrackPoint+MapKit.swift */; };
+		899D677019CE024600C88A0A /* GPXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D676F19CE024600C88A0A /* GPXFileManager.swift */; };
+		899D677219CE8B3600C88A0A /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D677119CE8B3600C88A0A /* StopWatch.swift */; };
+		899D677819CF0A9F00C88A0A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D677719CF0A9F00C88A0A /* MessageUI.framework */; };
+		899D677B19D10F7C00C88A0A /* GPXFilesTableViewControlllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D677A19D10F7C00C88A0A /* GPXFilesTableViewControlllerDelegate.swift */; };
+		899D677D19D22E1B00C88A0A /* StopWatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D677C19D22E1B00C88A0A /* StopWatchDelegate.swift */; };
+		899D677F19D2366100C88A0A /* GPXMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D677E19D2366100C88A0A /* GPXMapView.swift */; };
+		899D678219D351DA00C88A0A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D678119D351DA00C88A0A /* AboutViewController.swift */; };
+		899D678419D3528D00C88A0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D678319D3528D00C88A0A /* WebKit.framework */; };
+		899D678719D354EB00C88A0A /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 899D678519D354EB00C88A0A /* about.html */; };
+		89E327BE1A7481EA00FC559E /* GPXTileServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E327BD1A7481EA00FC559E /* GPXTileServer.swift */; };
+		89EA86612157A08E002E03A7 /* Date+timeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA86602157A08E002E03A7 /* Date+timeAgo.swift */; };
+		89EA86632157B42C002E03A7 /* GPXFileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA86622157B42C002E03A7 /* GPXFileInfo.swift */; };
+		89EA86652157C444002E03A7 /* Int+asFilesize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA86642157C444002E03A7 /* Int+asFilesize.swift */; };
+		89F6E0F5227D091900CE3E3F /* Double+Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6E0F4227D091900CE3E3F /* Double+Measures.swift */; };
+		89F6E0F7227E107C00CE3E3F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6E0F6227E107C00CE3E3F /* Preferences.swift */; };
+		89F6E105227F7C1C00CE3E3F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6E0F6227E107C00CE3E3F /* Preferences.swift */; };
+		89F6E106227F7C2500CE3E3F /* GPXTileServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E327BD1A7481EA00FC559E /* GPXTileServer.swift */; };
+		89F6E107227F7C5500CE3E3F /* Double+Measures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6E0F4227D091900CE3E3F /* Double+Measures.swift */; };
+		89F8749B1BBB7362004EF41A /* GPXTrack+length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8749A1BBB7362004EF41A /* GPXTrack+length.swift */; };
+		89F8749F1BBCB97F004EF41A /* GPXRoot+length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8749E1BBCB97F004EF41A /* GPXRoot+length.swift */; };
+		BF15092223916FC100F51F1B /* UIColor+DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15092123916FC100F51F1B /* UIColor+DarkMode.swift */; };
+		BF177EEA24D54F9200D5E021 /* CoreDataHelper+BatchDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF177EE924D54F9200D5E021 /* CoreDataHelper+BatchDelete.swift */; };
+		BF1FE1A8230EAB9B00404B59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF1FE1A6230EAB9B00404B59 /* Localizable.strings */; };
+		BF214B5E22E60B64000E96AA /* CLActivityType+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF214B5D22E60B64000E96AA /* CLActivityType+Info.swift */; };
+		BF36B6CF220C6F1A00077B46 /* GPXFileTableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF36B6CE220C6F1A00077B46 /* GPXFileTableInterfaceController.swift */; };
+		BF5C0D2222D771D1001C2575 /* DistanceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C0D2122D771D0001C2575 /* DistanceLabel.swift */; };
+		BF637D132216C5FA0003EC04 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BF6408A3225C63E700BB5242 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6408A2225C63E700BB5242 /* CoreDataHelper.swift */; };
+		BF6428B8220EC1A90015447E /* GPXFileTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6428B7220EC1A90015447E /* GPXFileTableRowController.swift */; };
+		BF64602F220AE9CF00957FF6 /* GPXTrackSegment+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D676B19CD9E9E00C88A0A /* GPXTrackSegment+MapKit.swift */; };
+		BF68ECC62448B887005C779F /* DateFieldTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68ECC52448B887005C779F /* DateFieldTypeView.swift */; };
+		BF692F5D2209AAFB00F8A0F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF692F5C2209AAFB00F8A0F1 /* Assets.xcassets */; };
+		BF692F692209AAFB00F8A0F1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF692F682209AAFB00F8A0F1 /* InterfaceController.swift */; };
+		BF692F6B2209AAFB00F8A0F1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF692F6A2209AAFB00F8A0F1 /* ExtensionDelegate.swift */; };
+		BF692F6D2209AAFB00F8A0F1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF692F6C2209AAFB00F8A0F1 /* ComplicationController.swift */; };
+		BF692F6F2209AAFC00F8A0F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF692F6E2209AAFC00F8A0F1 /* Assets.xcassets */; };
+		BF692F7E2209B36900F8A0F1 /* GPXWaypoint+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893BEC8519C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift */; };
+		BF692F802209B80300F8A0F1 /* GPXTrackPoint+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D676D19CD9FAF00C88A0A /* GPXTrackPoint+MapKit.swift */; };
+		BF692F812209B80700F8A0F1 /* GPXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D676F19CE024600C88A0A /* GPXFileManager.swift */; };
+		BF692F822209B80A00F8A0F1 /* StopWatchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D677C19D22E1B00C88A0A /* StopWatchDelegate.swift */; };
+		BF692F832209B80E00F8A0F1 /* GPXExtentCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F04B31A7143CE004BEE8A /* GPXExtentCoordinates.swift */; };
+		BF692F842209B81100F8A0F1 /* GPXTrack+length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8749A1BBB7362004EF41A /* GPXTrack+length.swift */; };
+		BF692F852209B81400F8A0F1 /* GPXRoot+length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F8749E1BBCB97F004EF41A /* GPXRoot+length.swift */; };
+		BF692F862209B81700F8A0F1 /* Date+timeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA86602157A08E002E03A7 /* Date+timeAgo.swift */; };
+		BF692F872209B81A00F8A0F1 /* Int+asFilesize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA86642157C444002E03A7 /* Int+asFilesize.swift */; };
+		BF692F882209B81E00F8A0F1 /* GPXFileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA86622157B42C002E03A7 /* GPXFileInfo.swift */; };
+		BF692F892209B82500F8A0F1 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899D677119CE8B3600C88A0A /* StopWatch.swift */; };
+		BF9AE57C2410011D00B103A0 /* DefaultNameSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE57B2410011D00B103A0 /* DefaultNameSetupViewController.swift */; };
+		BF9AE57E2410012700B103A0 /* DefaultDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9AE57D2410012700B103A0 /* DefaultDateFormat.swift */; };
+		BFA3CE8222C23B2300A8B965 /* CoreDataAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3CE8122C23B2300A8B965 /* CoreDataAlertView.swift */; };
+		BFB06F02244A037300AC0CDC /* UIColor+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB06F01244A037300AC0CDC /* UIColor+Keyboard.swift */; };
+		BFE026C0244A0160005423E6 /* String+CountInstances.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE026BF244A0160005423E6 /* String+CountInstances.swift */; };
+		BFE026C2244A01DB005423E6 /* UIInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE026C1244A01DB005423E6 /* UIInsetLabel.swift */; };
+		BFE026C4244A0281005423E6 /* DateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE026C3244A0281005423E6 /* DateField.swift */; };
+		BFE026C6244A02A4005423E6 /* DatePatternButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE026C5244A02A4005423E6 /* DatePatternButton.swift */; };
+		BFF3047F2312DC1D0012D263 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF1FE1A6230EAB9B00404B59 /* Localizable.strings */; };
+		BFF304802312DC1F0012D263 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF1FE1A6230EAB9B00404B59 /* Localizable.strings */; };
+		BFF304812312DC700012D263 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A430EB230D61240003C2F2 /* Interface.storyboard */; };
+		BFF304822312DC800012D263 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D671230D2476009AA75F /* InfoPlist.strings */; };
+		C894B839E0B8DC37DE05DDCC /* Pods_AllTrexxTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D28CBDF2535138FA16F38F /* Pods_AllTrexxTracker.framework */; };
+		DC4908A11C4A136F009484AE /* TrackerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4908A01C4A136F009484AE /* TrackerButton.swift */; };
+		DC4908A31C4A332E009484AE /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4908A21C4A332E009484AE /* MapViewDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		898EECEE19C49B5800B4B207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898EECCD19C49B5800B4B207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898EECD419C49B5800B4B207;
+			remoteInfo = OpenGpxTracker;
+		};
+		BF692F652209AAFB00F8A0F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898EECCD19C49B5800B4B207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF692F622209AAFB00F8A0F1;
+			remoteInfo = "OpenGpxTracker-Watch Extension";
+		};
+		BF692F712209AAFC00F8A0F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898EECCD19C49B5800B4B207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF692F562209AAF900F8A0F1;
+			remoteInfo = "OpenGpxTracker-Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF692F792209AAFC00F8A0F1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF692F7B2209AAFC00F8A0F1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0175AC0023F014C7003323C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0175AC0323F014EA003323C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0175AC0523F01519003323C3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0175AC0723F01523003323C3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		120DE70F22B274910055C4CB /* GPXSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXSession.swift; sourceTree = "<group>"; };
+		1262DD9624F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Interface.strings; sourceTree = "<group>"; };
+		1262DD9724F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1262DD9824F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1262DD9924F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		12A1A44324D561AC0057ED7A /* CoreDataHelper+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataHelper+FetchRequests.swift"; sourceTree = "<group>"; };
+		12D4905424C448540065D995 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
+		12D4905524C448540065D995 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		12D4905624C448540065D995 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		12D4905724C448540065D995 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3C3088B74A230AB1FD234D6F /* Pods_AllTrexxTracker_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTrexxTracker_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44E786790A477838358F948C /* Pods-AllTrexxTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrexxTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenGpxTracker/Pods-AllTrexxTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		455F78BE230AA9D6003705F3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		4588D66C230D23AA009AA75F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4588D66E230D23AD009AA75F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4588D670230D2476009AA75F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4588D672230D247C009AA75F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45A430EA230D61240003C2F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		45A430ED230D612B0003C2F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Interface.strings; sourceTree = "<group>"; };
+		45A430EF230D612C0003C2F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
+		554D2ACAA71E64B3A7B1A167 /* Pods-AllTrexxTracker-Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrexxTracker-Watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenGpxTracker-Watch Extension/Pods-AllTrexxTracker-Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		84DE40602499509900ED7D6D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84DE40612499509900ED7D6D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Interface.strings; sourceTree = "<group>"; };
+		84DE40622499509900ED7D6D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84DE40632499509900ED7D6D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8913CD8B1BDB0A9A009EC729 /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
+		8913CD8D1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		893BEC8519C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXWaypoint+MKAnnotation.swift"; sourceTree = "<group>"; };
+		895F04B31A7143CE004BEE8A /* GPXExtentCoordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXExtentCoordinates.swift; sourceTree = "<group>"; };
+		898E2BDD23129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		898E2BDE23129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
+		898E2BDF23129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		898E2BE023129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		898E2BE123129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		898EECD519C49B5800B4B207 /* AllTrexxTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrexxTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		898EECD919C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		898EECDA19C49B5800B4B207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		898EECDD19C49B5800B4B207 /* OpenGpxTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenGpxTracker.xcdatamodel; sourceTree = "<group>"; };
+		898EECDF19C49B5800B4B207 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		898EECE219C49B5800B4B207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		898EECE419C49B5800B4B207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		898EECED19C49B5800B4B207 /* AllTrexxTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllTrexxTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		898EECF219C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		898EECF319C49B5800B4B207 /* AllTrexxTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrexxTrackerTests.swift; sourceTree = "<group>"; };
+		898EECFD19C49DC700B4B207 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		898EECFF19C4A15E00B4B207 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		898EED0219C5EE1500B4B207 /* ObjectiveCBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCBridgingHeader.h; sourceTree = "<group>"; };
+		898EED3519C6402900B4B207 /* GPXFilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXFilesTableViewController.swift; sourceTree = "<group>"; };
+		899D676B19CD9E9E00C88A0A /* GPXTrackSegment+MapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXTrackSegment+MapKit.swift"; sourceTree = "<group>"; };
+		899D676D19CD9FAF00C88A0A /* GPXTrackPoint+MapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXTrackPoint+MapKit.swift"; sourceTree = "<group>"; };
+		899D676F19CE024600C88A0A /* GPXFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXFileManager.swift; sourceTree = "<group>"; };
+		899D677119CE8B3600C88A0A /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
+		899D677719CF0A9F00C88A0A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		899D677A19D10F7C00C88A0A /* GPXFilesTableViewControlllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXFilesTableViewControlllerDelegate.swift; sourceTree = "<group>"; };
+		899D677C19D22E1B00C88A0A /* StopWatchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchDelegate.swift; sourceTree = "<group>"; };
+		899D677E19D2366100C88A0A /* GPXMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXMapView.swift; sourceTree = "<group>"; };
+		899D678119D351DA00C88A0A /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		899D678319D3528D00C88A0A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		899D678519D354EB00C88A0A /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		89D2F8F81DD7FA7700A52D64 /* Cache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cache.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/OpenGpxTracker-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/Cache/Cache.framework"; sourceTree = "<group>"; };
+		89D2F8FA1DD7FAF600A52D64 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/OpenGpxTracker-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
+		89D2F8FC1DD7FAFA00A52D64 /* iOS_GPX_Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOS_GPX_Framework.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/OpenGpxTracker-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/iOS-GPX-Framework/iOS_GPX_Framework.framework"; sourceTree = "<group>"; };
+		89D2F8FE1DD7FAFF00A52D64 /* TBXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TBXML.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/OpenGpxTracker-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/TBXML/TBXML.framework"; sourceTree = "<group>"; };
+		89E327BD1A7481EA00FC559E /* GPXTileServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXTileServer.swift; sourceTree = "<group>"; };
+		89EA86602157A08E002E03A7 /* Date+timeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+timeAgo.swift"; sourceTree = "<group>"; };
+		89EA86622157B42C002E03A7 /* GPXFileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXFileInfo.swift; sourceTree = "<group>"; };
+		89EA86642157C444002E03A7 /* Int+asFilesize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+asFilesize.swift"; sourceTree = "<group>"; };
+		89F6E0F4227D091900CE3E3F /* Double+Measures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Measures.swift"; sourceTree = "<group>"; };
+		89F6E0F6227E107C00CE3E3F /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		89F8749A1BBB7362004EF41A /* GPXTrack+length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXTrack+length.swift"; sourceTree = "<group>"; };
+		89F8749E1BBCB97F004EF41A /* GPXRoot+length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPXRoot+length.swift"; sourceTree = "<group>"; };
+		93BD71BED3CF101C2B01ABDA /* Pods_AllTrexxTracker_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTrexxTracker_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D28CBDF2535138FA16F38F /* Pods_AllTrexxTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTrexxTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A591D96EF2E41D00AD6BB3A /* Pods-AllTrexxTracker-Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrexxTracker-Watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenGpxTracker-Watch Extension/Pods-AllTrexxTracker-Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		BF15092123916FC100F51F1B /* UIColor+DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DarkMode.swift"; sourceTree = "<group>"; };
+		BF177EE924D54F9200D5E021 /* CoreDataHelper+BatchDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataHelper+BatchDelete.swift"; sourceTree = "<group>"; };
+		BF1FE1A7230EAB9B00404B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF1FE1A9230EABA500404B59 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF214B5D22E60B64000E96AA /* CLActivityType+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLActivityType+Info.swift"; sourceTree = "<group>"; };
+		BF36B6CE220C6F1A00077B46 /* GPXFileTableInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXFileTableInterfaceController.swift; sourceTree = "<group>"; };
+		BF3D192924371DC30079B630 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/Interface.strings"; sourceTree = "<group>"; };
+		BF3D192A24371DC30079B630 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BF3D192B24371DC30079B630 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BF3D192C24371DC30079B630 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BF5C0D2122D771D0001C2575 /* DistanceLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceLabel.swift; sourceTree = "<group>"; };
+		BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		BF6408A2225C63E700BB5242 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		BF6428B7220EC1A90015447E /* GPXFileTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXFileTableRowController.swift; sourceTree = "<group>"; };
+		BF68ECC52448B887005C779F /* DateFieldTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFieldTypeView.swift; sourceTree = "<group>"; };
+		BF692F572209AAF900F8A0F1 /* AllTrexxTracker-Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AllTrexxTracker-Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF692F5C2209AAFB00F8A0F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF692F5E2209AAFB00F8A0F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF692F632209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AllTrexxTracker-Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF692F682209AAFB00F8A0F1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		BF692F6A2209AAFB00F8A0F1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		BF692F6C2209AAFB00F8A0F1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		BF692F6E2209AAFC00F8A0F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF692F702209AAFC00F8A0F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9AE57B2410011D00B103A0 /* DefaultNameSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNameSetupViewController.swift; sourceTree = "<group>"; };
+		BF9AE57D2410012700B103A0 /* DefaultDateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultDateFormat.swift; sourceTree = "<group>"; };
+		BFA3CE8122C23B2300A8B965 /* CoreDataAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAlertView.swift; sourceTree = "<group>"; };
+		BFB06F01244A037300AC0CDC /* UIColor+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Keyboard.swift"; sourceTree = "<group>"; };
+		BFE026BF244A0160005423E6 /* String+CountInstances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CountInstances.swift"; sourceTree = "<group>"; };
+		BFE026C1244A01DB005423E6 /* UIInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInsetLabel.swift; sourceTree = "<group>"; };
+		BFE026C3244A0281005423E6 /* DateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateField.swift; sourceTree = "<group>"; };
+		BFE026C5244A02A4005423E6 /* DatePatternButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePatternButton.swift; sourceTree = "<group>"; };
+		BFF3047A2312D8A00012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		BFF3047B2312D8A00012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		BFF3047C2312D8A00012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BFF3047D2312D8A10012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BFF3047E2312D8A10012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D39420E323CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Interface.strings; sourceTree = "<group>"; };
+		D39420E423CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D39420E523CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D39420E623CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC4908A01C4A136F009484AE /* TrackerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerButton.swift; sourceTree = "<group>"; };
+		DC4908A21C4A332E009484AE /* MapViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
+		F8AD19460733F6AD5C43BE2D /* Pods-AllTrexxTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrexxTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenGpxTracker/Pods-AllTrexxTracker.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		898EECD219C49B5800B4B207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF637D132216C5FA0003EC04 /* WatchConnectivity.framework in Frameworks */,
+				899D678419D3528D00C88A0A /* WebKit.framework in Frameworks */,
+				899D677819CF0A9F00C88A0A /* MessageUI.framework in Frameworks */,
+				6E7431DF25D91DB400D0E0C1 /* CryptoSwift.framework in Frameworks */,
+				898EED0019C4A15E00B4B207 /* CoreLocation.framework in Frameworks */,
+				6E7431E025D91DB800D0E0C1 /* Cache.framework in Frameworks */,
+				898EECFE19C49DC700B4B207 /* MapKit.framework in Frameworks */,
+				6E7431DE25D91DB100D0E0C1 /* iOS_GPX_Framework.framework in Frameworks */,
+				C894B839E0B8DC37DE05DDCC /* Pods_AllTrexxTracker.framework in Frameworks */,
+				6E7431DD25D91DAA00D0E0C1 /* TBXML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898EECEA19C49B5800B4B207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF692F602209AAFB00F8A0F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF47EB2F9EF82452477E687E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7431E525D91DD800D0E0C1 /* Pods_AllTrexxTracker_Watch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8948550619CB954100AB366A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89F6E104227F7BD000CE3E3F /* shared */,
+				899D677119CE8B3600C88A0A /* StopWatch.swift */,
+				893BEC8519C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift */,
+				899D676B19CD9E9E00C88A0A /* GPXTrackSegment+MapKit.swift */,
+				899D676D19CD9FAF00C88A0A /* GPXTrackPoint+MapKit.swift */,
+				899D676F19CE024600C88A0A /* GPXFileManager.swift */,
+				899D677C19D22E1B00C88A0A /* StopWatchDelegate.swift */,
+				895F04B31A7143CE004BEE8A /* GPXExtentCoordinates.swift */,
+				89F8749A1BBB7362004EF41A /* GPXTrack+length.swift */,
+				89F8749E1BBCB97F004EF41A /* GPXRoot+length.swift */,
+				89EA86602157A08E002E03A7 /* Date+timeAgo.swift */,
+				89EA86642157C444002E03A7 /* Int+asFilesize.swift */,
+				89EA86622157B42C002E03A7 /* GPXFileInfo.swift */,
+				BF6408A2225C63E700BB5242 /* CoreDataHelper.swift */,
+				12A1A44324D561AC0057ED7A /* CoreDataHelper+FetchRequests.swift */,
+				BF177EE924D54F9200D5E021 /* CoreDataHelper+BatchDelete.swift */,
+				BF214B5D22E60B64000E96AA /* CLActivityType+Info.swift */,
+				BF15092123916FC100F51F1B /* UIColor+DarkMode.swift */,
+				BFB06F01244A037300AC0CDC /* UIColor+Keyboard.swift */,
+				BFE026BF244A0160005423E6 /* String+CountInstances.swift */,
+				BFE026C1244A01DB005423E6 /* UIInsetLabel.swift */,
+				BFE026C3244A0281005423E6 /* DateField.swift */,
+				BF9AE57D2410012700B103A0 /* DefaultDateFormat.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		898EECCC19C49B5800B4B207 = {
+			isa = PBXGroup;
+			children = (
+				898EECD719C49B5800B4B207 /* AllTrexxTracker */,
+				898EECF019C49B5800B4B207 /* AllTrexxTrackerTests */,
+				BF692F582209AAF900F8A0F1 /* AllTrexxTracker-Watch */,
+				BF692F672209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension */,
+				898EED0119C4A16600B4B207 /* Frameworks */,
+				898EECD619C49B5800B4B207 /* Products */,
+				B27080D4833A50C81310699E /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		898EECD619C49B5800B4B207 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				898EECD519C49B5800B4B207 /* AllTrexxTracker.app */,
+				898EECED19C49B5800B4B207 /* AllTrexxTrackerTests.xctest */,
+				BF692F572209AAF900F8A0F1 /* AllTrexxTracker-Watch.app */,
+				BF692F632209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		898EECD719C49B5800B4B207 /* AllTrexxTracker */ = {
+			isa = PBXGroup;
+			children = (
+				899D678019D2373600C88A0A /* Views */,
+				899D677919D0CAF400C88A0A /* Controllers */,
+				8948550619CB954100AB366A /* Models */,
+				898EED0219C5EE1500B4B207 /* ObjectiveCBridgingHeader.h */,
+				898EECDC19C49B5800B4B207 /* AllTrexxTracker.xcdatamodeld */,
+				899D678919D3551300C88A0A /* Resources */,
+				898EECD819C49B5800B4B207 /* Supporting Files */,
+			);
+			path = AllTrexxTracker;
+			sourceTree = "<group>";
+		};
+		898EECD819C49B5800B4B207 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				898EECD919C49B5800B4B207 /* Info.plist */,
+				4588D66D230D23AA009AA75F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		898EECF019C49B5800B4B207 /* AllTrexxTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				898EECF319C49B5800B4B207 /* AllTrexxTrackerTests.swift */,
+				898EECF119C49B5800B4B207 /* Supporting Files */,
+			);
+			path = AllTrexxTrackerTests;
+			sourceTree = "<group>";
+		};
+		898EECF119C49B5800B4B207 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				898EECF219C49B5800B4B207 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		898EED0119C4A16600B4B207 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */,
+				89D2F8FE1DD7FAFF00A52D64 /* TBXML.framework */,
+				89D2F8FC1DD7FAFA00A52D64 /* iOS_GPX_Framework.framework */,
+				89D2F8FA1DD7FAF600A52D64 /* CryptoSwift.framework */,
+				89D2F8F81DD7FA7700A52D64 /* Cache.framework */,
+				899D678319D3528D00C88A0A /* WebKit.framework */,
+				899D677719CF0A9F00C88A0A /* MessageUI.framework */,
+				898EECFF19C4A15E00B4B207 /* CoreLocation.framework */,
+				898EECFD19C49DC700B4B207 /* MapKit.framework */,
+				95D28CBDF2535138FA16F38F /* Pods_AllTrexxTracker.framework */,
+				3C3088B74A230AB1FD234D6F /* Pods_AllTrexxTracker_Watch.framework */,
+				93BD71BED3CF101C2B01ABDA /* Pods_AllTrexxTracker_Watch_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		899D677919D0CAF400C88A0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				898EECDF19C49B5800B4B207 /* ViewController.swift */,
+				898EED3519C6402900B4B207 /* GPXFilesTableViewController.swift */,
+				899D677A19D10F7C00C88A0A /* GPXFilesTableViewControlllerDelegate.swift */,
+				899D678119D351DA00C88A0A /* AboutViewController.swift */,
+				8913CD8B1BDB0A9A009EC729 /* PreferencesTableViewController.swift */,
+				8913CD8D1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift */,
+				DC4908A21C4A332E009484AE /* MapViewDelegate.swift */,
+				BF9AE57B2410011D00B103A0 /* DefaultNameSetupViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		899D678019D2373600C88A0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				899D677E19D2366100C88A0A /* GPXMapView.swift */,
+				BF5C0D2122D771D0001C2575 /* DistanceLabel.swift */,
+				BFA3CE8122C23B2300A8B965 /* CoreDataAlertView.swift */,
+				DC4908A01C4A136F009484AE /* TrackerButton.swift */,
+				BFE026C5244A02A4005423E6 /* DatePatternButton.swift */,
+				BF68ECC52448B887005C779F /* DateFieldTypeView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		899D678919D3551300C88A0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF1FE1A6230EAB9B00404B59 /* Localizable.strings */,
+				0175AC0123F014C7003323C3 /* LaunchScreen.storyboard */,
+				898EECE119C49B5800B4B207 /* Main.storyboard */,
+				898EECDA19C49B5800B4B207 /* AppDelegate.swift */,
+				899D678519D354EB00C88A0A /* about.html */,
+				898EECE419C49B5800B4B207 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		89F6E104227F7BD000CE3E3F /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				120DE70F22B274910055C4CB /* GPXSession.swift */,
+				89E327BD1A7481EA00FC559E /* GPXTileServer.swift */,
+				89F6E0F6227E107C00CE3E3F /* Preferences.swift */,
+				89F6E0F4227D091900CE3E3F /* Double+Measures.swift */,
+			);
+			name = shared;
+			sourceTree = "<group>";
+		};
+		B27080D4833A50C81310699E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44E786790A477838358F948C /* Pods-AllTrexxTracker.debug.xcconfig */,
+				F8AD19460733F6AD5C43BE2D /* Pods-AllTrexxTracker.release.xcconfig */,
+				9A591D96EF2E41D00AD6BB3A /* Pods-AllTrexxTracker-Watch Extension.debug.xcconfig */,
+				554D2ACAA71E64B3A7B1A167 /* Pods-AllTrexxTracker-Watch Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF692F582209AAF900F8A0F1 /* AllTrexxTracker-Watch */ = {
+			isa = PBXGroup;
+			children = (
+				45A430EB230D61240003C2F2 /* Interface.storyboard */,
+				BF692F5C2209AAFB00F8A0F1 /* Assets.xcassets */,
+				BF692F5E2209AAFB00F8A0F1 /* Info.plist */,
+			);
+			path = "AllTrexxTracker-Watch";
+			sourceTree = "<group>";
+		};
+		BF692F672209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BF36B6CE220C6F1A00077B46 /* GPXFileTableInterfaceController.swift */,
+				BF6428B7220EC1A90015447E /* GPXFileTableRowController.swift */,
+				BF692F682209AAFB00F8A0F1 /* InterfaceController.swift */,
+				BF692F6A2209AAFB00F8A0F1 /* ExtensionDelegate.swift */,
+				BF692F6C2209AAFB00F8A0F1 /* ComplicationController.swift */,
+				BF692F6E2209AAFC00F8A0F1 /* Assets.xcassets */,
+				BF692F702209AAFC00F8A0F1 /* Info.plist */,
+				4588D671230D2476009AA75F /* InfoPlist.strings */,
+			);
+			path = "AllTrexxTracker-Watch Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		898EECD419C49B5800B4B207 /* AllTrexxTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "AllTrexxTracker" */;
+			buildPhases = (
+				196CCD645C9925FAA058D622 /* [CP] Check Pods Manifest.lock */,
+				898EECD119C49B5800B4B207 /* Sources */,
+				898EECD219C49B5800B4B207 /* Frameworks */,
+				898EECD319C49B5800B4B207 /* Resources */,
+				DC6FB8E11C49DF2C00B378D4 /* SwiftLint */,
+				6F4A3D7A2BD48699BC9EFC52 /* [CP] Embed Pods Frameworks */,
+				BF692F7B2209AAFC00F8A0F1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF692F722209AAFC00F8A0F1 /* PBXTargetDependency */,
+			);
+			name = AllTrexxTracker;
+			productName = OpenGpxTracker;
+			productReference = 898EECD519C49B5800B4B207 /* AllTrexxTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		898EECEC19C49B5800B4B207 /* AllTrexxTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 898EECFA19C49B5800B4B207 /* Build configuration list for PBXNativeTarget "AllTrexxTrackerTests" */;
+			buildPhases = (
+				898EECE919C49B5800B4B207 /* Sources */,
+				898EECEA19C49B5800B4B207 /* Frameworks */,
+				898EECEB19C49B5800B4B207 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				898EECEF19C49B5800B4B207 /* PBXTargetDependency */,
+			);
+			name = AllTrexxTrackerTests;
+			productName = OpenGpxTrackerTests;
+			productReference = 898EECED19C49B5800B4B207 /* AllTrexxTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF692F562209AAF900F8A0F1 /* AllTrexxTracker-Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF692F7A2209AAFC00F8A0F1 /* Build configuration list for PBXNativeTarget "AllTrexxTracker-Watch" */;
+			buildPhases = (
+				BF692F552209AAF900F8A0F1 /* Resources */,
+				BF692F792209AAFC00F8A0F1 /* Embed App Extensions */,
+				DF47EB2F9EF82452477E687E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF692F662209AAFB00F8A0F1 /* PBXTargetDependency */,
+			);
+			name = "AllTrexxTracker-Watch";
+			productName = "OpenGpxTracker-Watch";
+			productReference = BF692F572209AAF900F8A0F1 /* AllTrexxTracker-Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		BF692F622209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF692F782209AAFC00F8A0F1 /* Build configuration list for PBXNativeTarget "AllTrexxTracker-Watch Extension" */;
+			buildPhases = (
+				1EDBCB1D99E3EAA90FE83A6C /* [CP] Check Pods Manifest.lock */,
+				BF692F5F2209AAFB00F8A0F1 /* Sources */,
+				BF692F602209AAFB00F8A0F1 /* Frameworks */,
+				BF692F612209AAFB00F8A0F1 /* Resources */,
+				ED9A4042AD567E254EB31430 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AllTrexxTracker-Watch Extension";
+			productName = "OpenGpxTracker-Watch Extension";
+			productReference = BF692F632209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		898EECCD19C49B5800B4B207 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					898EECD419C49B5800B4B207 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9J2S23WJH3;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					898EECEC19C49B5800B4B207 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 9J2S23WJH3;
+						LastSwiftMigration = 1020;
+						TestTargetID = 898EECD419C49B5800B4B207;
+					};
+					BF692F562209AAF900F8A0F1 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 9J2S23WJH3;
+						ProvisioningStyle = Automatic;
+					};
+					BF692F622209AAFB00F8A0F1 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 9J2S23WJH3;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "AllTrexxTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				es,
+				"zh-Hans",
+				uk,
+				"fi-FI",
+				ru,
+				fr,
+				nl,
+			);
+			mainGroup = 898EECCC19C49B5800B4B207;
+			productRefGroup = 898EECD619C49B5800B4B207 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				898EECD419C49B5800B4B207 /* AllTrexxTracker */,
+				898EECEC19C49B5800B4B207 /* AllTrexxTrackerTests */,
+				BF692F562209AAF900F8A0F1 /* AllTrexxTracker-Watch */,
+				BF692F622209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		898EECD319C49B5800B4B207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7431E625D91DE800D0E0C1 /* AllTrexxTracker.app in Resources */,
+				4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */,
+				BF1FE1A8230EAB9B00404B59 /* Localizable.strings in Resources */,
+				899D678719D354EB00C88A0A /* about.html in Resources */,
+				898EECE319C49B5800B4B207 /* Main.storyboard in Resources */,
+				898EECE519C49B5800B4B207 /* Images.xcassets in Resources */,
+				0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898EECEB19C49B5800B4B207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7431E725D91DEC00D0E0C1 /* AllTrexxTrackerTests.xctest in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF692F552209AAF900F8A0F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A430E9230D61240003C2F2 /* Interface.storyboard in Resources */,
+				BFF304822312DC800012D263 /* InfoPlist.strings in Resources */,
+				6E7431E825D91DF000D0E0C1 /* AllTrexxTracker-Watch.app in Resources */,
+				BFF3047F2312DC1D0012D263 /* Localizable.strings in Resources */,
+				BF692F5D2209AAFB00F8A0F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF692F612209AAFB00F8A0F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF304812312DC700012D263 /* Interface.storyboard in Resources */,
+				6E7431E925D91DF700D0E0C1 /* AllTrexxTracker-Watch Extension.appex in Resources */,
+				BF692F6F2209AAFC00F8A0F1 /* Assets.xcassets in Resources */,
+				BFF304802312DC1F0012D263 /* Localizable.strings in Resources */,
+				4588D66F230D2476009AA75F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		196CCD645C9925FAA058D622 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenGpxTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EDBCB1D99E3EAA90FE83A6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenGpxTracker-Watch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F4A3D7A2BD48699BC9EFC52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllTrexxTracker/Pods-AllTrexxTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CoreGPX-iOS/CoreGPX.framework",
+				"${BUILT_PRODUCTS_DIR}/MapCache/MapCache.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreGPX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapCache.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrexxTracker/Pods-AllTrexxTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC6FB8E11C49DF2C00B378D4 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		ED9A4042AD567E254EB31430 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllTrexxTracker-Watch Extension/Pods-AllTrexxTracker-Watch Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CoreGPX-watchOS/CoreGPX.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreGPX.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrexxTracker-Watch Extension/Pods-AllTrexxTracker-Watch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		898EECD119C49B5800B4B207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE026C6244A02A4005423E6 /* DatePatternButton.swift in Sources */,
+				BF15092223916FC100F51F1B /* UIColor+DarkMode.swift in Sources */,
+				899D677F19D2366100C88A0A /* GPXMapView.swift in Sources */,
+				BF6408A3225C63E700BB5242 /* CoreDataHelper.swift in Sources */,
+				89E327BE1A7481EA00FC559E /* GPXTileServer.swift in Sources */,
+				898EECE019C49B5800B4B207 /* ViewController.swift in Sources */,
+				120DE71022B274910055C4CB /* GPXSession.swift in Sources */,
+				BF68ECC62448B887005C779F /* DateFieldTypeView.swift in Sources */,
+				BF9AE57E2410012700B103A0 /* DefaultDateFormat.swift in Sources */,
+				899D677019CE024600C88A0A /* GPXFileManager.swift in Sources */,
+				898EECDE19C49B5800B4B207 /* AllTrexxTracker.xcdatamodeld in Sources */,
+				89EA86652157C444002E03A7 /* Int+asFilesize.swift in Sources */,
+				BF214B5E22E60B64000E96AA /* CLActivityType+Info.swift in Sources */,
+				BF5C0D2222D771D1001C2575 /* DistanceLabel.swift in Sources */,
+				89F6E0F5227D091900CE3E3F /* Double+Measures.swift in Sources */,
+				8913CD8E1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift in Sources */,
+				899D676E19CD9FAF00C88A0A /* GPXTrackPoint+MapKit.swift in Sources */,
+				89F8749B1BBB7362004EF41A /* GPXTrack+length.swift in Sources */,
+				BF177EEA24D54F9200D5E021 /* CoreDataHelper+BatchDelete.swift in Sources */,
+				BFB06F02244A037300AC0CDC /* UIColor+Keyboard.swift in Sources */,
+				BFA3CE8222C23B2300A8B965 /* CoreDataAlertView.swift in Sources */,
+				899D678219D351DA00C88A0A /* AboutViewController.swift in Sources */,
+				89EA86612157A08E002E03A7 /* Date+timeAgo.swift in Sources */,
+				895F04B41A7143CE004BEE8A /* GPXExtentCoordinates.swift in Sources */,
+				899D677B19D10F7C00C88A0A /* GPXFilesTableViewControlllerDelegate.swift in Sources */,
+				12A1A44424D561AC0057ED7A /* CoreDataHelper+FetchRequests.swift in Sources */,
+				8913CD8C1BDB0A9A009EC729 /* PreferencesTableViewController.swift in Sources */,
+				899D677D19D22E1B00C88A0A /* StopWatchDelegate.swift in Sources */,
+				898EECDB19C49B5800B4B207 /* AppDelegate.swift in Sources */,
+				89EA86632157B42C002E03A7 /* GPXFileInfo.swift in Sources */,
+				899D676C19CD9E9E00C88A0A /* GPXTrackSegment+MapKit.swift in Sources */,
+				899D677219CE8B3600C88A0A /* StopWatch.swift in Sources */,
+				89F6E0F7227E107C00CE3E3F /* Preferences.swift in Sources */,
+				BFE026C0244A0160005423E6 /* String+CountInstances.swift in Sources */,
+				BFE026C4244A0281005423E6 /* DateField.swift in Sources */,
+				BFE026C2244A01DB005423E6 /* UIInsetLabel.swift in Sources */,
+				BF9AE57C2410011D00B103A0 /* DefaultNameSetupViewController.swift in Sources */,
+				893BEC8619C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift in Sources */,
+				DC4908A31C4A332E009484AE /* MapViewDelegate.swift in Sources */,
+				898EED3619C6402900B4B207 /* GPXFilesTableViewController.swift in Sources */,
+				DC4908A11C4A136F009484AE /* TrackerButton.swift in Sources */,
+				89F8749F1BBCB97F004EF41A /* GPXRoot+length.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898EECE919C49B5800B4B207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898EECF419C49B5800B4B207 /* AllTrexxTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF692F5F2209AAFB00F8A0F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF692F862209B81700F8A0F1 /* Date+timeAgo.swift in Sources */,
+				89F6E106227F7C2500CE3E3F /* GPXTileServer.swift in Sources */,
+				89F6E107227F7C5500CE3E3F /* Double+Measures.swift in Sources */,
+				89F6E105227F7C1C00CE3E3F /* Preferences.swift in Sources */,
+				BF64602F220AE9CF00957FF6 /* GPXTrackSegment+MapKit.swift in Sources */,
+				BF692F6B2209AAFB00F8A0F1 /* ExtensionDelegate.swift in Sources */,
+				BF692F852209B81400F8A0F1 /* GPXRoot+length.swift in Sources */,
+				BF692F822209B80A00F8A0F1 /* StopWatchDelegate.swift in Sources */,
+				BF692F812209B80700F8A0F1 /* GPXFileManager.swift in Sources */,
+				BF692F7E2209B36900F8A0F1 /* GPXWaypoint+MKAnnotation.swift in Sources */,
+				BF692F842209B81100F8A0F1 /* GPXTrack+length.swift in Sources */,
+				BF6428B8220EC1A90015447E /* GPXFileTableRowController.swift in Sources */,
+				BF692F692209AAFB00F8A0F1 /* InterfaceController.swift in Sources */,
+				BF692F802209B80300F8A0F1 /* GPXTrackPoint+MapKit.swift in Sources */,
+				BF692F832209B80E00F8A0F1 /* GPXExtentCoordinates.swift in Sources */,
+				BF692F872209B81A00F8A0F1 /* Int+asFilesize.swift in Sources */,
+				BF692F892209B82500F8A0F1 /* StopWatch.swift in Sources */,
+				BF692F6D2209AAFB00F8A0F1 /* ComplicationController.swift in Sources */,
+				BF692F882209B81E00F8A0F1 /* GPXFileInfo.swift in Sources */,
+				BF36B6CF220C6F1A00077B46 /* GPXFileTableInterfaceController.swift in Sources */,
+				120DE71122B274A40055C4CB /* GPXSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		898EECEF19C49B5800B4B207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898EECD419C49B5800B4B207 /* AllTrexxTracker */;
+			targetProxy = 898EECEE19C49B5800B4B207 /* PBXContainerItemProxy */;
+		};
+		BF692F662209AAFB00F8A0F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF692F622209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension */;
+			targetProxy = BF692F652209AAFB00F8A0F1 /* PBXContainerItemProxy */;
+		};
+		BF692F722209AAFC00F8A0F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF692F562209AAF900F8A0F1 /* AllTrexxTracker-Watch */;
+			targetProxy = BF692F712209AAFC00F8A0F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0175AC0123F014C7003323C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0175AC0023F014C7003323C3 /* Base */,
+				0175AC0323F014EA003323C3 /* zh-Hans */,
+				0175AC0523F01519003323C3 /* de */,
+				0175AC0723F01523003323C3 /* es */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4588D66D230D23AA009AA75F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4588D66C230D23AA009AA75F /* de */,
+				4588D66E230D23AD009AA75F /* en */,
+				898E2BE023129FE000DC4E3F /* es */,
+				BFF3047D2312D8A10012D263 /* zh-Hans */,
+				D39420E523CC1B0500EDC8F6 /* uk */,
+				BF3D192B24371DC30079B630 /* fi-FI */,
+				84DE40632499509900ED7D6D /* ru */,
+				12D4905624C448540065D995 /* fr */,
+				1262DD9824F9568F00B5C2EA /* nl */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4588D671230D2476009AA75F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4588D670230D2476009AA75F /* en */,
+				4588D672230D247C009AA75F /* de */,
+				898E2BE123129FE000DC4E3F /* es */,
+				BFF3047E2312D8A10012D263 /* zh-Hans */,
+				D39420E623CC1B0500EDC8F6 /* uk */,
+				BF3D192C24371DC30079B630 /* fi-FI */,
+				84DE40602499509900ED7D6D /* ru */,
+				12D4905724C448540065D995 /* fr */,
+				1262DD9924F9568F00B5C2EA /* nl */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		45A430EB230D61240003C2F2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A430EA230D61240003C2F2 /* Base */,
+				45A430ED230D612B0003C2F2 /* en */,
+				45A430EF230D612C0003C2F2 /* de */,
+				898E2BDE23129FE000DC4E3F /* es */,
+				BFF3047B2312D8A00012D263 /* zh-Hans */,
+				D39420E323CC1B0500EDC8F6 /* uk */,
+				BF3D192924371DC30079B630 /* fi-FI */,
+				84DE40612499509900ED7D6D /* ru */,
+				12D4905424C448540065D995 /* fr */,
+				1262DD9624F9568F00B5C2EA /* nl */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		898EECE119C49B5800B4B207 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				898EECE219C49B5800B4B207 /* Base */,
+				455F78BE230AA9D6003705F3 /* de */,
+				898E2BDD23129FE000DC4E3F /* es */,
+				BFF3047A2312D8A00012D263 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF1FE1A6230EAB9B00404B59 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF1FE1A7230EAB9B00404B59 /* en */,
+				BF1FE1A9230EABA500404B59 /* de */,
+				898E2BDF23129FE000DC4E3F /* es */,
+				BFF3047C2312D8A00012D263 /* zh-Hans */,
+				D39420E423CC1B0500EDC8F6 /* uk */,
+				BF3D192A24371DC30079B630 /* fi-FI */,
+				84DE40622499509900ED7D6D /* ru */,
+				12D4905524C448540065D995 /* fr */,
+				1262DD9724F9568F00B5C2EA /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		898EECF519C49B5800B4B207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		898EECF619C49B5800B4B207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		898EECF819C49B5800B4B207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E786790A477838358F948C /* Pods-AllTrexxTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				INFOPLIST_FILE = AllTrexxTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.7.2;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = AllTrexxTracker/ObjectiveCBridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		898EECF919C49B5800B4B207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8AD19460733F6AD5C43BE2D /* Pods-AllTrexxTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				INFOPLIST_FILE = AllTrexxTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.7.2;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = AllTrexxTracker/ObjectiveCBridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		898EECFB19C49B5800B4B207 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AllTrexxTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.transitbox.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllTrexxTracker.app/AllTrexxTracker";
+			};
+			name = Debug;
+		};
+		898EECFC19C49B5800B4B207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AllTrexxTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.transitbox.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllTrexxTracker.app/AllTrexxTracker";
+			};
+			name = Release;
+		};
+		BF692F742209AAFC00F8A0F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = AllTrexxTracker_Watch_Extension;
+				INFOPLIST_FILE = "AllTrexxTracker-Watch/Info.plist";
+				MARKETING_VERSION = 1.7.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		BF692F752209AAFC00F8A0F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = AllTrexxTracker_Watch_Extension;
+				INFOPLIST_FILE = "AllTrexxTracker-Watch/Info.plist";
+				MARKETING_VERSION = 1.7.2;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		BF692F762209AAFC00F8A0F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A591D96EF2E41D00AD6BB3A /* Pods-AllTrexxTracker-Watch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "AllTrexxTracker-Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.7.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker.watchkitapp.extension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		BF692F772209AAFC00F8A0F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 554D2ACAA71E64B3A7B1A167 /* Pods-AllTrexxTracker-Watch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "AllTrexxTracker-Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.7.2;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker.watchkitapp.extension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "AllTrexxTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898EECF519C49B5800B4B207 /* Debug */,
+				898EECF619C49B5800B4B207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "AllTrexxTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898EECF819C49B5800B4B207 /* Debug */,
+				898EECF919C49B5800B4B207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		898EECFA19C49B5800B4B207 /* Build configuration list for PBXNativeTarget "AllTrexxTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898EECFB19C49B5800B4B207 /* Debug */,
+				898EECFC19C49B5800B4B207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF692F782209AAFC00F8A0F1 /* Build configuration list for PBXNativeTarget "AllTrexxTracker-Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF692F762209AAFC00F8A0F1 /* Debug */,
+				BF692F772209AAFC00F8A0F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF692F7A2209AAFC00F8A0F1 /* Build configuration list for PBXNativeTarget "AllTrexxTracker-Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF692F742209AAFC00F8A0F1 /* Debug */,
+				BF692F752209AAFC00F8A0F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		898EECDC19C49B5800B4B207 /* AllTrexxTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				898EECDD19C49B5800B4B207 /* OpenGpxTracker.xcdatamodel */,
+			);
+			currentVersion = 898EECDD19C49B5800B4B207 /* OpenGpxTracker.xcdatamodel */;
+			path = AllTrexxTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 898EECCD19C49B5800B4B207 /* Project object */;
+}
