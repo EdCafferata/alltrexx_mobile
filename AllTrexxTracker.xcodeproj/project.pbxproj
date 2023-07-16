@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,10 +19,14 @@
 		6E7431DF25D91DB400D0E0C1 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D2F8FA1DD7FAF600A52D64 /* CryptoSwift.framework */; };
 		6E7431E025D91DB800D0E0C1 /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D2F8F81DD7FA7700A52D64 /* Cache.framework */; };
 		6E7431E525D91DD800D0E0C1 /* Pods_AllTrexxTracker_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3088B74A230AB1FD234D6F /* Pods_AllTrexxTracker_Watch.framework */; };
-		6E7431E625D91DE800D0E0C1 /* AllTrexxTracker.app in Resources */ = {isa = PBXBuildFile; fileRef = 898EECD519C49B5800B4B207 /* AllTrexxTracker.app */; };
-		6E7431E725D91DEC00D0E0C1 /* AllTrexxTrackerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 898EECED19C49B5800B4B207 /* AllTrexxTrackerTests.xctest */; };
-		6E7431E825D91DF000D0E0C1 /* AllTrexxTracker-Watch.app in Resources */ = {isa = PBXBuildFile; fileRef = BF692F572209AAF900F8A0F1 /* AllTrexxTracker-Watch.app */; };
-		6E7431E925D91DF700D0E0C1 /* AllTrexxTracker-Watch Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = BF692F632209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension.appex */; };
+		6E9B70D42A64164200211FCA /* Pods-AllTrexxTracker-Watch Extension.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A591D96EF2E41D00AD6BB3A /* Pods-AllTrexxTracker-Watch Extension.debug.xcconfig */; };
+		6E9B70D52A6416FA00211FCA /* Pods-AllTrexxTracker-Watch Extension.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 554D2ACAA71E64B3A7B1A167 /* Pods-AllTrexxTracker-Watch Extension.release.xcconfig */; };
+		6E9B70D62A64170700211FCA /* Pods-AllTrexxTracker.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F8AD19460733F6AD5C43BE2D /* Pods-AllTrexxTracker.release.xcconfig */; };
+		6E9B70D72A64170B00211FCA /* Pods-AllTrexxTracker.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 44E786790A477838358F948C /* Pods-AllTrexxTracker.debug.xcconfig */; };
+		6E9B70D82A64171200211FCA /* AllTrexxTracker-Watch Extension.appex in Resources */ = {isa = PBXBuildFile; fileRef = BF692F632209AAFB00F8A0F1 /* AllTrexxTracker-Watch Extension.appex */; };
+		6E9B70D92A64171500211FCA /* AllTrexxTracker-Watch.app in Resources */ = {isa = PBXBuildFile; fileRef = BF692F572209AAF900F8A0F1 /* AllTrexxTracker-Watch.app */; };
+		6E9B70DA2A64171900211FCA /* AllTrexxTrackerTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 898EECED19C49B5800B4B207 /* AllTrexxTrackerTests.xctest */; };
+		6E9B70DB2A64171C00211FCA /* AllTrexxTracker.app in Resources */ = {isa = PBXBuildFile; fileRef = 898EECD519C49B5800B4B207 /* AllTrexxTracker.app */; };
 		8913CD8C1BDB0A9A009EC729 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913CD8B1BDB0A9A009EC729 /* PreferencesTableViewController.swift */; };
 		8913CD8E1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8913CD8D1BDB2477009EC729 /* PreferencesTableViewControllerDelegate.swift */; };
 		893BEC8619C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893BEC8519C7E62200C77354 /* GPXWaypoint+MKAnnotation.swift */; };
@@ -127,14 +131,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BF692F792209AAFC00F8A0F1 /* Embed App Extensions */ = {
+		BF692F792209AAFC00F8A0F1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BF692F7B2209AAFC00F8A0F1 /* Embed Watch Content */ = {
@@ -566,7 +570,7 @@
 			buildConfigurationList = BF692F7A2209AAFC00F8A0F1 /* Build configuration list for PBXNativeTarget "AllTrexxTracker-Watch" */;
 			buildPhases = (
 				BF692F552209AAF900F8A0F1 /* Resources */,
-				BF692F792209AAFC00F8A0F1 /* Embed App Extensions */,
+				BF692F792209AAFC00F8A0F1 /* Embed Foundation Extensions */,
 				DF47EB2F9EF82452477E687E /* Frameworks */,
 			);
 			buildRules = (
@@ -604,9 +608,10 @@
 		898EECCD19C49B5800B4B207 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					898EECD419C49B5800B4B207 = {
@@ -677,12 +682,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7431E625D91DE800D0E0C1 /* AllTrexxTracker.app in Resources */,
 				4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */,
 				BF1FE1A8230EAB9B00404B59 /* Localizable.strings in Resources */,
+				6E9B70D72A64170B00211FCA /* Pods-AllTrexxTracker.debug.xcconfig in Resources */,
 				899D678719D354EB00C88A0A /* about.html in Resources */,
+				6E9B70DB2A64171C00211FCA /* AllTrexxTracker.app in Resources */,
 				898EECE319C49B5800B4B207 /* Main.storyboard in Resources */,
 				898EECE519C49B5800B4B207 /* Images.xcassets in Resources */,
+				6E9B70D62A64170700211FCA /* Pods-AllTrexxTracker.release.xcconfig in Resources */,
 				0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +698,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7431E725D91DEC00D0E0C1 /* AllTrexxTrackerTests.xctest in Resources */,
+				6E9B70DA2A64171900211FCA /* AllTrexxTrackerTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +708,7 @@
 			files = (
 				45A430E9230D61240003C2F2 /* Interface.storyboard in Resources */,
 				BFF304822312DC800012D263 /* InfoPlist.strings in Resources */,
-				6E7431E825D91DF000D0E0C1 /* AllTrexxTracker-Watch.app in Resources */,
+				6E9B70D92A64171500211FCA /* AllTrexxTracker-Watch.app in Resources */,
 				BFF3047F2312DC1D0012D263 /* Localizable.strings in Resources */,
 				BF692F5D2209AAFB00F8A0F1 /* Assets.xcassets in Resources */,
 			);
@@ -712,10 +719,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF304812312DC700012D263 /* Interface.storyboard in Resources */,
-				6E7431E925D91DF700D0E0C1 /* AllTrexxTracker-Watch Extension.appex in Resources */,
 				BF692F6F2209AAFC00F8A0F1 /* Assets.xcassets in Resources */,
+				6E9B70D42A64164200211FCA /* Pods-AllTrexxTracker-Watch Extension.debug.xcconfig in Resources */,
 				BFF304802312DC1F0012D263 /* Localizable.strings in Resources */,
 				4588D66F230D2476009AA75F /* InfoPlist.strings in Resources */,
+				6E9B70D82A64171200211FCA /* AllTrexxTracker-Watch Extension.appex in Resources */,
+				6E9B70D52A6416FA00211FCA /* Pods-AllTrexxTracker-Watch Extension.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,7 +1119,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1127,7 +1137,10 @@
 				DEVELOPMENT_TEAM = 9J2S23WJH3;
 				INFOPLIST_FILE = AllTrexxTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1148,7 +1161,10 @@
 				DEVELOPMENT_TEAM = 9J2S23WJH3;
 				INFOPLIST_FILE = AllTrexxTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1172,7 +1188,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AllTrexxTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.transitbox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1190,7 +1210,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AllTrexxTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.transitbox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1277,7 +1301,11 @@
 				DEVELOPMENT_TEAM = 9J2S23WJH3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AllTrexxTracker-Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.7.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1309,7 +1337,11 @@
 				DEVELOPMENT_TEAM = 9J2S23WJH3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AllTrexxTracker-Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.7.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.AlltrexxTracker.watchkitapp.extension;

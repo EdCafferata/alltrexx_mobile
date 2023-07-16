@@ -51,8 +51,6 @@ public final class GPXLink: GPXElement, Codable {
     ///
     public init(withHref href: String) {
         self.href = href
-        self.mimetype = String()
-        self.text = String()
     }
     
     /// Initializes with a URL.
@@ -88,6 +86,12 @@ public final class GPXLink: GPXElement, Codable {
         self.href = raw.attributes["href"]
     }
     
+    public init?(url: URL?, name: String? = nil) {
+        if url == nil && name == nil { return nil }
+        self.text = name
+        self.href = url?.absoluteString
+    }
+    
     // MARK:- Tag
     
     override func tagName() -> String {
@@ -97,10 +101,10 @@ public final class GPXLink: GPXElement, Codable {
     // MARK:- GPX
     
     override func addOpenTag(toGPX gpx: NSMutableString, indentationLevel: Int) {
-        let attribute = NSMutableString()
+        let attribute = NSMutableString(string: "")
         
         if let href = href {
-            attribute.appendFormat(" href=\"%@\"", href)
+            attribute.append(" href=\"\(href)\"")
         }
         gpx.appendOpenTag(indentation: indent(forIndentationLevel: indentationLevel), tag: tagName(), attribute: attribute)
     }

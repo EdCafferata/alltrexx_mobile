@@ -1,6 +1,6 @@
 //
 //  DateFieldTypeView.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by Vincent Neo on 15/4/20.
 //

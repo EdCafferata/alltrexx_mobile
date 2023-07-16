@@ -2,7 +2,7 @@
 //  GPXTileServer.swift
 //  AllTrexxTracker
 //
-//  Created by Cafferata on 14/02/2021.
+//  Created by merlos on 25/01/15.
 //
 // Shared file: this file is also included in the AllTrexxTracker-Watch Extension target.
 
@@ -22,9 +22,12 @@ enum GPXTileServer: Int {
     /// Apple tile server
     case apple
     
+    /// Apple satellite tile server
+    case appleSatellite
+    
     /// Open Street Map tile server
     case openStreetMap
-    //case AnotherMap
+    // case AnotherMap
     
     /// CartoDB tile server
     case cartoDB
@@ -35,14 +38,19 @@ enum GPXTileServer: Int {
     /// OpenTopoMap tile server
     case openTopoMap
     
-    ///String that describes the selected tile server.
+    /// OpenSeaMap tile server
+    case openSeaMap
+    
+    /// String that describes the selected tile server.
     var name: String {
         switch self {
         case .apple: return "Apple Mapkit (no offline cache)"
+        case .appleSatellite: return "Apple Satellite (no offline cache)"
         case .openStreetMap: return "Open Street Map"
         case .cartoDB: return "Carto DB"
         case .cartoDBRetina: return "Carto DB (Retina resolution)"
         case .openTopoMap: return "OpenTopoMap"
+        case .openSeaMap: return "OpenSeaMap"
         }
     }
     
@@ -50,10 +58,12 @@ enum GPXTileServer: Int {
     var templateUrl: String {
         switch self {
         case .apple: return ""
+        case .appleSatellite: return ""
         case .openStreetMap: return "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         case .cartoDB: return "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
         case .cartoDBRetina: return "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png"
         case .openTopoMap: return "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
+        case .openSeaMap: return "https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png"
         }
     }
     
@@ -67,9 +77,12 @@ enum GPXTileServer: Int {
     var subdomains: [String] {
         switch self {
         case .apple: return []
+        case .appleSatellite: return []
         case .openStreetMap: return ["a", "b", "c"]
         case .cartoDB, .cartoDBRetina: return ["a", "b", "c"]
         case .openTopoMap: return ["a", "b", "c"]
+        case .openSeaMap: return []
+        // case .AnotherMap: return ["a","b"]
         }
     }
     
@@ -87,12 +100,17 @@ enum GPXTileServer: Int {
         switch self {
         case .apple:
             return -1
+        case .appleSatellite: 
+            return -1
         case .openStreetMap:
             return 19
         case .cartoDB, .cartoDBRetina:
             return 21
         case .openTopoMap:
             return 17
+        // case .AnotherMap: return 10
+        case .openSeaMap:
+            return 16
         }
     }
     ///
@@ -107,12 +125,26 @@ enum GPXTileServer: Int {
         switch self {
         case .apple:
             return 0
+        case .appleSatellite:
+            return 0
         case .openStreetMap:
             return 0
         case .cartoDB, .cartoDBRetina:
             return 0
         case .openTopoMap:
             return 0
+        case .openSeaMap:
+            return 0
+        // case .AnotherMap: return 0
+        }
+    }
+    
+    /// Does the tile overlay replace the map?
+    ///  Generally all the tiles provided replace the AppleMaps. However there are some
+    var canReplaceMapContent: Bool {
+        switch self {
+        case .openSeaMap: return false
+        default: return true
         }
     }
     
@@ -126,7 +158,11 @@ enum GPXTileServer: Int {
         default: return 256
         }
     }
+    
+    var needForceDarkMode: Bool {
+        return self == .appleSatellite
+    }
 
     /// Returns the number of tile servers currently defined
-    static var count: Int { return GPXTileServer.openTopoMap.rawValue + 1}
+    static var count: Int { return GPXTileServer.openSeaMap.rawValue + 1}
 }

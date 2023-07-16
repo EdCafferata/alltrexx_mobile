@@ -1,6 +1,6 @@
 //
 //  UIColor+DarkMode.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by Vincent on 29/11/19.
 //

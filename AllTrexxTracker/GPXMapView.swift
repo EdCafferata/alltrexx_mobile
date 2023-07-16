@@ -1,16 +1,10 @@
 //
 //  GPXMapView.swift
-<<<<<<< refs/remotes/origin/main
-//  AlltrexxTracker
-//  Created by merlos on 24/09/14.
-//
-=======
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 24/09/14.
 //
 
->>>>>>> Initial Commit
 import Foundation
 import UIKit
 import MapKit
@@ -48,19 +42,19 @@ class GPXMapView: MKMapView {
     var currentSegmentOverlay: MKPolyline
     
     ///
-    var extent: GPXExtentCoordinates = GPXExtentCoordinates() //extent of the GPX points and tracks
+    var extent: GPXExtentCoordinates = GPXExtentCoordinates() // Extent of the GPX points and tracks
 
-    ///position of the compass in the map
-    ///Example:
+    /// Position of the compass in the map
+    /// Example:
     /// map.compassRect = CGRect(x: map.frame.width/2 - 18, y: 70, width: 36, height: 36)
     var compassRect: CGRect
     
     /// Is the map using local image cache??
-    var useCache: Bool = true { //use tile overlay cache (
+    var useCache: Bool = true { // Use tile overlay cache (
         didSet {
             if tileServerOverlay is CachedTileOverlay {
                 print("GPXMapView:: setting useCache \(useCache)")
-                // swiftlint:disable force_cast
+                // swiftlint:disable:next force_cast
                 (tileServerOverlay as! CachedTileOverlay).useCache = useCache
             }
         }
@@ -78,13 +72,13 @@ class GPXMapView: MKMapView {
             updateMapInformation(newValue)
             // remove current overlay
             if tileServer != .apple {
-                //to see apple maps we need to remove the overlay added by map cache.
+                // To see apple maps we need to remove the overlay added by map cache.
                 removeOverlay(tileServerOverlay)
             }
             
-            //add new overlay to map if not using Apple Maps
-            if newValue != .apple {
-                //Update cacheConfig
+            // Add new overlay to map if not using Apple Maps
+            if newValue != .apple && newValue != .appleSatellite {
+                // Update cacheConfig
                 var config = MapCacheConfig(withUrlTemplate: newValue.templateUrl)
                 config.subdomains = newValue.subdomains
                 config.tileSize = CGSize(width: newValue.tileSize, height: newValue.tileSize)
@@ -97,7 +91,10 @@ class GPXMapView: MKMapView {
                 let cache = MapCache(withConfig: config)
                 // the overlay returned substitutes Apple Maps tile overlay.
                 // we need to keep a reference to remove it, in case we return back to Apple Maps.
-                tileServerOverlay = useCache(cache)
+                //
+                tileServerOverlay = useCache(cache, canReplaceMapContent: newValue.canReplaceMapContent)
+            } else {
+                self.mapType = (newValue == .apple) ? .standard : .satellite
             }
         }
         didSet {
@@ -132,7 +129,7 @@ class GPXMapView: MKMapView {
     /// Initializes the map with an empty currentSegmentOverlay.
     ///
     required init?(coder aDecoder: NSCoder) {
-        var tmpCoords: [CLLocationCoordinate2D] = [] //init with empty
+        var tmpCoords: [CLLocationCoordinate2D] = [] // Init with empty
         currentSegmentOverlay = MKPolyline(coordinates: &tmpCoords, count: 0)
         compassRect = CGRect.init(x: 0, y: 0, width: 36, height: 36)
         super.init(coder: aDecoder)
@@ -143,6 +140,10 @@ class GPXMapView: MKMapView {
         addGestureRecognizer(rotationGesture)
         isUserInteractionEnabled = true
         isMultipleTouchEnabled = true
+        
+        if #available(iOS 11, *) {
+            self.showsCompass = false
+        }
     }
     
     ///
@@ -255,11 +256,14 @@ class GPXMapView: MKMapView {
     let pt = GPXTrackPoint(location: location)
         coreDataHelper.add(toCoreData: pt, withTrackSegmentID: session.trackSegments.count)
         session.addPointToCurrentTrackSegmentAtLocation(location)
-        //redrawCurrent track segment overlay
-        //First remove last overlay, then re-add the overlay updated with the new point
+        // RedrawCurrent track segment overlay
+        // First remove last overlay, then re-add the overlay updated with the new point
         removeOverlay(currentSegmentOverlay)
         currentSegmentOverlay = session.currentSegment.overlay
-        addOverlay(currentSegmentOverlay)
+        
+        addOverlayOnTop(currentSegmentOverlay)
+
+        print("[OVERLAYS] \(overlays)")
         extent.extendAreaToIncludeLocation(location.coordinate)
     }
     
@@ -268,7 +272,7 @@ class GPXMapView: MKMapView {
     /// initializes currentSegment to a new one.
     ///
     func startNewTrackSegment() {
-        if session.currentSegment.trackpoints.count > 0 {
+        if session.currentSegment.points.count > 0 {
             session.startNewTrackSegment()
             currentSegmentOverlay = MKPolyline()
         }
@@ -278,7 +282,7 @@ class GPXMapView: MKMapView {
     /// Finishes current segment.
     ///
     func finishCurrentSegment() {
-        startNewTrackSegment() //basically, we need to append the segment to the list of segments
+        startNewTrackSegment() // Basically, we need to append the segment to the list of segments
     }
     
     ///
@@ -290,10 +294,10 @@ class GPXMapView: MKMapView {
         removeAnnotations(annotations)
         extent = GPXExtentCoordinates()
         
-        //add tile server overlay
-        //by removing all overlays, tile server overlay is also removed. We need to add it back
+        // Add tile server overlay
+        // by removing all overlays, tile server overlay is also removed. We need to add it back
         if tileServer != .apple {
-            addOverlay(tileServerOverlay, level: .aboveLabels)
+            addOverlayOnBottom(tileServerOverlay)
         }
     }
     
@@ -337,11 +341,11 @@ class GPXMapView: MKMapView {
         session.tracks = gpx.tracks
         for oneTrack in session.tracks {
             session.totalTrackedDistance += oneTrack.length
-            for segment in oneTrack.tracksegments {
+            for segment in oneTrack.segments {
                 let overlay = segment.overlay
-                addOverlay(overlay)
-                let segmentTrackpoints = segment.trackpoints
-                //add point to map extent
+                addOverlayOnTop(overlay)
+                let segmentTrackpoints = segment.points
+                // Add point to map extent
                 for waypoint in segmentTrackpoints {
                     extent.extendAreaToIncludeLocation(waypoint.coordinate)
                 }
@@ -358,26 +362,26 @@ class GPXMapView: MKMapView {
         // for last session's previous tracks, through resuming
         for oneTrack in session.tracks {
             session.totalTrackedDistance += oneTrack.length
-            for segment in oneTrack.tracksegments {
+            for segment in oneTrack.segments {
                 let overlay = segment.overlay
-                addOverlay(overlay)
+                addOverlayOnTop(overlay)
                 
-                let segmentTrackpoints = segment.trackpoints
-                //add point to map extent
+                let segmentTrackpoints = segment.points
+                // Add point to map extent
                 for waypoint in segmentTrackpoints {
                     extent.extendAreaToIncludeLocation(waypoint.coordinate)
                 }
             }
         }
         
-        // for last session track segment
+        // For last session track segment
         for trackSegment in session.trackSegments {
             
             let overlay = trackSegment.overlay
-            addOverlay(overlay)
+            addOverlayOnTop(overlay)
             
-            let segmentTrackpoints = trackSegment.trackpoints
-            //add point to map extent
+            let segmentTrackpoints = trackSegment.points
+            // Add point to map extent
             for waypoint in segmentTrackpoints {
                 extent.extendAreaToIncludeLocation(waypoint.coordinate)
             }

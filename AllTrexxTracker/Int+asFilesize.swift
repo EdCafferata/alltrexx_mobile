@@ -1,6 +1,6 @@
 //
 //  Int+inKB.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 23/09/2018.
 //  Copyright © 2018 TransitBox. All rights reserved.
@@ -17,7 +17,7 @@ extension Int {
         bcf.allowedUnits = [.useAll]
         bcf.countStyle = .file
         let string = bcf.string(fromByteCount: Int64(self))
-        //print("formatted result: \(string)")
+        // print("formatted result: \(string)")
         return string
     }
 }

@@ -1,6 +1,6 @@
 //
 //  GPXTrack+length.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 30/09/15.
 //
@@ -15,7 +15,7 @@ extension GPXTrack {
     /// Track length in meters
     public var length: CLLocationDistance {
         var trackLength: CLLocationDistance = 0.0
-        for segment in tracksegments {
+        for segment in segments {
             trackLength += segment.length()
         }
         return trackLength

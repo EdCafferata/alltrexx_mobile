@@ -1,8 +1,9 @@
 //
 //  AppDelegate.swift
 //  AllTrexxTracker
-//  Created by Cafferata on 13/02/2021.
-//  Copyright (c) 2021 All rights reserved.
+//
+//  Created by merlos on 13/09/14.
+//  Copyright (c) 2014 TransitBox. All rights reserved.
 //
 
 import UIKit
@@ -66,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        //self.saveContext()
+        // self.saveContext()
     }
     
     /// Default pandle load GPX file
@@ -101,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. 
         // It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle.main.url(forResource: "OpenGpxTracker", withExtension: "momd")!
+        let modelURL = Bundle.main.url(forResource: "AllTrexxTracker", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
         }()
     
@@ -112,7 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)[0].appendingPathComponent("open-gpx-tracker-session.sqlite")
+        let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)[0].appendingPathComponent("Alltraxx-tracker-session.sqlite")
         
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
@@ -210,9 +211,8 @@ extension AppDelegate: WCSessionDelegate {
     /// Called when a file is received from Apple Watch.
     /// Displays a popup informing about the reception of the file.
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
-        // swiftlint:disable force_cast
+        // swiftlint:disable:next force_cast
         let fileName = file.metadata!["fileName"] as! String?
-        
         DispatchQueue.global().sync {
             GPXFileManager.moveFrom(file.fileURL, fileName: fileName)
             print("ViewController:: Received file from WatchConnectivity Session")

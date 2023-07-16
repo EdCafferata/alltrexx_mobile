@@ -1,7 +1,8 @@
 //
 //  BridgeToObjectiveC.h
 //  AllTrexxTracker
-//  Created by Cafferata on 14/02/2021.
+//
+//  Created by merlos on 14/09/14.
 //
 
 #ifndef AllTrexxTracker_ObjectiveCBridgingHeader_h

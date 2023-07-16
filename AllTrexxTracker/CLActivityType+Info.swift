@@ -1,6 +1,6 @@
 //
 //  CLActivityType+Info.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by Vincent on 22/7/19.
 //

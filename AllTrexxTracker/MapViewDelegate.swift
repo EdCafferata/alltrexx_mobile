@@ -1,13 +1,17 @@
 //
 //  Localized by nitricware on 19/08/19.
 //
+
 import MapKit
 import CoreGPX
+
 /// Handles all delegate functions of the GPX Mapview
 ///
 class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
+
     /// The Waypoint is being edited (if there is any)
     var waypointBeingEdited: GPXWaypoint = GPXWaypoint()
+    
     /// Displays a pin with whose annotation (bubble) will include delete and edit buttons.
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation.isKind(of: MKUserLocation.self) {
@@ -16,7 +20,6 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
         let annotationView: MKPinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "PinView")
         annotationView.canShowCallout = true
         annotationView.isDraggable = true
-        //let detailButton: UIButton = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as UIButton
         
         let deleteButton: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         deleteButton.setImage(UIImage(named: "delete"), for: UIControl.State())
@@ -46,7 +49,11 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
             pr.strokeColor = UIColor.blue
             
             if #available(iOS 13, *) {
-                pr.shouldRasterize = true
+                if #available(iOS 14, *) {
+                    pr.shouldRasterize = false
+                } else {
+                    pr.shouldRasterize = true
+                }
                 if mapView.traitCollection.userInterfaceStyle == .dark {
                     pr.alpha = 0.5
                     pr.strokeColor = UIColor.yellow
@@ -114,7 +121,7 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
                  annotationView view: MKAnnotationView,
                  didChange newState: MKAnnotationView.DragState,
                  fromOldState oldState: MKAnnotationView.DragState) {
-        // swiftlint:disable force_cast
+        // swiftlint:disable:next force_cast
         let gpxMapView = mapView as! GPXMapView
         
         if newState == MKAnnotationView.DragState.ending {
@@ -134,14 +141,14 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
     /// Adds the pin to the map with an animation (comes from the top of the screen)
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
         var i = 0
-        // swiftlint:disable force_cast
+        // swiftlint:disable:next force_cast
         let gpxMapView = mapView as! GPXMapView
         var hasImpacted = false
-        //adds the pins with an animation
+        // Adds the pins with an animation
         for object in views {
             i += 1
             let annotationView = object as MKAnnotationView
-            //The only exception is the user location, we add to this the heading icon.
+            // The only exception is the user location, we add to this the heading icon.
             if annotationView.annotation!.isKind(of: MKUserLocation.self) {
                 if gpxMapView.headingImageView == nil {
                     let image = UIImage(named: "heading")!
@@ -167,7 +174,6 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
                 }, completion: { (finished) -> Void in
                     if finished {
                         UIView.animate(withDuration: 0.05, animations: { () -> Void in
-                            //aV.transform = CGAffineTransformMakeScale(1.0, 0.8)
                             annotationView.transform = CGAffineTransform(a: 1.0, b: 0, c: 0, d: 0.8, tx: 0, ty: annotationView.frame.size.height*0.1)
                             
                             }, completion: { _ -> Void in
@@ -196,11 +202,7 @@ class MapViewDelegate: NSObject, MKMapViewDelegate, UIAlertViewDelegate {
         guard let map = mapView as? GPXMapView else {
             return
         }
-        print("MapView: User interaction has ended")
-        
         map.updateHeading()
-        
-        //Is 
     }
     
 }

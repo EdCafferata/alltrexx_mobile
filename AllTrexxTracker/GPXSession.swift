@@ -1,8 +1,10 @@
 //
 //  GPXSession.swift
 //  AllTrexxTracker
+//
 //  Created by Vincent Neo on 13/6/19.
-//  Shared file: this file is also included in the OpenGpxTracker-Watch Extension target.
+//
+//  Shared file: this file is also included in the AllTrexxTracker-Watch Extension target.
 
 import Foundation
 import CoreGPX
@@ -83,12 +85,12 @@ class GPXSession {
         let pt = GPXTrackPoint(location: location)
         self.currentSegment.add(trackpoint: pt)
         
-        //add the distance to previous tracked point
-        if self.currentSegment.trackpoints.count >= 2 { //at elast there are two points in the segment
-            let prevPt = self.currentSegment.trackpoints[self.currentSegment.trackpoints.count-2] //get previous point
+        // Add the distance to previous tracked point
+        if self.currentSegment.points.count >= 2 { // At elast there are two points in the segment
+            let prevPt = self.currentSegment.points[self.currentSegment.points.count-2] // Get previous point
             guard let latitude = prevPt.latitude, let longitude = prevPt.longitude else { return }
             let prevPtLoc = CLLocation(latitude: latitude, longitude: longitude)
-            //now get the distance
+            // Now get the distance
             let distance = prevPtLoc.distance(from: location)
             self.currentTrackDistance += distance
             self.totalTrackedDistance += distance
@@ -100,7 +102,7 @@ class GPXSession {
     /// Appends currentSegment to trackSegments and initializes currentSegment to a new one.
     ///
     func startNewTrackSegment() {
-        if self.currentSegment.trackpoints.count > 0 {
+        if self.currentSegment.points.count > 0 {
             self.trackSegments.append(self.currentSegment)
             self.currentSegment = GPXTrackSegment()
             self.currentSegmentDistance = 0.00
@@ -129,18 +131,18 @@ class GPXSession {
     ///
     func exportToGPXString() -> String {
         print("Exporting session data into GPX String")
-        //Create the gpx structure
+        // Create the gpx structure
         let gpx = GPXRoot(creator: kGPXCreatorString)
         gpx.add(waypoints: self.waypoints)
         let track = GPXTrack()
         track.add(trackSegments: self.trackSegments)
-        //add current segment if not empty
-        if self.currentSegment.trackpoints.count > 0 {
+        // Add current segment if not empty
+        if self.currentSegment.points.count > 0 {
             track.add(trackSegment: self.currentSegment)
         }
-        //add existing tracks
+        // Add existing tracks
         gpx.add(tracks: self.tracks)
-        //add current track
+        // Add current track
         gpx.add(track: track)
         return gpx.gpx()
     }
@@ -150,12 +152,14 @@ class GPXSession {
         let lastTrack = gpx.tracks.last ?? GPXTrack()
         totalTrackedDistance += lastTrack.length
         
-        //add track segments
+        // Add track segments
         self.tracks = gpx.tracks
-        self.trackSegments = lastTrack.tracksegments
+        self.trackSegments = lastTrack.segments
         
-        // remove last track as that track is packaged by Core Data, but should its tracksegments should be seperated, into self.tracksegments.
-        self.tracks.removeLast()
+        // Remove last track as that track is packaged by Core Data, but should its tracksegments should be seperated, into self.tracksegments.
+        if self.tracks.count > 0 {
+            self.tracks.removeLast()
+        }
         
     }
     

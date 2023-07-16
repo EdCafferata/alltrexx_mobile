@@ -1,6 +1,6 @@
 //
 //  InfoWKViewController.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 24/09/14.
 //
@@ -42,13 +42,13 @@ class AboutViewController: UIViewController {
         
         self.title = NSLocalizedString("ABOUT", comment: "no comment")
         
-        //Add the done button
+        // Add the done button
         let shareItem = UIBarButtonItem(title: NSLocalizedString("DONE", comment: "no comment"),
                                         style: UIBarButtonItem.Style.plain, target: self,
                                         action: #selector(AboutViewController.closeViewController))
         self.navigationItem.rightBarButtonItems = [shareItem]
   
-        //Add the Webview
+        // Add the Webview
         self.webView = WKWebView(frame: self.view.frame, configuration: WKWebViewConfiguration())
         
         self.webView?.navigationDelegate = self
@@ -80,7 +80,11 @@ extension AboutViewController: WKNavigationDelegate {
         print("AboutViewController: decidePolicyForNavigationAction")
         
         if navigationAction.navigationType == .linkActivated {
-            UIApplication.shared.openURL(navigationAction.request.url!)
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(navigationAction.request.url!)
+            } else {
+                UIApplication.shared.openURL(navigationAction.request.url!)
+            }
             print("AboutViewController: external link sent to Safari")
             
             decisionHandler(.cancel)
