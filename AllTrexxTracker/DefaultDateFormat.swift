@@ -1,6 +1,6 @@
 //
 //  DefaultDateFormat.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by Vincent on 4/3/20.
 //

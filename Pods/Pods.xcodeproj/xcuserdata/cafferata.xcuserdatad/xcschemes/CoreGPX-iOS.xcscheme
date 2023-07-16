@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD:Pods/Pods.xcodeproj/xcuserdata/cafferata.xcuserdatad/xcschemes/CoreGPX-iOS.xcscheme
    LastUpgradeVersion = "1300"
+=======
+   LastUpgradeVersion = "1430"
+>>>>>>> main:AllTrexxTracker.xcodeproj/xcshareddata/xcschemes/AllTrexxTracker.xcscheme
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"

@@ -1,6 +1,6 @@
 //
 //  CoreDataHelper.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by Vincent on 9/4/19.
 //

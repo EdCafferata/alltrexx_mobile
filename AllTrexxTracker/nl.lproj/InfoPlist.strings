@@ -1,11 +1,17 @@
-/*
+/* 
   InfoPlist.strings
+<<<<<<< HEAD
   OpenGpxTracker
 
   Dutch Translation by @julian08100, submitted on 12/08/2020
+=======
+  AllTrexxTracker
+
+  Created by Kurt Höblinger on 21.08.19.
+>>>>>>> main
 */
 
-NSLocationAlwaysAndWhenInUseUsageDescription = "De locatie is alleen gebruikt voor het laten zien van de positie op de kaart. Selecteer altijd 'Altijd locatie delen'";
-NSLocationAlwaysUsageDescription = "De locatie is nodig voor het mane van een GPX track ook wanneer de App in de achtergrond is.";
-NSLocationUsageDescription = "De locatie is nodig voor het maken van GPX en het maken van POI's.";
-NSLocationWhenInUseUsageDescription = "De locatie wordt gebruikt om je locatie te laten zien op de kaart waar je bent en waar je bent geweest.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "Location is only used to display your position in the map. Select always allow to track your position even if the app is in background.";
+NSLocationAlwaysUsageDescription = "Location is needed to create the GPX track even when the app is in background.";
+NSLocationUsageDescription = "Location is needed to create GPX and add POIs";
+NSLocationWhenInUseUsageDescription = "Location is used to display in the map where are you and where you have been.";

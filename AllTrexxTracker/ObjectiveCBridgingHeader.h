@@ -1,6 +1,10 @@
 //
 //  BridgeToObjectiveC.h
+<<<<<<< HEAD
 //  OpenGpxTracker
+=======
+//  AllTrexxTracker
+>>>>>>> main
 //
 //  Created by merlos on 14/09/14.
 //

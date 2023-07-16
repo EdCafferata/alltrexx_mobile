@@ -1,6 +1,6 @@
 //
 //  GPXPin.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 16/09/14.
 //

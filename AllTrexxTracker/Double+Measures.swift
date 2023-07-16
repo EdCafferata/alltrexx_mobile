@@ -1,10 +1,18 @@
 //
 //  Double+Meatures.swift
+<<<<<<< HEAD
 //  OpenGpxTracker
 //
 //  Created by merlos on 03/05/2019.
 //
 // Shared file: this file is also included in the OpenGpxTracker-Watch Extension target.
+=======
+//  AllTrexxTracker
+//
+//  Created by merlos on 03/05/2019.
+//
+// Shared file: this file is also included in the AllTrexxTracker-Watch Extension target.
+>>>>>>> main
 
 import Foundation
 

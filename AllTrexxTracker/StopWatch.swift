@@ -1,6 +1,6 @@
 //
 //  StopWatch.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 21/09/14.
 //

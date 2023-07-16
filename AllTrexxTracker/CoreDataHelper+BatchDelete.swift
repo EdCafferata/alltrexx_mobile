@@ -1,6 +1,6 @@
 //
 //  CoreDataHelper+BatchDelete.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by Vincent on 1/8/20.
 //

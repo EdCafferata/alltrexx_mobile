@@ -1,6 +1,6 @@
 //
 //  GPXLoadFileDelegate.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 23/09/14.
 //

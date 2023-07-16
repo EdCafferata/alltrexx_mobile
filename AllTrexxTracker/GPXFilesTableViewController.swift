@@ -1,6 +1,6 @@
 //
 //  GPXFilesTableViewController.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 14/09/14.
 //

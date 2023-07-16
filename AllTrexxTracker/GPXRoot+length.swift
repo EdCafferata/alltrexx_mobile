@@ -1,6 +1,6 @@
 //
 //  GPXRoot+length.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 01/10/15.
 //

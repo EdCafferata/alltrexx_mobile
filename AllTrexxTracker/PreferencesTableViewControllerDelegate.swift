@@ -1,6 +1,10 @@
 //
 //  PreferencesTableViewControllerDelegate.swift
+<<<<<<< HEAD
 //  OpenGpxTracker
+=======
+//  AllTrexxTracker
+>>>>>>> main
 //
 //  Created by merlos on 24/10/15.
 //

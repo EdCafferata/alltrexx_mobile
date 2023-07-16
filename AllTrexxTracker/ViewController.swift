@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 13/09/14.
 //
@@ -16,7 +16,11 @@ import CoreGPX
 
 /// App title
 
+<<<<<<< HEAD
 let kAppTitle: String = "  Open GPX Tracker"
+=======
+let kAppTitle: String = "  AllTrexx Tracker"
+>>>>>>> main
 /// Purple color for button background
 let kPurpleButtonBackgroundColor: UIColor =  UIColor(red: 146.0/255.0, green: 166.0/255.0, blue: 218.0/255.0, alpha: 0.90)
 

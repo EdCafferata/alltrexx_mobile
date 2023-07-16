@@ -1,6 +1,10 @@
 //
 //  GPXMapView.swift
+<<<<<<< HEAD
 //  OpenGpxTracker
+=======
+//  AllTrexxTracker
+>>>>>>> main
 //
 //  Created by merlos on 24/09/14.
 //

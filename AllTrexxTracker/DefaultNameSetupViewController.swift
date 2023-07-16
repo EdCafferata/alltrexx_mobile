@@ -1,6 +1,10 @@
 //
 //  DefaultNameSetupViewController.swift
+<<<<<<< HEAD
 //  OpenGpxTracker
+=======
+//  AllTrexxTracker
+>>>>>>> main
 //
 //  Created by Vincent on 3/3/20.
 //

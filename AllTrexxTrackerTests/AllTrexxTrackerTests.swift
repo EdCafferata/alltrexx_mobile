@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class OpenGpxTrackerTests: XCTestCase {
+class AllTrexxTrackerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

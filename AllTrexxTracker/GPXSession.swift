@@ -1,10 +1,18 @@
 //
 //  GPXSession.swift
+<<<<<<< HEAD
 //  OpenGpxTracker
 //
 //  Created by Vincent Neo on 13/6/19.
 //
 //  Shared file: this file is also included in the OpenGpxTracker-Watch Extension target.
+=======
+//  AllTrexxTracker
+//
+//  Created by Vincent Neo on 13/6/19.
+//
+//  Shared file: this file is also included in the AllTrexxTracker-Watch Extension target.
+>>>>>>> main
 
 import Foundation
 import CoreGPX

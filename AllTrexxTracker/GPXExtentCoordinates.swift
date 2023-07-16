@@ -1,6 +1,6 @@
 //
 //  GPXExtentCoordinates.swift
-//  OpenGpxTracker
+//  AllTrexxTracker
 //
 //  Created by merlos on 22/01/15.
 //

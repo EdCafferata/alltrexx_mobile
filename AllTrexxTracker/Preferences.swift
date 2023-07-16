@@ -1,11 +1,19 @@
 //
 //  Preferences.swift
+<<<<<<< HEAD
 //  OpenGpxTracker
+=======
+//  AllTrexxTracker
+>>>>>>> main
 //
 //  Created by merlos on 04/05/2019.
 //  Copyright © 2019 TransitBox. All rights reserved.
 //
+<<<<<<< HEAD
 // Shared file: this file is also included in the OpenGpxTracker-Watch Extension target.
+=======
+// Shared file: this file is also included in the AllTrexxTracker-Watch Extension target.
+>>>>>>> main
 
 import Foundation
 import CoreLocation
