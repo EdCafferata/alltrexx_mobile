@@ -1,6 +1,6 @@
 //
 //  ComplicationController.swift
-//  AllTrexxTracker-Watch Extension
+//  OpenGpxTracker-Watch Extension
 //
 //  Created by Vincent on 5/2/19.
 //  Copyright © 2019 TransitBox. All rights reserved.

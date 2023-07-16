@@ -17,7 +17,7 @@ public final class GPXBounds: GPXElement, Codable {
     /// Codable Implementation
     private enum CodingKeys: String, CodingKey {
         case minLatitude = "minlat"
-        case maxLatitude = "maxLat"
+        case maxLatitude = "maxlat"
         case minLongitude = "minlon"
         case maxLongitude = "maxlon"
     }
@@ -73,7 +73,7 @@ public final class GPXBounds: GPXElement, Codable {
     // MARK:- GPX
     
     override func addOpenTag(toGPX gpx: NSMutableString, indentationLevel: Int) {
-        let attribute = NSMutableString()
+        let attribute = NSMutableString(string: "")
         
         if let minLatitude = minLatitude {
             attribute.append(" minlat=\"\(minLatitude)\"")

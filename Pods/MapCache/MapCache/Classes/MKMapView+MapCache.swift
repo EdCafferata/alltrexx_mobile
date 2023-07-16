@@ -16,13 +16,14 @@ extension MKMapView {
     /// Will tell the map to use the cache passed as parameter for getting the tiles.
     ///
     /// - Parameter cache: A cache that implements the `MapCacheProtocol`. Typically an instance of `MapCache`
+    /// - Parameter canReplaceMapContent: Does the overlay replace the default map? It can be used to add a tile layer with centain level of transparency.
     ///
     /// - SeeAlso: `Readme`
     @discardableResult
-    public func useCache(_ cache: MapCacheProtocol) -> CachedTileOverlay {
+    public func useCache(_ cache: MapCacheProtocol, canReplaceMapContent: Bool = true) -> CachedTileOverlay {
 
         let tileServerOverlay = CachedTileOverlay(withCache: cache)
-        tileServerOverlay.canReplaceMapContent = true
+        tileServerOverlay.canReplaceMapContent = canReplaceMapContent
 
         // Don't set `maximumZ` when wanting "over zooming".
         // TileOverlay will stop trying in zoom levels beyond `maximumZ`.
@@ -39,7 +40,12 @@ extension MKMapView {
         }
         
         tileServerOverlay.tileSize = cache.config.tileSize
-        self.insertOverlay(tileServerOverlay, at: 0, level: .aboveLabels)
+        if let firstOverlay = self.overlays.first {
+            self.insertOverlay(tileServerOverlay, below: firstOverlay)
+        }
+        else {
+            self.addOverlay(tileServerOverlay, level: .aboveLabels)
+        }
         return tileServerOverlay
     }
 

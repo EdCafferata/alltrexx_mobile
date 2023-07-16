@@ -1,9 +1,9 @@
 //
-//  AllTrexxTrackerTests.swift
-//  AllTrexxTrackerTests
+//  OpenGpxTrackerTests.swift
+//  OpenGpxTrackerTests
 //
-//  Created by Cafferata on 13/02/2021.
-//  Copyright (c) 2021 All rights reserved.
+//  Created by merlos on 13/09/14.
+//  Copyright (c) 2014 TransitBox. All rights reserved.
 //
 
 import UIKit

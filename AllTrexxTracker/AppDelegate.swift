@@ -1,8 +1,9 @@
 //
 //  AppDelegate.swift
-//  AllTrexxTracker
-//  Created by Cafferata on 13/02/2021.
-//  Copyright (c) 2021 All rights reserved.
+//  OpenGpxTracker
+//
+//  Created by merlos on 13/09/14.
+//  Copyright (c) 2014 TransitBox. All rights reserved.
 //
 
 import UIKit
@@ -66,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        //self.saveContext()
+        // self.saveContext()
     }
     
     /// Default pandle load GPX file
@@ -210,9 +211,8 @@ extension AppDelegate: WCSessionDelegate {
     /// Called when a file is received from Apple Watch.
     /// Displays a popup informing about the reception of the file.
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
-        // swiftlint:disable force_cast
+        // swiftlint:disable:next force_cast
         let fileName = file.metadata!["fileName"] as! String?
-        
         DispatchQueue.global().sync {
             GPXFileManager.moveFrom(file.fileURL, fileName: fileName)
             print("ViewController:: Received file from WatchConnectivity Session")

@@ -1,33 +1,32 @@
-// Dutch Translation by @julian08100, submitted on 12/08/2020
 
-/* Class = "WKInterfaceLabel"; text = "signaal"; ObjectID = "036-aK-7ie"; */
+/* Class = "WKInterfaceLabel"; text = "signal"; ObjectID = "036-aK-7ie"; */
 "036-aK-7ie.text" = "signal";
 
-/* Class = "WKInterfaceLabel"; text = "Bestandsnaam"; ObjectID = "19n-8m-sC5"; */
+/* Class = "WKInterfaceLabel"; text = "File Name"; ObjectID = "19n-8m-sC5"; */
 "19n-8m-sC5.text" = "File Name";
 
-/* Class = "WKInterfaceButton"; title = "Bestanden bekijken"; ObjectID = "3QZ-4r-aMl"; */
+/* Class = "WKInterfaceButton"; title = "View files"; ObjectID = "3QZ-4r-aMl"; */
 "3QZ-4r-aMl.title" = "View files";
 
-/* Class = "WKInterfaceLabel"; text = "Snelheid"; ObjectID = "9yb-Lf-Jav"; */
+/* Class = "WKInterfaceLabel"; text = "speedValue"; ObjectID = "9yb-Lf-Jav"; */
 "9yb-Lf-Jav.text" = "speedValue";
 
-/* Class = "WKInterfaceLabel"; text = "Verzenden"; ObjectID = "AyV-DL-c4U"; */
+/* Class = "WKInterfaceLabel"; text = "Sending"; ObjectID = "AyV-DL-c4U"; */
 "AyV-DL-c4U.text" = "Sending";
 
-/* Class = "WKInterfaceLabel"; text = "SNELHEID"; ObjectID = "HGe-sg-FuE"; */
+/* Class = "WKInterfaceLabel"; text = "SPEED"; ObjectID = "HGe-sg-FuE"; */
 "HGe-sg-FuE.text" = "SPEED";
 
-/* Class = "WKInterfaceLabel"; text = "Alert label"; ObjectID = "IdU-wH-bcW"; */
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
 "IdU-wH-bcW.text" = "Alert Label";
 
-/* Class = "WKInterfaceLabel"; text = "Bestandsnaam"; ObjectID = "Nkq-Do-muS"; */
+/* Class = "WKInterfaceLabel"; text = "File Name"; ObjectID = "Nkq-Do-muS"; */
 "Nkq-Do-muS.text" = "File Name";
 
-/* Class = "WKInterfaceButton"; title = "Opslaan"; ObjectID = "Yfa-t6-5Sk"; */
+/* Class = "WKInterfaceButton"; title = "Save"; ObjectID = "Yfa-t6-5Sk"; */
 "Yfa-t6-5Sk.title" = "Save";
 
-/* Class = "WKInterfaceButton"; title = "Begin tracking"; ObjectID = "exN-t4-It8"; */
+/* Class = "WKInterfaceButton"; title = "Start Tracking"; ObjectID = "exN-t4-It8"; */
 "exN-t4-It8.title" = "Start Tracking";
 
 /* Class = "WKInterfaceLabel"; text = "altValue"; ObjectID = "fLq-xh-Kj9"; */
@@ -39,16 +38,16 @@
 /* Class = "WKInterfaceLabel"; text = "0m"; ObjectID = "jLD-vq-fZz"; */
 "jLD-vq-fZz.text" = "0m";
 
-/* Class = "WKInterfaceButton"; titel = "📍"; ObjectID = "juk-oB-3vV"; */
+/* Class = "WKInterfaceButton"; title = "📍"; ObjectID = "juk-oB-3vV"; */
 "juk-oB-3vV.title" = "📍";
 
-/* Class = "WKInterfaceLabel"; text = "Coordinaten"; ObjectID = "oWE-ge-dGJ"; */
+/* Class = "WKInterfaceLabel"; text = "COORDINATES"; ObjectID = "oWE-ge-dGJ"; */
 "oWE-ge-dGJ.text" = "COORDINATES";
 
-/* Class = "WKInterfaceLabel"; text = "HOOGTE"; ObjectID = "sOz-Cs-O7T"; */
+/* Class = "WKInterfaceLabel"; text = "ALTITUDE"; ObjectID = "sOz-Cs-O7T"; */
 "sOz-Cs-O7T.text" = "ALTITUDE";
 
-/* Class = "WKInterfaceLabel"; text = "coordinatenlabel"; ObjectID = "wh4-cP-QA2"; */
+/* Class = "WKInterfaceLabel"; text = "coordinatesLabel"; ObjectID = "wh4-cP-QA2"; */
 "wh4-cP-QA2.text" = "coordinatesLabel";
 
 /* Class = "WKInterfaceLabel"; text = "00:00"; ObjectID = "xum-IR-If6"; */

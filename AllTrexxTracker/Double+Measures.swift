@@ -1,7 +1,9 @@
 //
 //  Double+Meatures.swift
-//  AllTrexxTracker
-//  Created by Cafferata on 12/02/2021.
+//  OpenGpxTracker
+//
+//  Created by merlos on 03/05/2019.
+//
 // Shared file: this file is also included in the OpenGpxTracker-Watch Extension target.
 
 import Foundation
