@@ -9,7 +9,6 @@ voor de volledige feature-status en backlog.
 
 ## Eigenaar
 - **Ed Cafferata** (edcafferata@icloud.com)
-- **Mede-eigenaar:** Jim Orie
 - **Ondersteund door:** The IT Crowd
 
 ## Locatie

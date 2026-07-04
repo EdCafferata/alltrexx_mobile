@@ -5,7 +5,6 @@ Alltrexx Mobile — iOS/Android mobiele app voor het Alltrexx platform.
 
 ## Eigenaar
 - **Ed Cafferata** (edcafferata@icloud.com)
-- **Mede-eigenaar:** Jim Orie
 - **Team ID:** `9J2S23WJH3`
 
 ## Locatie & build
