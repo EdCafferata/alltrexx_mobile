@@ -1,0 +1,25 @@
+Versie 2.2.0
+
+Nieuw
+• OWM kleurlegenda — bij elke weerlaag verschijnt een kleurschaal in de kaarthoek zodat je meteen begrijpt wat je ziet
+• Windsnelheid in knopen — zichtbaar als getal onder de Beaufort-cirkel op de kaart
+• Neerslag mm/uur — actuele neerslagintensiteit toegevoegd aan de infobalk
+• Info-knop verplaatst naar de bovenste rij, naast de deelknop
+
+Live weerdata
+Windrichting, windkracht (Beaufort), temperatuur, zicht, luchtdruk en golfhoogte — direct in beeld via Open-Meteo.
+
+OpenWeatherMap kaartlagen
+Neerslag, bewolking, wind, luchtdruk of temperatuur als overlay over je navigatiekaart. Gratis OWM-account vereist.
+
+Waterstand Markermeer
+Automatisch opgehaald via Rijkswaterstaat, elke 10 minuten bijgewerkt (cm NAP).
+
+GPS-batterijbesparing
+Vier automatische GPS-profielen op basis van vaarsnelheid — tot 80% minder batterijverbruik bij stilliggen.
+
+Koers-up modus
+De kaart draait automatisch mee met je vaarrichting.
+
+Apple Watch
+Zelfstandig GPX-sporen opnemen, waypoints toevoegen en spoor draadloos naar iPhone sturen.

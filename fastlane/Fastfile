@@ -1,0 +1,111 @@
+default_platform(:ios)
+
+API_KEY = app_store_connect_api_key(
+  key_id:        "G389F99P3B",
+  issuer_id:     "69a6de7f-a9c3-47e3-e053-5b8c7c11a4d1",
+  key_filepath:  "#{Dir.home}/.appstoreconnect/private_keys/AuthKey_G389F99P3B.p8"
+)
+
+SCHEME       = "AlltrexxMobile"
+PROJECT      = "AlltrexxMobile.xcodeproj"
+BUNDLE_ID    = "info.cafferata.alltrexxmobile"
+SCREENSHOTS  = "AppStore/Screenshots"
+
+platform :ios do
+
+  # ─── TestFlight ────────────────────────────────────────────────────────────
+  desc "Build en upload naar TestFlight"
+  lane :beta do
+    increment_build_number(xcodeproj: PROJECT)
+    build_app(
+      project:           PROJECT,
+      scheme:            SCHEME,
+      configuration:     "Release",
+      export_method:     "app-store",
+      export_options: {
+        provisioningProfiles: {
+          BUNDLE_ID => "match AppStore #{BUNDLE_ID}"
+        }
+      }
+    )
+    upload_to_testflight(
+      api_key: API_KEY,
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  # ─── App Store release ─────────────────────────────────────────────────────
+  desc "Build, upload naar App Store en dien in ter beoordeling"
+  lane :release do
+    increment_build_number(xcodeproj: PROJECT)
+    build_app(
+      project:           PROJECT,
+      scheme:            SCHEME,
+      configuration:     "Release",
+      export_method:     "app-store",
+      export_options: {
+        provisioningProfiles: {
+          BUNDLE_ID => "match AppStore #{BUNDLE_ID}"
+        }
+      }
+    )
+    upload_to_app_store(
+      api_key:                      API_KEY,
+      submit_for_review:            true,
+      automatic_release:            false,
+      force:                        true,
+      skip_screenshots:             false,
+      screenshots_path:             SCREENSHOTS,
+      metadata_path:                "fastlane/metadata",
+      submission_information: {
+        add_id_info_uses_idfa: false
+      }
+    )
+  end
+
+  # ─── Alleen screenshots uploaden ───────────────────────────────────────────
+  desc "Upload screenshots naar App Store Connect"
+  lane :screenshots do
+    upload_to_app_store(
+      api_key:                              API_KEY,
+      app_identifier:                       BUNDLE_ID,
+      skip_binary_upload:                   true,
+      skip_metadata:                        true,
+      force:                                true,
+      edit_live:                            true,
+      run_precheck_before_submit:           false,
+      screenshots_path:                     SCREENSHOTS,
+      ignore_language_directory_validation: true
+    )
+  end
+
+  # ─── Alleen metadata uploaden (voor versie in voorbereiding) ──────────────
+  desc "Upload beschrijving en release notes naar App Store Connect"
+  lane :metadata do
+    upload_to_app_store(
+      api_key:                    API_KEY,
+      app_identifier:             BUNDLE_ID,
+      skip_binary_upload:         true,
+      skip_screenshots:           true,
+      force:                      true,
+      run_precheck_before_submit: false,
+      metadata_path:              "fastlane/metadata"
+    )
+  end
+
+  # ─── Alleen promotional tekst updaten (werkt op live versie) ───────────────
+  desc "Update promotional tekst op de live versie"
+  lane :promo do
+    upload_to_app_store(
+      api_key:                    API_KEY,
+      app_identifier:             BUNDLE_ID,
+      skip_binary_upload:         true,
+      skip_screenshots:           true,
+      force:                      true,
+      edit_live:                  true,
+      run_precheck_before_submit: false,
+      metadata_path:              "fastlane/metadata_promo"
+    )
+  end
+
+end

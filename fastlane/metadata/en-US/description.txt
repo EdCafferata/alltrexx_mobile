@@ -1,0 +1,52 @@
+GPS tracker built for the Blocq van Kuffeler sailing event.
+
+Record your route on iPhone and Apple Watch. No account, no subscription, no fuss — just sail and record.
+
+Live Weather Information
+• Wind direction, Beaufort force and gusts displayed on screen
+• Temperature, feels-like temperature and visibility
+• Air pressure with rising/falling trend
+• Wave height and wave period
+• Markermeer water level via Rijkswaterstaat (cm NAP, every 10 minutes)
+• Current estimate based on live wind data
+
+OpenWeatherMap Layers
+• Overlay a live weather map on your navigation chart
+• Choose from: precipitation, clouds, wind, pressure or temperature
+• Free OpenWeatherMap account required (via Settings)
+
+Map & Navigation
+• Speed-based map zoom — the map automatically adjusts to your speed
+• Course-up mode — the map rotates to match your heading
+• Choose your map server: Apple Maps, OpenStreetMap, OpenSeaMap, CartoDB, CartoDB Dark or OpenTopoMap
+• Offline map cache — browse your sailing area in advance, even without internet
+
+GPS & Recording
+• Record your full sailing route as a GPX track
+• Pause and resume recording underway
+• Merge multiple sessions
+• Add waypoints at your current location or by long-pressing the map
+• Edit, move or delete waypoints
+
+Battery Saving
+• Smart GPS accuracy based on speed — up to 80% savings at anchor
+• Charger mode: always maximum accuracy when the phone is plugged in
+
+Safety
+• "Continue" option in the reset screen — accidentally tapped reset? Your session keeps running
+
+Sharing & Export
+• Export your GPX file via email, AirDrop or any other app
+• Import existing GPX files from other navigation apps
+
+Apple Watch
+• Record GPX tracks independently on the Watch
+• Pause, resume and save directly from your wrist
+• Display GPS signal strength
+
+Privacy
+• No account required
+• No subscription
+• All GPS data stays on your device — nothing is shared with third parties
+
+Available in 11 languages: Dutch, English, German, Spanish, French, Italian, Finnish, Portuguese, Russian, Ukrainian and Chinese.

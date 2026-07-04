@@ -1,0 +1,52 @@
+GPS-tracker speciaal gebouwd voor de Blocq van Kuffeler.
+
+Leg je vaarroute vast op iPhone én Apple Watch. Geen account, geen abonnement, geen gedoe — gewoon varen en opnemen.
+
+Live Weerinformatie
+• Windrichting, windkracht (Beaufort) en windstoten direct in beeld
+• Temperatuur, gevoelstemperatuur en zicht
+• Luchtdruk met stijging/daling trend
+• Golfhoogte en golfperiode
+• Waterstand Markermeer via Rijkswaterstaat (cm NAP, elke 10 minuten)
+• Stroomindicatie op basis van actuele winddata
+
+OpenWeatherMap Kaartlagen
+• Leg een live weerkaart over je navigatiekaart
+• Kies uit: neerslag, bewolking, wind, luchtdruk of temperatuur
+• Gratis OpenWeatherMap account vereist (via Instellingen)
+
+Kaart & Navigatie
+• Snelheidsgebaseerde kaart-zoom — de kaart zoomt automatisch mee met je vaartsnelheid
+• Koers-up modus — de kaart draait mee met je vaarrichting
+• Kies je kaartserver: Apple Maps, OpenStreetMap, OpenSeaMap, CartoDB, CartoDB Dark of OpenTopoMap
+• Offline kaartcache — browse het vaargebied vooraf, ook zonder internet
+
+GPS & Opname
+• Registreer je volledige vaarroute als GPX-spoor
+• Pauze en hervat de opname onderweg
+• Meerdere sessies samenvoegen
+• Waypoints toevoegen op je huidige locatie of via lang indrukken op de kaart
+• Waypoint naam bewerken, verplaatsen of verwijderen
+
+Batterijbesparing
+• Slimme GPS-nauwkeurigheid op basis van vaartsnelheid — tot 80% besparing bij stilliggen
+• Lader-modus: altijd maximale nauwkeurigheid als de telefoon aan de stroom hangt
+
+Veiligheid
+• "Doorgaan" optie in het reset-scherm — per ongeluk getikt? Je rit loopt gewoon verder
+
+Delen & Export
+• Exporteer je GPX-bestand via e-mail, AirDrop of elke andere app
+• Importeer bestaande GPX-bestanden vanuit andere navigatie-apps
+
+Apple Watch
+• Zelfstandig GPX-sporen opnemen op de Watch
+• Pauze, hervat en opslaan rechtstreeks vanaf je pols
+• GPS-signaalsterkte weergeven
+
+Privacy
+• Geen account aanmaken
+• Geen abonnement
+• Alle GPS-data blijft op jouw apparaat — niets wordt gedeeld met derden
+
+Beschikbaar in 11 talen: Nederlands, Engels, Duits, Spaans, Frans, Italiaans, Fins, Portugees, Russisch, Oekraïens en Chinees.

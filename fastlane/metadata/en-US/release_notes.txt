@@ -1,0 +1,25 @@
+Version 2.2.0
+
+New
+• OWM colour legend — a colour scale appears in the map corner for each weather layer so you instantly understand what you see
+• Wind speed in knots — displayed as a number below the Beaufort circle on the map
+• Precipitation mm/h — current rainfall intensity added to the info bar
+• Info button moved to the top row, next to the share button
+
+Live weather data
+Wind direction, Beaufort force, temperature, visibility, air pressure and wave height — shown directly on screen via Open-Meteo.
+
+OpenWeatherMap layers
+Precipitation, clouds, wind, pressure or temperature as an overlay on your navigation map. Free OWM account required.
+
+Markermeer water level
+Automatically retrieved via Rijkswaterstaat, updated every 10 minutes (cm NAP).
+
+GPS battery saving
+Four automatic GPS profiles based on sailing speed — up to 80% less battery use when stationary.
+
+Course-up mode
+The map automatically rotates to match your heading.
+
+Apple Watch
+Record GPX tracks independently, add waypoints and wirelessly send the track to your iPhone.

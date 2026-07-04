@@ -1,0 +1,25 @@
+Version 2.2.0
+
+Neu
+• OWM-Farbskala — bei jeder Wetterkarte erscheint eine Legende in der Kartenecke
+• Windgeschwindigkeit in Knoten — als Zahl unter dem Beaufort-Kreis auf der Karte
+• Niederschlag mm/h — aktuelle Regenintensität in der Informationsleiste
+• Info-Schaltfläche in die obere Reihe neben die Teilen-Schaltfläche verschoben
+
+Live-Wetterdaten
+Windrichtung, Windstärke (Beaufort), Temperatur, Sicht, Luftdruck und Wellenhöhe — direkt auf dem Bildschirm via Open-Meteo.
+
+OpenWeatherMap-Kartenebenen
+Niederschlag, Wolken, Wind, Luftdruck oder Temperatur als Überlagerung auf der Navigationskarte. Kostenloses OWM-Konto erforderlich.
+
+Wasserstand Markermeer
+Automatisch über Rijkswaterstaat abgerufen, alle 10 Minuten aktualisiert (cm NAP).
+
+GPS-Akkuschonung
+Vier automatische GPS-Profile basierend auf der Fahrgeschwindigkeit — bis zu 80% weniger Akkuverbrauch im Stand.
+
+Kurs-oben-Modus
+Die Karte dreht sich automatisch mit der Fahrtrichtung.
+
+Apple Watch
+GPX-Spuren selbstständig aufnehmen, Wegpunkte hinzufügen und Spur drahtlos an iPhone senden.

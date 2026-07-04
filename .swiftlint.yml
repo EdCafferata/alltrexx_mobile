@@ -1,0 +1,18 @@
+disabled_rules:
+  - trailing_whitespace
+  - nesting
+  - identifier_name
+
+excluded:
+  - Pods
+
+line_length: 150
+
+
+# try and remove these after we refactor some concerns out of the main view controller
+type_body_length:
+  - 300 # warning
+  - 800 # error
+function_body_length:
+  - 50
+  - 250

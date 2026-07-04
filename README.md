@@ -1,6 +1,11 @@
 # Alltrexx Mobile
 
-Alltrexx Mobile — iOS/Android app voor het Alltrexx platform.
+Alltrexx Mobile — iOS-app voor het Alltrexx platform. Kies bij het openen wat voor
+tracker dit toestel is (persoon, boot, fiets, auto, trein, vliegtuig) en volg jezelf
+mee op [alltrexx.live](https://alltrexx.live).
+
+**Status:** eerste scherm (typeselectie + sleutel aanmaken) werkt. Zie `CLAUDE.md`
+voor de volledige feature-status en backlog.
 
 ## Eigenaar
 - **Ed Cafferata** (edcafferata@icloud.com)

@@ -1,0 +1,7 @@
+app_identifier "info.cafferata.alltrexxmobile"
+apple_id "edcafferata@icloud.com"
+team_id "9J2S23WJH3"
+itc_team_id "122369439"
+
+# App Store Connect API
+api_key_path "~/.appstoreconnect/private_keys/AuthKey_G389F99P3B.p8"
