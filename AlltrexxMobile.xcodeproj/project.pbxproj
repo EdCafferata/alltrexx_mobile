@@ -10,6 +10,7 @@
 		000EB12B084F7693ED015802 /* WindAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFBF5B22A4E7294A7F0F272 /* WindAnnotation.swift */; };
 		0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0175AC0123F014C7003323C3 /* LaunchScreen.storyboard */; };
 		16087F5EA3979A32A287D555 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */; };
+		3450286509CF43324C5C766B /* SpoorwegenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1DC4344ED4653B3958CB6 /* SpoorwegenOverlay.swift */; };
 		38014231B7C6C6EC0A845AB9 /* LiveKaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7FD0DF6413AAD60B39BAF /* LiveKaartViewController.swift */; };
 		43BE62B36963F2A4CB40FBA3 /* PositieLogboek.swift in Sources */ = {isa = PBXBuildFile; fileRef = A112BD76CFFE3B3A2199769A /* PositieLogboek.swift */; };
 		4491E3437136030052113B25 /* OWMLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8B61090C3379205B06047D /* OWMLegendView.swift */; };
@@ -17,6 +18,8 @@
 		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
 		48B961C3CB2EEB4C1F475B5D /* PositieLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17410F3F384071BC488C0B5 /* PositieLogEntry.swift */; };
 		500BB791B1DFCE5F2AED2987 /* OpenTopoMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8A046B309275BD6942150 /* OpenTopoMapOverlay.swift */; };
+		56715E63BBD4A87E7B9C5EE6 /* CartoLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCB145358BAF08C4B7C07D4 /* CartoLightOverlay.swift */; };
+		5B32E6EB19A55850EE1280C6 /* OpenAIPOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */; };
 		634B2185C53356A65E4E66C1 /* OpenSeaMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2284713A96FC4ED232F4C32 /* OpenSeaMapOverlay.swift */; };
 		73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */; };
 		898EECDB19C49B5800B4B207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EECDA19C49B5800B4B207 /* AppDelegate.swift */; };
@@ -28,10 +31,13 @@
 		94FAD2CEE723BC165D731750 /* PositieUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16179D8EA12F7BD15869DE4A /* PositieUploader.swift */; };
 		A77708A9C25DA0C1D20F045E /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD863FC70B2A552358EBFA99 /* KaartViewController.swift */; };
 		B41A822F5CDAFF4A97AA51FA /* HoofdTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */; };
+		BD8CBF9B9D7B76F044F9B9C5 /* WaymarkedTrailsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038AECF80D36E1FB5ACCB0F /* WaymarkedTrailsOverlay.swift */; };
 		BE20738519C27B31DE624712 /* TrackerOpslag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6AD3D558EAD260A5850CA /* TrackerOpslag.swift */; };
 		BF637D132216C5FA0003EC04 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BFC7063CBAA96FEBEAF86AD2 /* OpenAIPSleutel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE40FDB4785086F9CC65D6 /* OpenAIPSleutel.swift */; };
 		C9F4EDE4803FFBBF79D3EA8E /* LocatieWaarnemer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */; };
 		DAC0A43E113CB5B44EFE0DED /* OWMTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84D6E6844E0FAFFB94DE0C /* OWMTileOverlay.swift */; };
+		DCEB8E430FB72398A6B3946F /* CyclOSMOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CC3D1A17810DCF7AE3AC2 /* CyclOSMOverlay.swift */; };
 		E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */; };
 		ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11819567B86343CC5C46FCD0 /* LocatieManager.swift */; };
 		F0089F14224633351A06094B /* OWMSleutel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9207132F97DB552D8E350EDC /* OWMSleutel.swift */; };
@@ -52,6 +58,7 @@
 		0175AC0323F014EA003323C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0175AC0523F01519003323C3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0175AC0723F01523003323C3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1038AECF80D36E1FB5ACCB0F /* WaymarkedTrailsOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WaymarkedTrailsOverlay.swift; sourceTree = "<group>"; };
 		11819567B86343CC5C46FCD0 /* LocatieManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocatieManager.swift; sourceTree = "<group>"; };
 		1262DD9824F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12A804A92656CE8200CA77C6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -60,11 +67,15 @@
 		16179D8EA12F7BD15869DE4A /* PositieUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PositieUploader.swift; sourceTree = "<group>"; };
 		4588D66C230D23AA009AA75F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4588D66E230D23AD009AA75F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenAIPOverlay.swift; sourceTree = "<group>"; };
+		62F1DC4344ED4653B3958CB6 /* SpoorwegenOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpoorwegenOverlay.swift; sourceTree = "<group>"; };
+		69BE40FDB4785086F9CC65D6 /* OpenAIPSleutel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenAIPSleutel.swift; sourceTree = "<group>"; };
 		7D84D6E6844E0FAFFB94DE0C /* OWMTileOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OWMTileOverlay.swift; sourceTree = "<group>"; };
 		7FE6AD3D558EAD260A5850CA /* TrackerOpslag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackerOpslag.swift; sourceTree = "<group>"; };
 		836B1BAE2E7DC7D500285130 /* MapCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MapCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836B1BB22E7DC7E900285130 /* CoreGPX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreGPX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE40632499509900ED7D6D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		875CC3D1A17810DCF7AE3AC2 /* CyclOSMOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CyclOSMOverlay.swift; sourceTree = "<group>"; };
 		892A57402838A865003FE8C5 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		898E2BE023129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		898EECD519C49B5800B4B207 /* AlltrexxMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlltrexxMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +92,7 @@
 		89D2F8FA1DD7FAF600A52D64 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AlltrexxMobile-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
 		89D2F8FC1DD7FAFA00A52D64 /* iOS_GPX_Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOS_GPX_Framework.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AlltrexxMobile-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/iOS-GPX-Framework/iOS_GPX_Framework.framework"; sourceTree = "<group>"; };
 		89D2F8FE1DD7FAFF00A52D64 /* TBXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TBXML.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AlltrexxMobile-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/TBXML/TBXML.framework"; sourceTree = "<group>"; };
+		8FCB145358BAF08C4B7C07D4 /* CartoLightOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CartoLightOverlay.swift; sourceTree = "<group>"; };
 		9207132F97DB552D8E350EDC /* OWMSleutel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OWMSleutel.swift; sourceTree = "<group>"; };
 		9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HoofdTabBarController.swift; sourceTree = "<group>"; };
 		A112BD76CFFE3B3A2199769A /* PositieLogboek.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PositieLogboek.swift; sourceTree = "<group>"; };
@@ -165,6 +177,12 @@
 				9207132F97DB552D8E350EDC /* OWMSleutel.swift */,
 				E2284713A96FC4ED232F4C32 /* OpenSeaMapOverlay.swift */,
 				DDC8A046B309275BD6942150 /* OpenTopoMapOverlay.swift */,
+				1038AECF80D36E1FB5ACCB0F /* WaymarkedTrailsOverlay.swift */,
+				875CC3D1A17810DCF7AE3AC2 /* CyclOSMOverlay.swift */,
+				8FCB145358BAF08C4B7C07D4 /* CartoLightOverlay.swift */,
+				62F1DC4344ED4653B3958CB6 /* SpoorwegenOverlay.swift */,
+				69BE40FDB4785086F9CC65D6 /* OpenAIPSleutel.swift */,
+				58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */,
 			);
 			path = AlltrexxMobile;
 			sourceTree = "<group>";
@@ -354,6 +372,12 @@
 				F0089F14224633351A06094B /* OWMSleutel.swift in Sources */,
 				634B2185C53356A65E4E66C1 /* OpenSeaMapOverlay.swift in Sources */,
 				500BB791B1DFCE5F2AED2987 /* OpenTopoMapOverlay.swift in Sources */,
+				BD8CBF9B9D7B76F044F9B9C5 /* WaymarkedTrailsOverlay.swift in Sources */,
+				DCEB8E430FB72398A6B3946F /* CyclOSMOverlay.swift in Sources */,
+				56715E63BBD4A87E7B9C5EE6 /* CartoLightOverlay.swift in Sources */,
+				3450286509CF43324C5C766B /* SpoorwegenOverlay.swift in Sources */,
+				BFC7063CBAA96FEBEAF86AD2 /* OpenAIPSleutel.swift in Sources */,
+				5B32E6EB19A55850EE1280C6 /* OpenAIPOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

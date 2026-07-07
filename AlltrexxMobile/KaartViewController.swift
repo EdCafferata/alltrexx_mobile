@@ -29,29 +29,43 @@ final class KaartViewController: UIViewController {
         LocatieManager.shared.voegWaarnemerToe(self)
     }
 
-    /// Elke categorie krijgt een passende kaartweergave: Boot vaart met
-    /// vaarwegmarkeringen (OpenSeaMap), Persoon en Fiets krijgen een
-    /// topografische kaart (hoogtelijnen, paden) van OpenTopoMap, Auto ziet
-    /// actuele verkeersdrukte, Vliegtuig krijgt een luchtfoto — Trein de gewone kaart.
+    /// Elke categorie krijgt dezelfde kaartweergave als het bijbehorende preset
+    /// op de alltrexx.live-webkaart (KAART_PRESETS in TrackerKaart.js), zodat
+    /// Live kaart en Tracking-scherm gelijk blijven:
+    /// - Boot: gewone kaart + vaarwegmarkeringen (OpenSeaMap)
+    /// - Fiets: CyclOSM-kaart + fietsroutes (Waymarked Trails)
+    /// - Auto: gewone kaart, geen extra laag
+    /// - Vliegtuig: lichte kaart + luchtvaartlaag (OpenAIP, als er een sleutel is)
+    /// - Persoon (wandelen): topografische kaart + wandelroutes (Waymarked Trails)
+    /// - Trein: lichte kaart + spoorwegenlaag (OpenRailwayMap)
     private func pasKaartAanOpCategorie() {
+        kaart.mapType = .standard
+
         switch TrackerOpslag.type {
         case .boat:
-            kaart.mapType = .standard
             let overlay = OpenSeaMapOverlay.make()
             openSeaMapOverlay = overlay
             kaart.addOverlay(overlay, level: .aboveLabels)
-        case .person, .bike:
-            kaart.mapType = .standard
+        case .bike:
+            kaart.addOverlay(CyclOSMOverlay.make())
+            kaart.addOverlay(WaymarkedTrailsOverlay.make(.fietsen), level: .aboveRoads)
+        case .car:
+            break
+        case .plane:
+            kaart.addOverlay(CartoLightOverlay.make())
+            if let sleutel = OpenAIPSleutel.waarde, !sleutel.isEmpty {
+                kaart.addOverlay(OpenAIPOverlay.make(apiKey: sleutel), level: .aboveRoads)
+            }
+        case .person:
             let overlay = OpenTopoMapOverlay.make()
             openTopoMapOverlay = overlay
-            kaart.addOverlay(overlay, level: .aboveRoads)
-        case .car:
-            kaart.mapType = .standard
-            kaart.showsTraffic = true
-        case .plane:
-            kaart.mapType = .satellite
-        case .train, .none:
-            kaart.mapType = .standard
+            kaart.addOverlay(overlay)
+            kaart.addOverlay(WaymarkedTrailsOverlay.make(.wandelen), level: .aboveRoads)
+        case .train:
+            kaart.addOverlay(CartoLightOverlay.make())
+            kaart.addOverlay(SpoorwegenOverlay.make(), level: .aboveRoads)
+        case .none:
+            break
         }
     }
 
@@ -253,11 +267,8 @@ extension KaartViewController: MKMapViewDelegate {
         if overlay is OWMTileOverlay {
             return OWMTileRenderer(tileOverlay: overlay as! MKTileOverlay)
         }
-        if let seaMap = overlay as? OpenSeaMapOverlay {
-            return MKTileOverlayRenderer(tileOverlay: seaMap)
-        }
-        if let topoMap = overlay as? OpenTopoMapOverlay {
-            return MKTileOverlayRenderer(tileOverlay: topoMap)
+        if let tileOverlay = overlay as? MKTileOverlay {
+            return MKTileOverlayRenderer(tileOverlay: tileOverlay)
         }
         if let polyline = overlay as? MKPolyline {
             let renderer = MKPolylineRenderer(overlay: polyline)
