@@ -15,6 +15,7 @@ final class KaartViewController: UIViewController {
     private var posities: [CLLocationCoordinate2D] = []
     private var heeftKaartGecentreerd = false
     private var owmOverlay: OWMTileOverlay?
+    private var openSeaMapOverlay: OpenSeaMapOverlay?
     private var laatsteWindOphaal: Date?
 
     override func viewDidLoad() {
@@ -22,8 +23,29 @@ final class KaartViewController: UIViewController {
         view.backgroundColor = .systemBackground
         bouwKaart()
         bouwKnoppen()
+        pasKaartAanOpCategorie()
         werkWeerWeergaveBij()
         LocatieManager.shared.voegWaarnemerToe(self)
+    }
+
+    /// Elke categorie krijgt een passende kaartweergave: Boot vaart met
+    /// vaarwegmarkeringen (OpenSeaMap), Auto ziet actuele verkeersdrukte,
+    /// Vliegtuig krijgt een luchtfoto — de rest de gewone kaart.
+    private func pasKaartAanOpCategorie() {
+        switch TrackerOpslag.type {
+        case .boat:
+            kaart.mapType = .standard
+            let overlay = OpenSeaMapOverlay.make()
+            openSeaMapOverlay = overlay
+            kaart.addOverlay(overlay, level: .aboveLabels)
+        case .car:
+            kaart.mapType = .standard
+            kaart.showsTraffic = true
+        case .plane:
+            kaart.mapType = .satellite
+        case .person, .bike, .train, .none:
+            kaart.mapType = .standard
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -223,6 +245,9 @@ extension KaartViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is OWMTileOverlay {
             return OWMTileRenderer(tileOverlay: overlay as! MKTileOverlay)
+        }
+        if let seaMap = overlay as? OpenSeaMapOverlay {
+            return MKTileOverlayRenderer(tileOverlay: seaMap)
         }
         if let polyline = overlay as? MKPolyline {
             let renderer = MKPolylineRenderer(overlay: polyline)
