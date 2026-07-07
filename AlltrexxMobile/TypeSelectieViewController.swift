@@ -83,7 +83,8 @@ final class TypeSelectieViewController: UIViewController {
             case .success(let sleutel):
                 TrackerOpslag.token = sleutel.token
                 TrackerOpslag.type = type
-                self.toonMelding(titel: "Sleutel aangemaakt", tekst: "\(type.emoji) \(type.label) — \"\(sleutel.naam)\" is toegevoegd aan Alltrexx Live.")
+                TrackerOpslag.trackingActief = true
+                self.view.window?.rootViewController = StatusViewController()
             case .failure(let error):
                 self.toonMelding(titel: "Mislukt", tekst: "Kon geen sleutel aanmaken: \(error.localizedDescription)")
             }

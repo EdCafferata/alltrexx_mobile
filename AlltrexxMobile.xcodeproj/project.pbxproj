@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0175AC0123F014C7003323C3 /* LaunchScreen.storyboard */; };
+		16087F5EA3979A32A287D555 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */; };
 		4500E4487F9F2191742596E8 /* TrackerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B656274A54961E695C1DEF4B /* TrackerType.swift */; };
 		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
 		73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */; };
@@ -20,6 +21,7 @@
 		BE20738519C27B31DE624712 /* TrackerOpslag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6AD3D558EAD260A5850CA /* TrackerOpslag.swift */; };
 		BF637D132216C5FA0003EC04 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */; };
+		ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11819567B86343CC5C46FCD0 /* LocatieManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 		0175AC0323F014EA003323C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0175AC0523F01519003323C3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0175AC0723F01523003323C3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		11819567B86343CC5C46FCD0 /* LocatieManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocatieManager.swift; sourceTree = "<group>"; };
 		1262DD9824F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12A804A92656CE8200CA77C6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		12A804AD2656CE8300CA77C6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		BF692F632209AAFB00F8A0F1 /* AlltrexxMobile-Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AlltrexxMobile-Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3047D2312D8A10012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D39420E523CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypeSelectieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +124,8 @@
 				AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */,
 				7FE6AD3D558EAD260A5850CA /* TrackerOpslag.swift */,
 				E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */,
+				11819567B86343CC5C46FCD0 /* LocatieManager.swift */,
+				E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */,
 			);
 			path = AlltrexxMobile;
 			sourceTree = "<group>";
@@ -294,6 +300,8 @@
 				E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */,
 				BE20738519C27B31DE624712 /* TrackerOpslag.swift in Sources */,
 				73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */,
+				ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */,
+				16087F5EA3979A32A287D555 /* StatusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
