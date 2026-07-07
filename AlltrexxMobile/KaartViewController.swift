@@ -10,6 +10,7 @@ final class KaartViewController: UIViewController {
     private let kaart = MKMapView()
     private let legende = OWMLegendView()
     private let weerKnop = UIButton(configuration: .filled())
+    private let luchtvaartKnop = UIButton(configuration: .filled())
     private let startKnop = UIButton(configuration: .filled())
 
     private var posities: [CLLocationCoordinate2D] = []
@@ -17,6 +18,7 @@ final class KaartViewController: UIViewController {
     private var owmOverlay: OWMTileOverlay?
     private var openSeaMapOverlay: OpenSeaMapOverlay?
     private var openTopoMapOverlay: OpenTopoMapOverlay?
+    private var openAIPOverlay: OpenAIPOverlay?
     private var laatsteWindOphaal: Date?
 
     override func viewDidLoad() {
@@ -53,9 +55,7 @@ final class KaartViewController: UIViewController {
             break
         case .plane:
             kaart.addOverlay(CartoLightOverlay.make())
-            if let sleutel = OpenAIPSleutel.waarde, !sleutel.isEmpty {
-                kaart.addOverlay(OpenAIPOverlay.make(apiKey: sleutel), level: .aboveRoads)
-            }
+            toonLuchtvaart(true)
         case .person:
             let overlay = OpenTopoMapOverlay.make()
             openTopoMapOverlay = overlay
@@ -104,10 +104,15 @@ final class KaartViewController: UIViewController {
         weerKnop.configuration?.cornerStyle = .capsule
         weerKnop.addAction(UIAction { [weak self] _ in self?.tikWeer() }, for: .touchUpInside)
 
+        luchtvaartKnop.configuration?.title = "✈️ Luchtvaart"
+        luchtvaartKnop.configuration?.cornerStyle = .capsule
+        luchtvaartKnop.isHidden = TrackerOpslag.type != .plane
+        luchtvaartKnop.addAction(UIAction { [weak self] _ in self?.tikLuchtvaart() }, for: .touchUpInside)
+
         startKnop.configuration?.cornerStyle = .capsule
         startKnop.addAction(UIAction { [weak self] _ in self?.tikStart() }, for: .touchUpInside)
 
-        let stack = UIStackView(arrangedSubviews: [weerKnop, startKnop])
+        let stack = UIStackView(arrangedSubviews: [weerKnop, luchtvaartKnop, startKnop])
         stack.axis = .horizontal
         stack.spacing = 12
         stack.distribution = .fillEqually
@@ -164,6 +169,51 @@ final class KaartViewController: UIViewController {
         weerKnop.configuration?.baseBackgroundColor = aan ? .systemBlue : .secondarySystemBackground
         weerKnop.configuration?.baseForegroundColor = aan ? .white : .label
         legende.isHidden = !aan
+    }
+
+    // MARK: - Luchtvaartlaag (alleen categorie Vliegtuig)
+
+    private func tikLuchtvaart() {
+        guard let sleutel = OpenAIPSleutel.waarde, !sleutel.isEmpty else {
+            vraagOpenAIPSleutel()
+            return
+        }
+        toonLuchtvaart(!(openAIPOverlay != nil))
+    }
+
+    private func vraagOpenAIPSleutel() {
+        let alert = UIAlertController(
+            title: "OpenAIP-sleutel",
+            message: "Voor de luchtvaartlaag (vliegvelden & luchtruim) is een gratis OpenAIP API-sleutel nodig (openaip.net), zelfde als op alltrexx.live.",
+            preferredStyle: .alert
+        )
+        alert.addTextField { $0.placeholder = "API-sleutel" }
+        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Opslaan", style: .default) { [weak self, weak alert] _ in
+            guard let sleutel = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines), !sleutel.isEmpty else { return }
+            OpenAIPSleutel.waarde = sleutel
+            self?.toonLuchtvaart(true)
+        })
+        present(alert, animated: true)
+    }
+
+    private func toonLuchtvaart(_ aan: Bool) {
+        if let bestaand = openAIPOverlay {
+            kaart.removeOverlay(bestaand)
+            openAIPOverlay = nil
+        }
+        if aan, let sleutel = OpenAIPSleutel.waarde, !sleutel.isEmpty {
+            let overlay = OpenAIPOverlay.make(apiKey: sleutel)
+            openAIPOverlay = overlay
+            kaart.addOverlay(overlay, level: .aboveRoads)
+        }
+        werkLuchtvaartWeergaveBij()
+    }
+
+    private func werkLuchtvaartWeergaveBij() {
+        let aan = openAIPOverlay != nil
+        luchtvaartKnop.configuration?.baseBackgroundColor = aan ? .systemBlue : .secondarySystemBackground
+        luchtvaartKnop.configuration?.baseForegroundColor = aan ? .white : .label
     }
 
     // MARK: - Tracking-knop (zelfde status als het Status-scherm)
