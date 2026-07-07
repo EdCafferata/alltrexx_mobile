@@ -1,12 +1,13 @@
 import CoreLocation
 
-/// Vraagt locatietoestemming en stuurt periodiek de positie door naar Alltrexx Live
-/// via `AlltrexxAPI.stuurPositie`, zolang tracking actief is.
+/// Vraagt locatietoestemming en logt periodiek de positie in `PositieLogboek`,
+/// zolang tracking actief is. `PositieUploader` verstuurt dat logboek (inclusief
+/// eventuele achterstand) naar Alltrexx Live.
 final class LocatieManager: NSObject {
     static let shared = LocatieManager()
 
     private let manager = CLLocationManager()
-    private var laatstVerzonden: Date?
+    private var laatstGelogd: Date?
     private let minimaleInterval: TimeInterval = 15
 
     private(set) var actief = false
@@ -62,15 +63,13 @@ extension LocatieManager: CLLocationManagerDelegate {
 
         waarnemers.forEach { $0.waarnemer?.locatieBijgewerkt(locatie) }
 
-        guard let token = TrackerOpslag.token else { return }
-        if let laatst = laatstVerzonden, Date().timeIntervalSince(laatst) < minimaleInterval {
-            return
+        if laatstGelogd == nil || Date().timeIntervalSince(laatstGelogd!) >= minimaleInterval {
+            laatstGelogd = Date()
+            let snelheid = locatie.speed >= 0 ? locatie.speed : nil
+            let koers = locatie.course >= 0 ? locatie.course : nil
+            PositieLogboek.voegToe(lat: locatie.coordinate.latitude, lon: locatie.coordinate.longitude, snelheid: snelheid, koers: koers)
         }
-        laatstVerzonden = Date()
 
-        let snelheid = locatie.speed >= 0 ? locatie.speed : nil
-        let koers = locatie.course >= 0 ? locatie.course : nil
-
-        AlltrexxAPI.stuurPositie(token: token, lat: locatie.coordinate.latitude, lon: locatie.coordinate.longitude, snelheid: snelheid, koers: koers) { _ in }
+        PositieUploader.probeerIndienNodig()
     }
 }
