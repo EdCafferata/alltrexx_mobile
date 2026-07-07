@@ -11,6 +11,19 @@ final class LocatieManager: NSObject {
 
     private(set) var actief = false
 
+    private struct ZwakkeWaarnemer {
+        weak var waarnemer: LocatieWaarnemer?
+    }
+    private var waarnemers: [ZwakkeWaarnemer] = []
+
+    func voegWaarnemerToe(_ waarnemer: LocatieWaarnemer) {
+        waarnemers.append(ZwakkeWaarnemer(waarnemer: waarnemer))
+    }
+
+    func verwijderWaarnemer(_ waarnemer: LocatieWaarnemer) {
+        waarnemers.removeAll { $0.waarnemer === waarnemer }
+    }
+
     private override init() {
         super.init()
         manager.delegate = self
@@ -45,8 +58,11 @@ extension LocatieManager: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard actief, let locatie = locations.last, let token = TrackerOpslag.token else { return }
+        guard actief, let locatie = locations.last else { return }
 
+        waarnemers.forEach { $0.waarnemer?.locatieBijgewerkt(locatie) }
+
+        guard let token = TrackerOpslag.token else { return }
         if let laatst = laatstVerzonden, Date().timeIntervalSince(laatst) < minimaleInterval {
             return
         }

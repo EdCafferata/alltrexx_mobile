@@ -84,7 +84,7 @@ final class TypeSelectieViewController: UIViewController {
                 TrackerOpslag.token = sleutel.token
                 TrackerOpslag.type = type
                 TrackerOpslag.trackingActief = true
-                self.view.window?.rootViewController = StatusViewController()
+                self.view.window?.rootViewController = HoofdTabBarController()
             case .failure(let error):
                 self.toonMelding(titel: "Mislukt", tekst: "Kon geen sleutel aanmaken: \(error.localizedDescription)")
             }

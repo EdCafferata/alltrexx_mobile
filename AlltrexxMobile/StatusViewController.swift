@@ -7,6 +7,7 @@ final class StatusViewController: UIViewController {
     private let titelLabel = UILabel()
     private let statusLabel = UILabel()
     private let trackingKnop = UIButton(configuration: .filled())
+    private let bekijkKnop = UIButton(configuration: .filled())
     private let wisKnop = UIButton(configuration: .plain())
 
     override func viewDidLoad() {
@@ -34,10 +35,17 @@ final class StatusViewController: UIViewController {
         trackingKnop.heightAnchor.constraint(equalToConstant: 56).isActive = true
         trackingKnop.addAction(UIAction { [weak self] _ in self?.tikTracking() }, for: .touchUpInside)
 
+        bekijkKnop.configuration?.title = "Tracking bekijken"
+        bekijkKnop.configuration?.baseBackgroundColor = .systemIndigo
+        bekijkKnop.configuration?.cornerStyle = .large
+        bekijkKnop.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+        bekijkKnop.heightAnchor.constraint(equalToConstant: 56).isActive = true
+        bekijkKnop.addAction(UIAction { [weak self] _ in self?.tikBekijken() }, for: .touchUpInside)
+
         wisKnop.setTitle("Sleutel wissen en opnieuw instellen", for: .normal)
         wisKnop.addAction(UIAction { [weak self] _ in self?.tikWissen() }, for: .touchUpInside)
 
-        let stack = UIStackView(arrangedSubviews: [titelLabel, statusLabel, trackingKnop, wisKnop])
+        let stack = UIStackView(arrangedSubviews: [titelLabel, statusLabel, trackingKnop, bekijkKnop, wisKnop])
         stack.axis = .vertical
         stack.spacing = 20
         stack.setCustomSpacing(32, after: statusLabel)
@@ -68,6 +76,10 @@ final class StatusViewController: UIViewController {
         TrackerOpslag.trackingActief = nieuweStatus
         nieuweStatus ? LocatieManager.shared.start() : LocatieManager.shared.stop()
         werkStatusBij()
+    }
+
+    private func tikBekijken() {
+        tabBarController?.selectedIndex = 1
     }
 
     private func tikWissen() {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0175AC0123F014C7003323C3 /* LaunchScreen.storyboard */; };
 		16087F5EA3979A32A287D555 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */; };
+		38014231B7C6C6EC0A845AB9 /* LiveKaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7FD0DF6413AAD60B39BAF /* LiveKaartViewController.swift */; };
 		4500E4487F9F2191742596E8 /* TrackerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B656274A54961E695C1DEF4B /* TrackerType.swift */; };
 		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
 		73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */; };
@@ -18,8 +19,11 @@
 		898EED0019C4A15E00B4B207 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFF19C4A15E00B4B207 /* CoreLocation.framework */; };
 		899D677819CF0A9F00C88A0A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D677719CF0A9F00C88A0A /* MessageUI.framework */; };
 		899D678419D3528D00C88A0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D678319D3528D00C88A0A /* WebKit.framework */; };
+		A77708A9C25DA0C1D20F045E /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD863FC70B2A552358EBFA99 /* KaartViewController.swift */; };
+		B41A822F5CDAFF4A97AA51FA /* HoofdTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */; };
 		BE20738519C27B31DE624712 /* TrackerOpslag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE6AD3D558EAD260A5850CA /* TrackerOpslag.swift */; };
 		BF637D132216C5FA0003EC04 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C9F4EDE4803FFBBF79D3EA8E /* LocatieWaarnemer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */; };
 		E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */; };
 		ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11819567B86343CC5C46FCD0 /* LocatieManager.swift */; };
 /* End PBXBuildFile section */
@@ -66,16 +70,20 @@
 		89D2F8FA1DD7FAF600A52D64 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AlltrexxMobile-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
 		89D2F8FC1DD7FAFA00A52D64 /* iOS_GPX_Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOS_GPX_Framework.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AlltrexxMobile-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/iOS-GPX-Framework/iOS_GPX_Framework.framework"; sourceTree = "<group>"; };
 		89D2F8FE1DD7FAFF00A52D64 /* TBXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TBXML.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/AlltrexxMobile-ckihxvafhxclokeryoesprvioczh/Build/Products/Debug-iphonesimulator/TBXML/TBXML.framework"; sourceTree = "<group>"; };
+		9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HoofdTabBarController.swift; sourceTree = "<group>"; };
 		AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlltrexxAPI.swift; sourceTree = "<group>"; };
 		B656274A54961E695C1DEF4B /* TrackerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackerType.swift; sourceTree = "<group>"; };
+		BD863FC70B2A552358EBFA99 /* KaartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KaartViewController.swift; sourceTree = "<group>"; };
 		BF3D192B24371DC30079B630 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		BF692F572209AAF900F8A0F1 /* AlltrexxMobile-Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AlltrexxMobile-Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF692F632209AAFB00F8A0F1 /* AlltrexxMobile-Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AlltrexxMobile-Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3047D2312D8A10012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D39420E523CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7E7FD0DF6413AAD60B39BAF /* LiveKaartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveKaartViewController.swift; sourceTree = "<group>"; };
 		E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypeSelectieViewController.swift; sourceTree = "<group>"; };
+		FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocatieWaarnemer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,10 @@
 				E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */,
 				11819567B86343CC5C46FCD0 /* LocatieManager.swift */,
 				E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */,
+				FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */,
+				BD863FC70B2A552358EBFA99 /* KaartViewController.swift */,
+				D7E7FD0DF6413AAD60B39BAF /* LiveKaartViewController.swift */,
+				9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */,
 			);
 			path = AlltrexxMobile;
 			sourceTree = "<group>";
@@ -302,6 +314,10 @@
 				73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */,
 				ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */,
 				16087F5EA3979A32A287D555 /* StatusViewController.swift in Sources */,
+				C9F4EDE4803FFBBF79D3EA8E /* LocatieWaarnemer.swift in Sources */,
+				A77708A9C25DA0C1D20F045E /* KaartViewController.swift in Sources */,
+				38014231B7C6C6EC0A845AB9 /* LiveKaartViewController.swift in Sources */,
+				B41A822F5CDAFF4A97AA51FA /* HoofdTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
