@@ -5,6 +5,7 @@ import UIKit
 final class StatusViewController: UIViewController {
 
     private let titelLabel = UILabel()
+    private let naamLabel = UILabel()
     private let statusLabel = UILabel()
     private let trackingKnop = UIButton(configuration: .filled())
     private let bekijkKnop = UIButton(configuration: .filled())
@@ -30,6 +31,9 @@ final class StatusViewController: UIViewController {
         titelLabel.font = .systemFont(ofSize: 24, weight: .bold)
         titelLabel.textAlignment = .center
 
+        naamLabel.font = .systemFont(ofSize: 17, weight: .medium)
+        naamLabel.textAlignment = .center
+
         statusLabel.font = .systemFont(ofSize: 15)
         statusLabel.textColor = .secondaryLabel
         statusLabel.textAlignment = .center
@@ -50,9 +54,10 @@ final class StatusViewController: UIViewController {
         wisKnop.setTitle("Naam of type wijzigen", for: .normal)
         wisKnop.addAction(UIAction { [weak self] _ in self?.tikWijzigen() }, for: .touchUpInside)
 
-        let stack = UIStackView(arrangedSubviews: [titelLabel, statusLabel, trackingKnop, bekijkKnop, wisKnop])
+        let stack = UIStackView(arrangedSubviews: [titelLabel, naamLabel, statusLabel, trackingKnop, bekijkKnop, wisKnop])
         stack.axis = .vertical
-        stack.spacing = 20
+        stack.spacing = 8
+        stack.setCustomSpacing(24, after: naamLabel)
         stack.setCustomSpacing(32, after: statusLabel)
         stack.translatesAutoresizingMaskIntoConstraints = false
 
@@ -67,6 +72,7 @@ final class StatusViewController: UIViewController {
     private func werkStatusBij() {
         let type = TrackerOpslag.type
         titelLabel.text = "\(type?.emoji ?? "") \(type?.label ?? "")"
+        naamLabel.text = type.flatMap { TrackerOpslag.laatsteNaam(voor: $0) }
 
         let tokenKort = TrackerOpslag.token.map { String($0.suffix(6)) } ?? "onbekend"
         statusLabel.text = "Toestel: \(UIDevice.current.name)\nSleutel eindigt op …\(tokenKort)"
