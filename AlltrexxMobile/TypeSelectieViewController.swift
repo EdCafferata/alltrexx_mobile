@@ -2,8 +2,10 @@ import UIKit
 
 /// Eerste scherm van de app: kies wat voor tracker dit toestel is
 /// (persoon, boot, fiets, auto, trein, vliegtuig) — zelfde typen als op de
-/// webkaart van Alltrexx Live. Na keuze wordt er een gratis inlogsleutel
-/// aangemaakt bij de server en lokaal bewaard.
+/// webkaart van Alltrexx Live. Elke categorie vraagt om een eigen naam (met de
+/// laatst gebruikte naam als voorstel) en de actief gekozen categorie wordt
+/// gemarkeerd. Na keuze wordt er een gratis inlogsleutel aangemaakt bij de
+/// server en lokaal bewaard.
 final class TypeSelectieViewController: UIViewController {
 
     private let titelLabel: UILabel = {
@@ -57,23 +59,46 @@ final class TypeSelectieViewController: UIViewController {
     }
 
     private func maakTypeKnop(voor type: TrackerType) -> UIButton {
+        let isActief = TrackerOpslag.heeftSleutel && TrackerOpslag.type == type
+        let naam = TrackerOpslag.laatsteNaam(voor: type)
+
         var config = UIButton.Configuration.filled()
-        config.title = "\(type.emoji)  \(type.label)"
-        config.baseBackgroundColor = .secondarySystemBackground
-        config.baseForegroundColor = .label
+        config.title = isActief ? "\(type.emoji)  \(type.label)  ✓" : "\(type.emoji)  \(type.label)"
+        config.subtitle = naam
+        config.baseBackgroundColor = isActief ? .systemGreen : .secondarySystemBackground
+        config.baseForegroundColor = isActief ? .white : .label
         config.cornerStyle = .large
-        config.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+        config.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
 
         let button = UIButton(configuration: config)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
-        button.heightAnchor.constraint(equalToConstant: 56).isActive = true
-        button.addAction(UIAction { [weak self] _ in self?.kiesType(type) }, for: .touchUpInside)
+        button.heightAnchor.constraint(greaterThanOrEqualToConstant: 56).isActive = true
+        button.addAction(UIAction { [weak self] _ in self?.vraagNaamEnKies(type) }, for: .touchUpInside)
         return button
     }
 
-    private func kiesType(_ type: TrackerType) {
+    private func vraagNaamEnKies(_ type: TrackerType) {
+        let voorstel = TrackerOpslag.laatsteNaam(voor: type) ?? UIDevice.current.name
+
+        let alert = UIAlertController(
+            title: "\(type.emoji) \(type.label)",
+            message: "Onder welke naam wil je dit toestel laten zien op Alltrexx Live?",
+            preferredStyle: .alert
+        )
+        alert.addTextField { textField in
+            textField.text = voorstel
+            textField.placeholder = "Naam"
+        }
+        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Kiezen", style: .default) { [weak self, weak alert] _ in
+            let naam = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            self?.kiesType(type, naam: (naam?.isEmpty == false) ? naam! : voorstel)
+        })
+        present(alert, animated: true)
+    }
+
+    private func kiesType(_ type: TrackerType, naam: String) {
         activityIndicator.startAnimating()
-        let naam = UIDevice.current.name
 
         AlltrexxAPI.maakSleutel(naam: naam, type: type) { [weak self] result in
             guard let self = self else { return }
@@ -84,6 +109,7 @@ final class TypeSelectieViewController: UIViewController {
                 TrackerOpslag.token = sleutel.token
                 TrackerOpslag.type = type
                 TrackerOpslag.trackingActief = true
+                TrackerOpslag.bewaarNaam(naam, voor: type)
                 self.view.window?.rootViewController = HoofdTabBarController()
             case .failure(let error):
                 self.toonMelding(titel: "Mislukt", tekst: "Kon geen sleutel aanmaken: \(error.localizedDescription)")

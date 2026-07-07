@@ -21,6 +21,11 @@ final class StatusViewController: UIViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        werkStatusBij()
+    }
+
     private func bouwLayout() {
         titelLabel.font = .systemFont(ofSize: 24, weight: .bold)
         titelLabel.textAlignment = .center
@@ -42,8 +47,8 @@ final class StatusViewController: UIViewController {
         bekijkKnop.heightAnchor.constraint(equalToConstant: 56).isActive = true
         bekijkKnop.addAction(UIAction { [weak self] _ in self?.tikBekijken() }, for: .touchUpInside)
 
-        wisKnop.setTitle("Sleutel wissen en opnieuw instellen", for: .normal)
-        wisKnop.addAction(UIAction { [weak self] _ in self?.tikWissen() }, for: .touchUpInside)
+        wisKnop.setTitle("Naam of type wijzigen", for: .normal)
+        wisKnop.addAction(UIAction { [weak self] _ in self?.tikWijzigen() }, for: .touchUpInside)
 
         let stack = UIStackView(arrangedSubviews: [titelLabel, statusLabel, trackingKnop, bekijkKnop, wisKnop])
         stack.axis = .vertical
@@ -82,24 +87,7 @@ final class StatusViewController: UIViewController {
         tabBarController?.selectedIndex = 1
     }
 
-    private func tikWissen() {
-        let alert = UIAlertController(
-            title: "Weet je het zeker?",
-            message: "De sleutel wordt gewist en tracking gestopt. Je kunt daarna opnieuw een type kiezen.",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Wissen", style: .destructive) { [weak self] _ in
-            self?.wisSleutelEnGaTerug()
-        })
-        present(alert, animated: true)
-    }
-
-    private func wisSleutelEnGaTerug() {
-        LocatieManager.shared.stop()
-        TrackerOpslag.token = nil
-        TrackerOpslag.type = nil
-        TrackerOpslag.trackingActief = false
+    private func tikWijzigen() {
         view.window?.rootViewController = TypeSelectieViewController()
     }
 }

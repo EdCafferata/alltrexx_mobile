@@ -5,6 +5,7 @@ enum TrackerOpslag {
     private static let tokenKey = "alltrexx-token"
     private static let typeKey = "alltrexx-type"
     private static let trackingActiefKey = "alltrexx-tracking-actief"
+    private static let naamPerTypeKey = "alltrexx-naam-per-type"
 
     static var token: String? {
         get { UserDefaults.standard.string(forKey: tokenKey) }
@@ -24,4 +25,17 @@ enum TrackerOpslag {
     }
 
     static var heeftSleutel: Bool { token != nil }
+
+    /// Onthoudt per categorie (persoon, boot, ...) de laatst gebruikte naam,
+    /// zodat je die terugziet als je later nog eens dezelfde categorie kiest.
+    static func laatsteNaam(voor type: TrackerType) -> String? {
+        let dict = UserDefaults.standard.dictionary(forKey: naamPerTypeKey) as? [String: String] ?? [:]
+        return dict[type.rawValue]
+    }
+
+    static func bewaarNaam(_ naam: String, voor type: TrackerType) {
+        var dict = UserDefaults.standard.dictionary(forKey: naamPerTypeKey) as? [String: String] ?? [:]
+        dict[type.rawValue] = naam
+        UserDefaults.standard.set(dict, forKey: naamPerTypeKey)
+    }
 }
