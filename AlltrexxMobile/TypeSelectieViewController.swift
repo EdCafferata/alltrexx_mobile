@@ -8,10 +8,28 @@ import UIKit
 /// server en lokaal bewaard.
 final class TypeSelectieViewController: UIViewController {
 
+    private let logoImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "AlltrexxLogo"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 20
+        imageView.layer.cornerCurve = .continuous
+        imageView.layer.masksToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
+    /// Volle-breedte wrapper zodat het logo gecentreerd blijft binnen de stack,
+    /// ook al heeft de stack (voor titel/knoppen) fill-alignment nodig.
+    private let logoWrapper: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     private let titelLabel: UILabel = {
         let label = UILabel()
         label.text = "Alltrexx Mobile"
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        let basis = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        label.font = basis.fontDescriptor.withDesign(.rounded).map { UIFont(descriptor: $0, size: 30) } ?? basis
         label.textAlignment = .center
         return label
     }()
@@ -19,7 +37,7 @@ final class TypeSelectieViewController: UIViewController {
     private let toelichtingLabel: UILabel = {
         let label = UILabel()
         label.text = "Wat wil je volgen met dit toestel?"
-        label.font = .systemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 17, weight: .regular)
         label.textColor = .secondaryLabel
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -44,9 +62,19 @@ final class TypeSelectieViewController: UIViewController {
         knoppenStack.spacing = 12
         knoppenStack.distribution = .fillEqually
 
-        let hoofdStack = UIStackView(arrangedSubviews: [titelLabel, toelichtingLabel, knoppenStack, activityIndicator])
+        logoWrapper.addSubview(logoImageView)
+        NSLayoutConstraint.activate([
+            logoImageView.widthAnchor.constraint(equalToConstant: 88),
+            logoImageView.heightAnchor.constraint(equalToConstant: 88),
+            logoImageView.topAnchor.constraint(equalTo: logoWrapper.topAnchor),
+            logoImageView.bottomAnchor.constraint(equalTo: logoWrapper.bottomAnchor),
+            logoImageView.centerXAnchor.constraint(equalTo: logoWrapper.centerXAnchor),
+        ])
+
+        let hoofdStack = UIStackView(arrangedSubviews: [logoWrapper, titelLabel, toelichtingLabel, knoppenStack, activityIndicator])
         hoofdStack.axis = .vertical
-        hoofdStack.spacing = 24
+        hoofdStack.spacing = 12
+        hoofdStack.setCustomSpacing(20, after: logoWrapper)
         hoofdStack.setCustomSpacing(40, after: toelichtingLabel)
         hoofdStack.translatesAutoresizingMaskIntoConstraints = false
 
