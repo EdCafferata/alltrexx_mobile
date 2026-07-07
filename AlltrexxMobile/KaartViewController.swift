@@ -16,6 +16,7 @@ final class KaartViewController: UIViewController {
     private var heeftKaartGecentreerd = false
     private var owmOverlay: OWMTileOverlay?
     private var openSeaMapOverlay: OpenSeaMapOverlay?
+    private var openTopoMapOverlay: OpenTopoMapOverlay?
     private var laatsteWindOphaal: Date?
 
     override func viewDidLoad() {
@@ -29,8 +30,9 @@ final class KaartViewController: UIViewController {
     }
 
     /// Elke categorie krijgt een passende kaartweergave: Boot vaart met
-    /// vaarwegmarkeringen (OpenSeaMap), Auto ziet actuele verkeersdrukte,
-    /// Vliegtuig krijgt een luchtfoto — de rest de gewone kaart.
+    /// vaarwegmarkeringen (OpenSeaMap), Persoon en Fiets krijgen een
+    /// topografische kaart (hoogtelijnen, paden) van OpenTopoMap, Auto ziet
+    /// actuele verkeersdrukte, Vliegtuig krijgt een luchtfoto — Trein de gewone kaart.
     private func pasKaartAanOpCategorie() {
         switch TrackerOpslag.type {
         case .boat:
@@ -38,12 +40,17 @@ final class KaartViewController: UIViewController {
             let overlay = OpenSeaMapOverlay.make()
             openSeaMapOverlay = overlay
             kaart.addOverlay(overlay, level: .aboveLabels)
+        case .person, .bike:
+            kaart.mapType = .standard
+            let overlay = OpenTopoMapOverlay.make()
+            openTopoMapOverlay = overlay
+            kaart.addOverlay(overlay, level: .aboveRoads)
         case .car:
             kaart.mapType = .standard
             kaart.showsTraffic = true
         case .plane:
             kaart.mapType = .satellite
-        case .person, .bike, .train, .none:
+        case .train, .none:
             kaart.mapType = .standard
         }
     }
@@ -248,6 +255,9 @@ extension KaartViewController: MKMapViewDelegate {
         }
         if let seaMap = overlay as? OpenSeaMapOverlay {
             return MKTileOverlayRenderer(tileOverlay: seaMap)
+        }
+        if let topoMap = overlay as? OpenTopoMapOverlay {
+            return MKTileOverlayRenderer(tileOverlay: topoMap)
         }
         if let polyline = overlay as? MKPolyline {
             let renderer = MKPolylineRenderer(overlay: polyline)
