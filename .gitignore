@@ -34,3 +34,11 @@ Carthage/Build
 
 
 .DS_Store
+
+# Gevoelige bestanden (nooit committen)
+.env
+.env.*
+*.p8
+*.p12
+*.pem
+*.mobileprovision
