@@ -6,8 +6,16 @@ Alltrexx Mobile — iOS-app voor het Alltrexx platform. Kies bij het openen wat 
 tracker dit toestel is (persoon, boot, fiets, auto, trein, vliegtuig) en volg jezelf
 mee op [alltrexx.live](https://alltrexx.live).
 
-**Status:** eerste scherm (typeselectie + sleutel aanmaken) werkt. Zie `CLAUDE.md`
-voor de volledige feature-status en backlog.
+**Status:** 🟢 werkend op fysiek toestel. Typeselectie + sleutel aanmaken, achtergrond-
+locatie-tracking (throttled elke 15s), en een tabbar met drie schermen:
+- **Status** — huidig type/naam, tracking starten/stoppen
+- **Tracking** — eigen positie + route op de kaart, met per-categorie kaartlagen
+  exact gelijk aan de website (OpenSeaMap voor boten, CyclOSM voor fietsen, OpenAIP
+  luchtruim voor vliegtuigen, OpenRailwayMap voor treinen, OpenTopoMap voor wandelen)
+- **Live kaart** — de volledige alltrexx.live-website ingebed
+
+Zie `CLAUDE.md` voor de volledige feature-status en backlog (fastlane-metadata en
+achtergrond-test op toestel staan nog open).
 
 ## Eigenaar
 - **Ed Cafferata** (edcafferata@icloud.com)
