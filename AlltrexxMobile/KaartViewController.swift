@@ -240,7 +240,10 @@ final class KaartViewController: UIViewController {
         }
         laatsteWindOphaal = Date()
 
-        let urlStr = "https://api.open-meteo.com/v1/forecast?latitude=\(coordinate.latitude)&longitude=\(coordinate.longitude)&current=wind_speed_10m,wind_direction_10m&wind_speed_unit=kn"
+        // Privacy: stuur alleen een afgeronde positie (2 decimalen ≈ 1 km) naar Open-Meteo; ruim voldoende voor wind.
+        let lat = String(format: "%.2f", locale: Locale(identifier: "en_US_POSIX"), coordinate.latitude)
+        let lon = String(format: "%.2f", locale: Locale(identifier: "en_US_POSIX"), coordinate.longitude)
+        let urlStr = "https://api.open-meteo.com/v1/forecast?latitude=\(lat)&longitude=\(lon)&current=wind_speed_10m,wind_direction_10m&wind_speed_unit=kn"
         guard let url = URL(string: urlStr) else { return }
 
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
