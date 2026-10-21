@@ -1,6 +1,6 @@
 # Alltrexx Mobile
 
-🔒 Laatste security check: 2026-10-20 20:15 CEST
+🔒 Laatste security check: 2026-10-21 20:25 CEST
 
 Alltrexx Mobile — iOS-app voor het Alltrexx platform. Kies bij het openen wat voor
 tracker dit toestel is (persoon, boot, fiets, auto, trein, vliegtuig) en volg jezelf
