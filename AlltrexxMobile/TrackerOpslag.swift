@@ -7,6 +7,7 @@ enum TrackerOpslag {
     private static let trackingActiefKey = "alltrexx-tracking-actief"
     private static let naamPerTypeKey = "alltrexx-naam-per-type"
     private static let trackerIdKey = "alltrexx-tracker-id"
+    private static let onboardingGezienKey = "alltrexx-onboarding-gezien"
 
     static var token: String? {
         get { UserDefaults.standard.string(forKey: tokenKey) }
@@ -33,6 +34,13 @@ enum TrackerOpslag {
     static var trackingActief: Bool {
         get { UserDefaults.standard.bool(forKey: trackingActiefKey) }
         set { UserDefaults.standard.set(newValue, forKey: trackingActiefKey) }
+    }
+
+    /// Of het eenmalige introscherm al is getoond. Wordt NIET gewist bij
+    /// 'Verwijder mijn gegevens' — eenmaal gezien blijft gezien.
+    static var onboardingGezien: Bool {
+        get { UserDefaults.standard.bool(forKey: onboardingGezienKey) }
+        set { UserDefaults.standard.set(newValue, forKey: onboardingGezienKey) }
     }
 
     static var heeftSleutel: Bool { token != nil }

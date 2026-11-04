@@ -17,6 +17,8 @@
 		4500E4487F9F2191742596E8 /* TrackerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B656274A54961E695C1DEF4B /* TrackerType.swift */; };
 		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
 		A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */; };
+		A11CE50FA571000000000B21 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F21 /* OnboardingViewController.swift */; };
+		A11CE50FA571000000000B22 /* InstellingenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F22 /* InstellingenViewController.swift */; };
 		48B961C3CB2EEB4C1F475B5D /* PositieLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17410F3F384071BC488C0B5 /* PositieLogEntry.swift */; };
 		500BB791B1DFCE5F2AED2987 /* OpenTopoMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8A046B309275BD6942150 /* OpenTopoMapOverlay.swift */; };
 		56715E63BBD4A87E7B9C5EE6 /* CartoLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCB145358BAF08C4B7C07D4 /* CartoLightOverlay.swift */; };
@@ -82,6 +84,8 @@
 		898EECD519C49B5800B4B207 /* AlltrexxMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlltrexxMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECD919C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A11CE50FA571000000000F21 /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A11CE50FA571000000000F22 /* InstellingenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InstellingenViewController.swift; sourceTree = "<group>"; };
 		898EECDA19C49B5800B4B207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		898EECE419C49B5800B4B207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		898EECED19C49B5800B4B207 /* AlltrexxMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlltrexxMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +189,8 @@
 				62F1DC4344ED4653B3958CB6 /* SpoorwegenOverlay.swift */,
 				69BE40FDB4785086F9CC65D6 /* OpenAIPSleutel.swift */,
 				58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */,
+				A11CE50FA571000000000F21 /* OnboardingViewController.swift */,
+				A11CE50FA571000000000F22 /* InstellingenViewController.swift */,
 			);
 			path = AlltrexxMobile;
 			sourceTree = "<group>";
@@ -357,6 +363,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				898EECDB19C49B5800B4B207 /* AppDelegate.swift in Sources */,
+				A11CE50FA571000000000B21 /* OnboardingViewController.swift in Sources */,
+				A11CE50FA571000000000B22 /* InstellingenViewController.swift in Sources */,
 				4500E4487F9F2191742596E8 /* TrackerType.swift in Sources */,
 				E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */,
 				BE20738519C27B31DE624712 /* TrackerOpslag.swift in Sources */,

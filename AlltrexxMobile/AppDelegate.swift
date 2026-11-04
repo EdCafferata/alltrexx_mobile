@@ -12,8 +12,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             LocatieManager.shared.start()
         }
 
+        let startScherm: UIViewController
+        if TrackerOpslag.heeftSleutel {
+            startScherm = HoofdTabBarController()
+        } else if TrackerOpslag.onboardingGezien {
+            startScherm = TypeSelectieViewController()
+        } else {
+            startScherm = OnboardingViewController()
+        }
+
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = TrackerOpslag.heeftSleutel ? HoofdTabBarController() : TypeSelectieViewController()
+        window.rootViewController = startScherm
         window.makeKeyAndVisible()
         self.window = window
         return true
