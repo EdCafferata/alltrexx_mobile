@@ -42,16 +42,24 @@ Alltrexx Mobile — iOS/Android mobiele app voor het Alltrexx platform.
 | `TypeSelectieViewController.swift` | **Eerste scherm** — kies je type, maakt een sleutel aan en bewaart 'm lokaal |
 | `AppDelegate.swift` | Minimale programmatische opstart (geen storyboard) |
 
-## Feature status
-- [x] Project geïnitialiseerd (kopie BVK-scaffold, opgeschoond, hernoemd)
-- [x] Eerste scherm: typeselectie (persoon/boot/fiets/auto/trein/vliegtuig) + sleutel aanmaken
-- [ ] Scherm na typeselectie (bevestiging/status, token tonen)
-- [ ] Achtergrond-locatie daadwerkelijk periodiek versturen naar `/api/mobiel/positie`
-- [ ] App-icoon (nu nog BVK-icoon in Images.xcassets/AppIcon.appiconset)
+## Feature status (bijgewerkt 5 nov 2026)
+App is **functioneel compleet** en geverifieerd (Debug-sim + Release-device bouwen groen;
+hele UI-flow simulator-getest; live backend-pijplijn getest tegen alltrexx.live).
+- [x] Onboarding (eenmalig) → typeselectie (met naam-invoer) → status / Tracking-kaart / Live kaart (3 tabs)
+- [x] Gratis sleutel aanmaken + lokaal bewaren (token + tracker-id + type)
+- [x] Achtergrond-locatie **(bijna) real-time** naar `/api/mobiel/positie`, met offline-wachtrij + inhaal
+- [x] Snelheidsafhankelijk batterijprofiel; significante-locatiewijzigingen voor relaunch
+- [x] Hoogte meesturen + HTTP 403 (geweigerd token) afgehandeld
+- [x] Rijker statusscherm (live) + 'Bekijk mij live' + 'Verwijder mijn gegevens' + Instellingen (kaartsleutels)
+- [x] `PrivacyInfo.xcprivacy`, ATS uit (alles HTTPS), arm64, **iPhone-only**, versie 1.0.0/1
+- [x] Eigen Alltrexx-app-icoon; metadata + 11 permissie-strings van BVK → Alltrexx
 - [ ] Watch-target (bewust verwijderd uit de BVK-kopie, kan later terug als gewenst)
 
-## Open issues (backlog)
-- [ ] Positie-loop bouwen (CLLocationManager + timer/significant-location-changes → AlltrexxAPI.stuurPositie)
-- [ ] Naam invoerbaar maken i.p.v. automatisch UIDevice.current.name
-- [ ] App-icoon vervangen
-- [ ] TestFlight-indiening (fastlane staat al klaar, hergebruikt BVK's App Store Connect API-key)
+## Open punten
+Zie **`APP_STORE_READINESS.md`** (eindstand + TestFlight-afrondlijstje) en de GitHub-issues.
+- **TestFlight geblokkeerd** op eenmalige Apple-setup (needs Ed, interactief/2FA): app-record bestaat nog
+  niet (`APP_EXISTS=false`), bundle-id niet geregistreerd, geen `match`-profiel. Stappen in de readiness-doc.
+  Code bouwt groen in Release; alleen account-/signing-setup ontbreekt.
+- Open issues: #7 (formele screenshots), #9 (App Privacy in ASC), #12 (server-delete → backend #25),
+  #17 (focus-op-zelf → backend #26); backend alltrexx_live #25/#26/#27 (mobiele kant voorbereid).
+- Opruimen: TEST-trackers op alltrexx.live (id 216 e.a.) — zie alltrexx_live #27.
