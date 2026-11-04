@@ -1,11 +1,7 @@
 /*
   InfoPlist.strings
-  OpenBVKTracker
-
-  Created by Evgeniy NeoFusion on 20.06.20.
+  Alltrexx Mobile
 */
 
-NSLocationAlwaysAndWhenInUseUsageDescription = "Геопозиция используется для отображения вашего местоположения на карте. Разрешите доступ к геопозиции «всегда» для работы в фоновом режиме";
-NSLocationAlwaysUsageDescription = "Геопозиция используется для записи GPX-треков, даже когда приложение находится в фоновом режиме";
-NSLocationUsageDescription = "Геопозиция используется для записи GPX-треков и добавления объектов (POI)";
-NSLocationWhenInUseUsageDescription = "Геопозиция используется для отображения вашего текущего местоположения на карте и мест, где вы были";
+NSLocationWhenInUseUsageDescription = "Геопозиция используется для показа вашего положения на alltrexx.live.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "Геопозиция используется для трансляции вашего положения на alltrexx.live, в том числе когда приложение работает в фоновом режиме.";

@@ -1,11 +1,7 @@
-/* 
+/*
   InfoPlist.strings
-  OpenBVKTracker
-
-  Created by Paolo Fehlmann on 19.05.2021.
+  Alltrexx Mobile
 */
 
-NSLocationAlwaysAndWhenInUseUsageDescription = "La posizione viene utilizzata solo per mostrare la tua posizione sulla mappa. Seleziona \"sempre\" per rendere disponibile la posizione quando l'app funziona in background.";
-NSLocationAlwaysUsageDescription = "La tua posizione è necessaria per creare la traccia GPX anche quando l'app è in esecuzione in background.";
-NSLocationUsageDescription = "La posizione è necessaria per creare GPX e aggiungere POI";
-NSLocationWhenInUseUsageDescription = "La posizione viene utilizzata per mostrare sulla mappa dove ti trovi e dove sei stato.";
+NSLocationWhenInUseUsageDescription = "La tua posizione viene usata per condividerla su alltrexx.live.";
+NSLocationAlwaysAndWhenInUseUsageDescription = "La tua posizione viene usata per condividerla in tempo reale su alltrexx.live, anche quando l'app è in background.";
