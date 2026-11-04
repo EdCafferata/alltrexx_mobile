@@ -135,6 +135,7 @@ final class TypeSelectieViewController: UIViewController {
             switch result {
             case .success(let sleutel):
                 TrackerOpslag.token = sleutel.token
+                TrackerOpslag.trackerId = sleutel.id
                 TrackerOpslag.type = type
                 TrackerOpslag.trackingActief = true
                 TrackerOpslag.bewaarNaam(naam, voor: type)

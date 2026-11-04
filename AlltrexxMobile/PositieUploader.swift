@@ -1,30 +1,41 @@
 import Foundation
 
-/// Verstuurt periodiek (elke 15 minuten) alle nog niet bevestigd verzonden
-/// posities uit het `PositieLogboek` naar Alltrexx Live. Vangt zo zowel een
-/// kortstondige als een langere verbindingsonderbreking op: bij de eerstvolgende
-/// gelegenheid wordt alles wat lokaal is opgebouwd alsnog ingehaald.
+/// Stuurt gelogde posities (bijna) real-time door naar Alltrexx Live, en vangt
+/// onderbrekingen op: alles wat lokaal in `PositieLogboek` staat en nog niet is
+/// bevestigd, wordt bij de eerstvolgende gelegenheid alsnog ingehaald. Zo sta je
+/// vrijwel direct op de live kaart in plaats van met minutenlange vertraging.
 enum PositieUploader {
-    private static let interval: TimeInterval = 15 * 60
+    /// Minimale tijd tussen twee verzend-rondes, om een reeks snelle updates te bundelen.
+    private static let minimaleTussentijd: TimeInterval = 3
     private static var laatstePoging: Date?
+    private static var bezig = false
 
-    static func probeerIndienNodig() {
-        if let laatste = laatstePoging, Date().timeIntervalSince(laatste) < interval {
+    /// Door `LocatieManager` aangeroepen zodra er een nieuwe positie is gelogd.
+    static func nieuwePositie() {
+        if let laatste = laatstePoging, Date().timeIntervalSince(laatste) < minimaleTussentijd {
             return
         }
         laatstePoging = Date()
         verstuurOnverzonden()
     }
 
+    /// Verstuurt alle nog niet bevestigde posities; één ronde tegelijk.
     static func verstuurOnverzonden() {
-        guard let token = TrackerOpslag.token else { return }
+        guard !bezig, let token = TrackerOpslag.token else { return }
+        let wachtrij = PositieLogboek.onverzonden
+        guard !wachtrij.isEmpty else { return }
+        bezig = true
 
-        for entry in PositieLogboek.onverzonden {
-            AlltrexxAPI.stuurPositie(token: token, lat: entry.lat, lon: entry.lon, snelheid: entry.snelheid, koers: entry.koers) { result in
+        let groep = DispatchGroup()
+        for entry in wachtrij {
+            groep.enter()
+            AlltrexxAPI.stuurPositie(token: token, lat: entry.lat, lon: entry.lon, snelheid: entry.snelheid, koers: entry.koers, hoogte: entry.hoogte) { result in
                 if case .success = result {
                     PositieLogboek.markeerVerzonden(entry.id)
                 }
+                groep.leave()
             }
         }
+        groep.notify(queue: .main) { bezig = false }
     }
 }

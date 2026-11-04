@@ -25,17 +25,29 @@ enum PositieLogboek {
         try? data.write(to: bestandsURL, options: .atomic)
     }
 
-    static func voegToe(lat: Double, lon: Double, snelheid: Double?, koers: Double?) {
-        entries.append(PositieLogEntry(lat: lat, lon: lon, snelheid: snelheid, koers: koers))
+    static func voegToe(lat: Double, lon: Double, snelheid: Double?, koers: Double?, hoogte: Double?) {
+        entries.append(PositieLogEntry(lat: lat, lon: lon, snelheid: snelheid, koers: koers, hoogte: hoogte))
         schoonOp()
         bewaar()
     }
 
     static var onverzonden: [PositieLogEntry] { entries.filter { !$0.verzonden } }
 
+    /// Aantal posities dat nog op bevestiging van de server wacht (voor het statusscherm).
+    static var aantalOnverzonden: Int { entries.lazy.filter { !$0.verzonden }.count }
+
+    /// De meest recent gelogde positie (voor het statusscherm).
+    static var laatste: PositieLogEntry? { entries.last }
+
     static func markeerVerzonden(_ id: UUID) {
         guard let index = entries.firstIndex(where: { $0.id == id }) else { return }
         entries[index].verzonden = true
+        bewaar()
+    }
+
+    /// Wist het volledige logboek (voor 'Verwijder mijn gegevens').
+    static func wisAlles() {
+        entries.removeAll()
         bewaar()
     }
 

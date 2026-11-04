@@ -8,15 +8,17 @@ struct PositieLogEntry: Codable, Identifiable {
     let lon: Double
     let snelheid: Double?
     let koers: Double?
+    let hoogte: Double?
     var verzonden: Bool
 
-    init(lat: Double, lon: Double, snelheid: Double?, koers: Double?) {
+    init(lat: Double, lon: Double, snelheid: Double?, koers: Double?, hoogte: Double?) {
         self.id = UUID()
         self.tijdstip = Date()
         self.lat = lat
         self.lon = lon
         self.snelheid = snelheid
         self.koers = koers
+        self.hoogte = hoogte
         self.verzonden = false
     }
 }
