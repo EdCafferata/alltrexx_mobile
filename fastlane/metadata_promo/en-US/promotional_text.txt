@@ -1,1 +1,1 @@
-GPS tracker for the Blocq van Kuffeler. Live weather, OWM map layers with legend, precipitation & water level. No account, no subscription.
+Turn your phone into a live tracker and share your position on alltrexx.live — free, no account, no subscription.

@@ -1,0 +1,23 @@
+Alltrexx Mobile macht dein Handy zu einem Live-Standort-Tracker. Wähle, was du bist — Person, Boot, Fahrrad, Auto, Zug oder Flugzeug — und deine Position wird live auf alltrexx.live geteilt, sodass Freunde, Familie oder deine Crew dir in Echtzeit auf der Karte folgen können.
+
+Kostenlos und einfach
+- Kein Abo und kein Konto — wähle einfach einen Namen für deinen Tracker und los
+- Deine Position erscheint innerhalb von Sekunden auf alltrexx.live
+
+Zum Live-Verfolgen gemacht
+- Nahezu in Echtzeit, auch wenn die App im Hintergrund läuft
+- Eine intelligente Offline-Warteschlange überbrückt Funklöcher und holt automatisch auf
+- Akkuschonend: GPS-Genauigkeit und Updaterate passen sich deiner Geschwindigkeit an, Stillstand verbraucht kaum Energie
+- Trackt dank Überwachung signifikanter Standortänderungen auch nach einem Neustart weiter
+
+Karten, die zu deiner Reise passen
+- Deine eigene Live-Karte mit der Route, die du in dieser Sitzung geteilt hast
+- Kategoriespezifische Ebenen wie auf der alltrexx.live-Webkarte: Seezeichen für Boote, Rad- und Wanderwege, Eisenbahnen für Züge und eine Luftfahrtebene für Flugzeuge
+- Optionale Niederschlags- (OpenWeatherMap) und Luftraum- (OpenAIP) Ebenen mit einem kostenlosen Schlüssel
+
+Deine Daten, deine Kontrolle
+- Nur deine Position und der von dir gewählte Name werden geteilt
+- Lösche deinen Tracker und alle lokalen Daten jederzeit in der App
+- Kein Tracking durch Dritte und keine Werbung
+
+Tippe auf die Live-Schaltflaeche, um direkt zu dir selbst auf alltrexx.live zu springen.

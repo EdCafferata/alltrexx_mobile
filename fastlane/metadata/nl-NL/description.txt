@@ -1,52 +1,23 @@
-GPS-tracker speciaal gebouwd voor de Blocq van Kuffeler.
+Alltrexx Mobile maakt van je telefoon een live locatietracker. Kies wat je bent — persoon, boot, fiets, auto, trein of vliegtuig — en je positie wordt live gedeeld op alltrexx.live, zodat vrienden, familie of je bemanning je in real time op de kaart kunnen volgen.
 
-Leg je vaarroute vast op iPhone én Apple Watch. Geen account, geen abonnement, geen gedoe — gewoon varen en opnemen.
+Gratis en simpel
+- Geen abonnement en geen account — kies een naam voor je tracker en ga
+- Je positie verschijnt binnen enkele seconden op alltrexx.live
 
-Live Weerinformatie
-• Windrichting, windkracht (Beaufort) en windstoten direct in beeld
-• Temperatuur, gevoelstemperatuur en zicht
-• Luchtdruk met stijging/daling trend
-• Golfhoogte en golfperiode
-• Waterstand Markermeer via Rijkswaterstaat (cm NAP, elke 10 minuten)
-• Stroomindicatie op basis van actuele winddata
+Gemaakt om live te volgen
+- (Bijna) real-time updates, ook als de app op de achtergrond draait
+- Een slimme offline-wachtrij overbrugt dekkingsgaten en haalt automatisch in
+- Batterijvriendelijk: GPS-nauwkeurigheid en updatefrequentie passen zich aan je snelheid aan, dus stilstaan kost nauwelijks energie
+- Blijft volgen na een herstart dankzij significante-locatiebewaking
 
-OpenWeatherMap Kaartlagen
-• Leg een live weerkaart over je navigatiekaart
-• Kies uit: neerslag, bewolking, wind, luchtdruk of temperatuur
-• Gratis OpenWeatherMap account vereist (via Instellingen)
+Kaarten die bij je reis passen
+- Je eigen live kaart met de route die je deze sessie hebt gedeeld
+- Categorie-specifieke lagen, net als de alltrexx.live-webkaart: vaarmarkeringen voor boten, fiets- en wandelroutes, spoorwegen voor treinen en een luchtvaartlaag voor vliegtuigen
+- Optionele neerslag- (OpenWeatherMap) en luchtruim- (OpenAIP) lagen met een gratis sleutel
 
-Kaart & Navigatie
-• Snelheidsgebaseerde kaart-zoom — de kaart zoomt automatisch mee met je vaartsnelheid
-• Koers-up modus — de kaart draait mee met je vaarrichting
-• Kies je kaartserver: Apple Maps, OpenStreetMap, OpenSeaMap, CartoDB, CartoDB Dark of OpenTopoMap
-• Offline kaartcache — browse het vaargebied vooraf, ook zonder internet
+Jouw gegevens, jouw controle
+- Alleen je positie en de naam die je kiest worden gedeeld
+- Verwijder je tracker en alle lokale gegevens op elk moment in de app
+- Geen tracking door derden en geen advertenties
 
-GPS & Opname
-• Registreer je volledige vaarroute als GPX-spoor
-• Pauze en hervat de opname onderweg
-• Meerdere sessies samenvoegen
-• Waypoints toevoegen op je huidige locatie of via lang indrukken op de kaart
-• Waypoint naam bewerken, verplaatsen of verwijderen
-
-Batterijbesparing
-• Slimme GPS-nauwkeurigheid op basis van vaartsnelheid — tot 80% besparing bij stilliggen
-• Lader-modus: altijd maximale nauwkeurigheid als de telefoon aan de stroom hangt
-
-Veiligheid
-• "Doorgaan" optie in het reset-scherm — per ongeluk getikt? Je rit loopt gewoon verder
-
-Delen & Export
-• Exporteer je GPX-bestand via e-mail, AirDrop of elke andere app
-• Importeer bestaande GPX-bestanden vanuit andere navigatie-apps
-
-Apple Watch
-• Zelfstandig GPX-sporen opnemen op de Watch
-• Pauze, hervat en opslaan rechtstreeks vanaf je pols
-• GPS-signaalsterkte weergeven
-
-Privacy
-• Geen account aanmaken
-• Geen abonnement
-• Alle GPS-data blijft op jouw apparaat — niets wordt gedeeld met derden
-
-Beschikbaar in 11 talen: Nederlands, Engels, Duits, Spaans, Frans, Italiaans, Fins, Portugees, Russisch, Oekraïens en Chinees.
+Tik op "Bekijk mij live" om direct naar jezelf op alltrexx.live te springen.

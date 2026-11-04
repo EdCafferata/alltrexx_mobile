@@ -1,52 +1,23 @@
-GPS tracker built for the Blocq van Kuffeler sailing event.
+Alltrexx Mobile turns your phone into a live location tracker. Pick what you are — person, boat, bike, car, train or plane — and your position is shared live on alltrexx.live, so friends, family or your crew can follow you on the map in real time.
 
-Record your route on iPhone and Apple Watch. No account, no subscription, no fuss — just sail and record.
+Free and simple
+- No subscription and no account — just choose a name for your tracker and go
+- Your position appears on alltrexx.live within seconds
 
-Live Weather Information
-• Wind direction, Beaufort force and gusts displayed on screen
-• Temperature, feels-like temperature and visibility
-• Air pressure with rising/falling trend
-• Wave height and wave period
-• Markermeer water level via Rijkswaterstaat (cm NAP, every 10 minutes)
-• Current estimate based on live wind data
+Made for live following
+- Near real-time updates, also while the app runs in the background
+- A smart offline queue bridges gaps in coverage and catches up automatically
+- Battery-friendly: GPS accuracy and update rate adapt to your speed, so standing still barely uses power
+- Keeps tracking after a restart thanks to significant-location monitoring
 
-OpenWeatherMap Layers
-• Overlay a live weather map on your navigation chart
-• Choose from: precipitation, clouds, wind, pressure or temperature
-• Free OpenWeatherMap account required (via Settings)
+Maps that match your journey
+- Your own live map showing the route you have shared this session
+- Category-specific layers, just like the alltrexx.live web map: sea marks for boats, cycling and hiking routes, railways for trains and an aviation layer for planes
+- Optional precipitation (OpenWeatherMap) and airspace (OpenAIP) layers with a free key
 
-Map & Navigation
-• Speed-based map zoom — the map automatically adjusts to your speed
-• Course-up mode — the map rotates to match your heading
-• Choose your map server: Apple Maps, OpenStreetMap, OpenSeaMap, CartoDB, CartoDB Dark or OpenTopoMap
-• Offline map cache — browse your sailing area in advance, even without internet
+Your data, your control
+- Only your position and the name you choose are shared
+- Delete your tracker and all local data from the app at any time
+- No third-party tracking and no advertising
 
-GPS & Recording
-• Record your full sailing route as a GPX track
-• Pause and resume recording underway
-• Merge multiple sessions
-• Add waypoints at your current location or by long-pressing the map
-• Edit, move or delete waypoints
-
-Battery Saving
-• Smart GPS accuracy based on speed — up to 80% savings at anchor
-• Charger mode: always maximum accuracy when the phone is plugged in
-
-Safety
-• "Continue" option in the reset screen — accidentally tapped reset? Your session keeps running
-
-Sharing & Export
-• Export your GPX file via email, AirDrop or any other app
-• Import existing GPX files from other navigation apps
-
-Apple Watch
-• Record GPX tracks independently on the Watch
-• Pause, resume and save directly from your wrist
-• Display GPS signal strength
-
-Privacy
-• No account required
-• No subscription
-• All GPS data stays on your device — nothing is shared with third parties
-
-Available in 11 languages: Dutch, English, German, Spanish, French, Italian, Finnish, Portuguese, Russian, Ukrainian and Chinese.
+Tap the live button to jump straight to yourself on alltrexx.live.
