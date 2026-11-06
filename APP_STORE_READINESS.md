@@ -42,23 +42,26 @@ Apple-account-setup die jouw interactieve login (2FA) vereist — zie de checkli
   "Beoordeel"-knop + een "Neerslag tonen"-schakelaar. De **3 IAP-producten moeten nog in App Store
   Connect** worden aangemaakt (onder hetzelfde app-record) met exact deze product-ID's, anders toont
   het scherm "Donaties zijn binnenkort beschikbaar":
-  `info.cafferata.alltrexxmobile.tip.klein` (€0,99), `…tip.gemiddeld` (€2,99), `…tip.groot` (€5,99) — alle **Consumable**.
+  `info.cafferata.alltrexx.tip.klein` (€0,99), `…tip.gemiddeld` (€2,99), `…tip.groot` (€5,99) — alle **Consumable**.
   Lokaal testen in Xcode kan meteen via `Fooien.storekit` (al in de scheme gekoppeld). De review-knop
-  gebruikt de ingebouwde prompt; vul `Fooienpot.appStoreId` in zodra het record bestaat voor een
-  directe "schrijf een recensie"-link.
+  gebruikt nu een directe "schrijf een recensie"-link (`Fooienpot.appStoreId = 1553691366`).
 
-## TestFlight — waarom geblokkeerd + jouw afrondlijstje
-De bundle-id `info.cafferata.alltrexxmobile` is **nieuw**: geen app-record in App Store Connect
-(`APP_EXISTS=false`), bundle-id nog niet geregistreerd (`BUNDLE_ID_REGISTERED=false`), en geen
-`match`-profiel. De App Store Connect **API kan geen nieuwe app aanmaken** — dat eerste-keer-aanmaken
-vereist Apple-ID-login met 2FA of de ASC-website. Daarom kon ik de upload niet solo afmaken zonder
-jouw account-handelingen te forceren (ik heb niets op je account aangemaakt).
+## TestFlight — bestaand app-record hergebruikt (6 nov 2026)
+Het app-record bestond al: **"AllTreXX for all your tracks"**, **app-id 1553691366**,
+bundle-id **`info.cafferata.alltrexx`** (SKU gelijk, primaire taal NL). Er stond al een
+**iOS 1.0-versie in "Prepare for Submission"** klaar (0 builds, 4+). Daarom is de app
+omgezet van `info.cafferata.alltrexxmobile` → **`info.cafferata.alltrexx`** (pbxproj,
+Fastfile, Appfile, tip-product-ID's, Fooien.storekit). Het "app-record aanmaken" is dus
+**niet meer nodig** — die blokkade is weg.
 
-**Afronden (± 10 min, daarna upload):**
-1. **App-record aanmaken** in App Store Connect → My Apps → **+** → New App: platform iOS, bundle-id `info.cafferata.alltrexxmobile`, naam **Alltrexx Mobile**, primaire taal Nederlands, SKU naar keuze. (Of `fastlane produce` met Apple-ID-login + 2FA.)
-2. **Controleer de overeenkomsten** in ASC (Agreements, Tax, and Banking) — er was eerder een licentie-/overeenkomst-blokkade; die moet geaccepteerd zijn, anders faalt de upload.
-3. **Signing/profiel** voor de nieuwe bundle-id: `fastlane match appstore` (jouw certs-repo) zodat het profiel `match AppStore info.cafferata.alltrexxmobile` bestaat — de `beta`-lane verwacht die naam.
-4. **Upload:** `fastlane beta` (increment build → build_app → upload_to_testflight met API-key G389F99P3B). De code bouwt groen in Release; alleen de account-/signing-setup ontbrak.
+**Nog te doen vóór upload:**
+1. **Signing/profiel** voor `info.cafferata.alltrexx`: `fastlane match appstore` (certs-repo) zodat
+   het profiel `match AppStore info.cafferata.alltrexx` bestaat — de `beta`-lane verwacht die naam.
+   (De App ID staat al geregistreerd in het Developer-portal, want het record bestaat.)
+2. **Controleer de overeenkomsten** in ASC (Agreements, Tax, and Banking) — moeten geaccepteerd zijn.
+3. **Upload:** `fastlane beta` (increment build → build_app → upload_to_testflight, API-key G389F99P3B)
+   → komt binnen op de iOS-versie van record 1553691366. Code bouwt groen in Release.
+4. (Record is universeel: er is ook een ongebruikte macOS 1.0-slot — die blijft gewoon staan, niet indienen.)
 
 ## Testdata om op te ruimen (server-side)
 Tijdens de live-verificatie zijn gratis TEST-trackers aangemaakt op alltrexx.live:

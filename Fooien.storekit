@@ -13,7 +13,7 @@
           "locale" : "nl_NL"
         }
       ],
-      "productID" : "info.cafferata.alltrexxmobile.tip.klein",
+      "productID" : "info.cafferata.alltrexx.tip.klein",
       "referenceName" : "Kleine fooi",
       "type" : "Consumable"
     },
@@ -28,7 +28,7 @@
           "locale" : "nl_NL"
         }
       ],
-      "productID" : "info.cafferata.alltrexxmobile.tip.gemiddeld",
+      "productID" : "info.cafferata.alltrexx.tip.gemiddeld",
       "referenceName" : "Gemiddelde fooi",
       "type" : "Consumable"
     },
@@ -43,7 +43,7 @@
           "locale" : "nl_NL"
         }
       ],
-      "productID" : "info.cafferata.alltrexxmobile.tip.groot",
+      "productID" : "info.cafferata.alltrexx.tip.groot",
       "referenceName" : "Grote fooi",
       "type" : "Consumable"
     }

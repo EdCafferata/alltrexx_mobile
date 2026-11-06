@@ -565,7 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexxmobile;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
@@ -590,7 +590,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexxmobile;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;

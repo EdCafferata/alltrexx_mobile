@@ -25,7 +25,7 @@ Alltrexx Mobile — iOS/Android mobiele app voor het Alltrexx platform.
 - **iOS, UIKit** (geen storyboard-entrypoint, volledig programmatisch) — gestart als kopie
   van de scaffold van BVK-GpxTracker (project/signing/fastlane-infra), daarna alle
   GPX/kaart-specifieke code verwijderd en vervangen door nieuwe, kleine bestanden.
-- **Bundle ID:** `info.cafferata.alltrexxmobile`
+- **Bundle ID:** `info.cafferata.alltrexx` (hergebruikt bestaand ASC-record "AllTreXX for all your tracks", app-id 1553691366 — iOS-versie 1.0 stond al klaar in "Prepare for Submission")
 - **Project:** `AlltrexxMobile.xcodeproj`, scheme `AlltrexxMobile`
 - **Minimum iOS:** 16.0 (bewust verhoogd van de 12.0 die BVK nog had — nieuwe app, geen
   reden om oude toestellen te ondersteunen)

@@ -42,7 +42,7 @@ Simulator-opnames met geïnjecteerde demo-state via launch-args (NSArgumentDomai
 
 Kort recept om opnieuw te genereren:
 ```bash
-UDID=<iPhone 17 Pro Max udid>; BID=info.cafferata.alltrexxmobile
+UDID=<iPhone 17 Pro Max udid>; BID=info.cafferata.alltrexx
 xcrun simctl boot "$UDID"
 # build + install de .app, dan:
 xcrun simctl privacy "$UDID" grant location-always "$BID"

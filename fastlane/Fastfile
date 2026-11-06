@@ -8,7 +8,7 @@ API_KEY = app_store_connect_api_key(
 
 SCHEME       = "AlltrexxMobile"
 PROJECT      = "AlltrexxMobile.xcodeproj"
-BUNDLE_ID    = "info.cafferata.alltrexxmobile"
+BUNDLE_ID    = "info.cafferata.alltrexx"
 SCREENSHOTS  = "AppStore/Screenshots"
 
 platform :ios do

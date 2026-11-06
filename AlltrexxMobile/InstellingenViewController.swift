@@ -279,13 +279,13 @@ final class InstellingenViewController: UIViewController {
 /// moeten in App Store Connect (onder hetzelfde app-record) worden aangemaakt met
 /// deze ID's; tot die tijd toont het scherm netjes "binnenkort beschikbaar".
 enum Fooienpot {
-    /// Vul in zodra het App Store-record bestaat, voor een directe "schrijf een recensie"-link.
-    static let appStoreId: String? = nil
+    /// App Store-id van het record "AllTreXX for all your tracks" — directe "schrijf een recensie"-link.
+    static let appStoreId: String? = "1553691366"
 
     static let productIDs = [
-        "info.cafferata.alltrexxmobile.tip.klein",
-        "info.cafferata.alltrexxmobile.tip.gemiddeld",
-        "info.cafferata.alltrexxmobile.tip.groot",
+        "info.cafferata.alltrexx.tip.klein",
+        "info.cafferata.alltrexx.tip.gemiddeld",
+        "info.cafferata.alltrexx.tip.groot",
     ]
 
     static func producten() async -> [Product] {
