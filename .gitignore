@@ -42,3 +42,10 @@ Carthage/Build
 *.p12
 *.pem
 *.mobileprovision
+
+# Build-/fastlane-artefacten (niet committen)
+fastlane/report.xml
+fastlane/README.md
+*.dSYM.zip
+*.ipa
+*.xcarchive
