@@ -54,7 +54,7 @@ final class KaartViewController: UIViewController {
         case .car:
             break
         case .plane:
-            kaart.addOverlay(CartoLightOverlay.make())
+            kaart.mapType = .mutedStandard
             toonLuchtvaart(true)
         case .person:
             let overlay = OpenTopoMapOverlay.make()
@@ -62,7 +62,7 @@ final class KaartViewController: UIViewController {
             kaart.addOverlay(overlay)
             kaart.addOverlay(WaymarkedTrailsOverlay.make(.wandelen), level: .aboveRoads)
         case .train:
-            kaart.addOverlay(CartoLightOverlay.make())
+            kaart.mapType = .mutedStandard
             kaart.addOverlay(SpoorwegenOverlay.make(), level: .aboveRoads)
         case .none:
             break

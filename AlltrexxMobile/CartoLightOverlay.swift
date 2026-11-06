@@ -1,8 +1,11 @@
 import MapKit
 
-/// Gratis, sleutelloze lichte/rustige kaartondergrond van CARTO — vervangt de
-/// kaartondergrond voor Vliegtuig en Trein. Zelfde bron als de "licht"-basiskaart
-/// op de alltrexx.live-webkaart (BASIS_TILES.licht).
+/// NIET MEER IN GEBRUIK (6 nov 2026). CARTO vereist tegenwoordig een API-sleutel:
+/// de keyless-endpoint `basemaps.cartocdn.com/light_all` levert nu alleen nog
+/// "API KEY REQUIRED"-watermerktegels. De lichte ondergrond voor Vliegtuig en Trein
+/// gebruikt daarom `MKMapType.mutedStandard` (zie `KaartViewController`) — Apple's
+/// eigen gedempte basiskaart, zonder externe afhankelijkheid of sleutel.
+/// Klasse bewust bewaard voor context; nergens meer aangeroepen.
 class CartoLightOverlay: MKTileOverlay {
     static func make() -> CartoLightOverlay {
         let overlay = CartoLightOverlay(urlTemplate: "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png")
