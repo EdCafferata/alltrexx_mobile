@@ -4,14 +4,21 @@ _Gegenereerd 6 nov 2026 (Claude). Issue #7._
 
 ## Wat staat hier
 `Screenshots/<locale>/` bevat de iPhone-screenshots voor de App Store-listing.
-Er zijn er **vier**, in volgorde (het nummer-prefix bepaalt de volgorde in de listing):
+Er zijn er **zeven**, in volgorde (het nummer-prefix bepaalt de volgorde in de listing).
+De laatste vier laten zien dat de kaart zich aanpast aan wat je volgt:
 
 | # | Bestand | Scherm | Toont |
 |---|---------|--------|-------|
-| 1 | `01_welkom.png`    | Onboarding      | Logo + "Welkom bij Alltrexx Mobile" + de 3 kernpunten (live delen, (bijna) real-time, privacy) + "Aan de slag" |
-| 2 | `02_typekeuze.png` | Typeselectie    | "Wat wil je volgen met dit toestel?" — Persoon / Boot / Fiets / Auto / Trein / Vliegtuig |
-| 3 | `03_status.png`    | Status          | "🧍 Persoon · Ed", 🟢 Tracking actief, sleutel, en de knoppen (Mijn kaart / Bekijk mij live / Instellingen / verwijderen) |
-| 4 | `04_kaart.png`     | Tracking-kaart  | Topografische kaart (Persoon = OpenTopoMap + wandelroutes) met eigen positie + live windpijl (Beaufort), op de Veluwe |
+| 1 | `01_welkom.png`      | Onboarding     | Logo + "Welkom bij Alltrexx Mobile" + de 3 kernpunten (live delen, (bijna) real-time, privacy) + "Aan de slag" |
+| 2 | `02_typekeuze.png`   | Typeselectie   | "Wat wil je volgen met dit toestel?" — Persoon / Boot / Fiets / Auto / Trein / Vliegtuig |
+| 3 | `03_status.png`      | Status         | "🧍 Persoon · Ed", 🟢 Tracking actief, sleutel, en de knoppen (Mijn kaart / Bekijk mij live / Instellingen / verwijderen) |
+| 4 | `04_kaart.png`       | Kaart — Persoon | Topografische kaart (OpenTopoMap + wandelroutes) met eigen positie + live windpijl (Beaufort), op de Veluwe |
+| 5 | `05_kaart_boot.png`  | Kaart — Boot   | Gewone kaart + vaarwegmarkeringen (OpenSeaMap), op het water bij Volendam (Markermeer) |
+| 6 | `06_kaart_fiets.png` | Kaart — Fiets  | CyclOSM-kaart + fietsroutes (Waymarked Trails), in fietsstad Houten |
+| 7 | `07_kaart_trein.png` | Kaart — Trein  | Gedempte kaart + spoorwegenlaag (OpenRailwayMap), bij Utrecht Centraal |
+
+> De overige twee categorie-kaarten (auto = Knooppunt Oudenrijn, vliegtuig = Schiphol)
+> staan in `../categorie-kaarten/` en kunnen desgewenst ook toegevoegd worden (Apple staat tot 10 toe).
 
 ## Formaat
 - **1320 × 2868 px** — iPhone **6.9"** (iPhone 17 Pro Max-simulator, portret).
