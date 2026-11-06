@@ -15,17 +15,23 @@ platform :ios do
 
   # ─── TestFlight ────────────────────────────────────────────────────────────
   desc "Build en upload naar TestFlight"
+  # Manual signing (dit account kan geen cloud-managed distribution via de API-key):
+  # certificaat + profiel staan lokaal, profiel via de ASC-API aangemaakt.
+  PROFILE   = "alltrexx AppStore 2026-11-06"
+  SIGN_ID   = "iPhone Distribution: The IT Crowd (9J2S23WJH3)"
+  TEAM_ID   = "9J2S23WJH3"
+
   lane :beta do
-    increment_build_number(xcodeproj: PROJECT)
     build_app(
       project:           PROJECT,
       scheme:            SCHEME,
       configuration:     "Release",
       export_method:     "app-store",
+      xcargs:            "CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY=\"#{SIGN_ID}\" PROVISIONING_PROFILE_SPECIFIER=\"#{PROFILE}\" DEVELOPMENT_TEAM=#{TEAM_ID} CURRENT_PROJECT_VERSION=#{Time.now.strftime('%Y%m%d%H%M')}",
       export_options: {
-        provisioningProfiles: {
-          BUNDLE_ID => "match AppStore #{BUNDLE_ID}"
-        }
+        signingStyle:         "manual",
+        teamID:               TEAM_ID,
+        provisioningProfiles: { BUNDLE_ID => PROFILE }
       }
     )
     upload_to_testflight(
