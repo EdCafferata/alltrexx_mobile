@@ -38,6 +38,14 @@ Apple-account-setup die jouw interactieve login (2FA) vereist — zie de checkli
 - **#12 server-delete** — lokaal wissen werkt; volledige server-side verwijdering vereist backend **alltrexx_live #25** (nodig voor richtlijn 5.1.1(v) vóór store-submission).
 - **#17 focus-op-zelf** — knop opent de live kaart; direct inzoomen op de eigen tracker vereist backend **alltrexx_live #26** (tracker-id wordt al lokaal bewaard).
 - Backend **alltrexx_live #25/#26/#27** — mobiele kant is voorbereid; endpoints nog te bouwen + deployen.
+- **Fooienpot (in-app aankopen)** — Instellingen heeft nu een fooienpot (3 consumables) + een
+  "Beoordeel"-knop + een "Neerslag tonen"-schakelaar. De **3 IAP-producten moeten nog in App Store
+  Connect** worden aangemaakt (onder hetzelfde app-record) met exact deze product-ID's, anders toont
+  het scherm "Donaties zijn binnenkort beschikbaar":
+  `info.cafferata.alltrexxmobile.tip.klein` (€0,99), `…tip.gemiddeld` (€2,99), `…tip.groot` (€5,99) — alle **Consumable**.
+  Lokaal testen in Xcode kan meteen via `Fooien.storekit` (al in de scheme gekoppeld). De review-knop
+  gebruikt de ingebouwde prompt; vul `Fooienpot.appStoreId` in zodra het record bestaat voor een
+  directe "schrijf een recensie"-link.
 
 ## TestFlight — waarom geblokkeerd + jouw afrondlijstje
 De bundle-id `info.cafferata.alltrexxmobile` is **nieuw**: geen app-record in App Store Connect

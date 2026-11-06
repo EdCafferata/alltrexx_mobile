@@ -28,6 +28,10 @@ final class KaartViewController: UIViewController {
         bouwKnoppen()
         pasKaartAanOpCategorie()
         werkWeerWeergaveBij()
+        // Neerslag-laag meteen tonen als dat zo is ingesteld in Instellingen (en er een sleutel is).
+        if OWMSleutel.neerslagStandaard, OWMSleutel.waarde?.isEmpty == false {
+            toonNeerslag(true)
+        }
         LocatieManager.shared.voegWaarnemerToe(self)
     }
 

@@ -1,0 +1,58 @@
+{
+  "identifier" : "A1F00212",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "100000001",
+      "localizations" : [
+        {
+          "description" : "Een kleine fooi om de ontwikkeling van Alltrexx te steunen.",
+          "displayName" : "Kleine fooi",
+          "locale" : "nl_NL"
+        }
+      ],
+      "productID" : "info.cafferata.alltrexxmobile.tip.klein",
+      "referenceName" : "Kleine fooi",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "100000002",
+      "localizations" : [
+        {
+          "description" : "Een gemiddelde fooi om de ontwikkeling van Alltrexx te steunen.",
+          "displayName" : "Gemiddelde fooi",
+          "locale" : "nl_NL"
+        }
+      ],
+      "productID" : "info.cafferata.alltrexxmobile.tip.gemiddeld",
+      "referenceName" : "Gemiddelde fooi",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "5.99",
+      "familyShareable" : false,
+      "internalID" : "100000003",
+      "localizations" : [
+        {
+          "description" : "Een grote fooi om de ontwikkeling van Alltrexx te steunen.",
+          "displayName" : "Grote fooi",
+          "locale" : "nl_NL"
+        }
+      ],
+      "productID" : "info.cafferata.alltrexxmobile.tip.groot",
+      "referenceName" : "Grote fooi",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

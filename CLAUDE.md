@@ -51,6 +51,7 @@ hele UI-flow simulator-getest; live backend-pijplijn getest tegen alltrexx.live)
 - [x] Snelheidsafhankelijk batterijprofiel; significante-locatiewijzigingen voor relaunch
 - [x] Hoogte meesturen + HTTP 403 (geweigerd token) afgehandeld
 - [x] Rijker statusscherm (live) + 'Bekijk mij live' + 'Verwijder mijn gegevens' + Instellingen (kaartsleutels)
+- [x] Instellingen uitgebreid: 'Neerslag tonen'-schakelaar, fooienpot (StoreKit, 3 consumables) + 'Beoordeel'-knop (6 nov)
 - [x] `PrivacyInfo.xcprivacy`, ATS uit (alles HTTPS), arm64, **iPhone-only**, versie 1.0.0/1
 - [x] Eigen Alltrexx-app-icoon; metadata + 11 permissie-strings van BVK → Alltrexx
 - [x] App Store-screenshots (6.9", 4 schermen) in `AppStore/Screenshots/` — zie `AppStore/README.md` (#7)
