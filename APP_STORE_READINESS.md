@@ -33,7 +33,7 @@ Apple-account-setup die jouw interactieve login (2FA) vereist — zie de checkli
 | — | **11 gelokaliseerde `InfoPlist.strings`** (locatie-permissieteksten) OpenBVKTracker → Alltrexx (gevonden tijdens simulator-test) | 4865b94 |
 
 ## Nog open (bewust, met reden)
-- **#7 screenshots** — preview-captures gemaakt in de simulator; formele App Store-screenshots (6.9"/6.5", evt. met captions) nog te maken/kiezen.
+- **#7 screenshots** — ✅ **gemaakt** (6 nov): 4 formele screenshots op **6.9"** (1320×2868, iPhone 17 Pro Max) in `AppStore/Screenshots/{nl-NL,en-US,de-DE}/` — onboarding, typekeuze, status (tracking actief) en de tracking-kaart met live windpijl. 6.9" is de door Apple vereiste maat; ASC schaalt die automatisch naar 6.5"/6.7". Zie `AppStore/README.md`. Alleen het **uploaden** wacht nog op de app-record (`release`-lane uploadt ze mee met de build).
 - **#9 App Privacy in ASC** — het xcprivacy-manifest is klaar; de App Privacy-'nutrition label' in App Store Connect moet dit nog spiegelen (Precieze locatie = App-functionaliteit, gekoppeld aan identiteit, niet voor tracking). Handmatige ASC-stap.
 - **#12 server-delete** — lokaal wissen werkt; volledige server-side verwijdering vereist backend **alltrexx_live #25** (nodig voor richtlijn 5.1.1(v) vóór store-submission).
 - **#17 focus-op-zelf** — knop opent de live kaart; direct inzoomen op de eigen tracker vereist backend **alltrexx_live #26** (tracker-id wordt al lokaal bewaard).

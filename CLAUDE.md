@@ -53,6 +53,7 @@ hele UI-flow simulator-getest; live backend-pijplijn getest tegen alltrexx.live)
 - [x] Rijker statusscherm (live) + 'Bekijk mij live' + 'Verwijder mijn gegevens' + Instellingen (kaartsleutels)
 - [x] `PrivacyInfo.xcprivacy`, ATS uit (alles HTTPS), arm64, **iPhone-only**, versie 1.0.0/1
 - [x] Eigen Alltrexx-app-icoon; metadata + 11 permissie-strings van BVK → Alltrexx
+- [x] App Store-screenshots (6.9", 4 schermen) in `AppStore/Screenshots/` — zie `AppStore/README.md` (#7)
 - [ ] Watch-target (bewust verwijderd uit de BVK-kopie, kan later terug als gewenst)
 
 ## Open punten
@@ -60,6 +61,6 @@ Zie **`APP_STORE_READINESS.md`** (eindstand + TestFlight-afrondlijstje) en de Gi
 - **TestFlight geblokkeerd** op eenmalige Apple-setup (needs Ed, interactief/2FA): app-record bestaat nog
   niet (`APP_EXISTS=false`), bundle-id niet geregistreerd, geen `match`-profiel. Stappen in de readiness-doc.
   Code bouwt groen in Release; alleen account-/signing-setup ontbreekt.
-- Open issues: #7 (formele screenshots), #9 (App Privacy in ASC), #12 (server-delete → backend #25),
+- Open issues: #7 (screenshots ✅ gemaakt, upload wacht op app-record), #9 (App Privacy in ASC), #12 (server-delete → backend #25),
   #17 (focus-op-zelf → backend #26); backend alltrexx_live #25/#26/#27 (mobiele kant voorbereid).
 - Opruimen: TEST-trackers op alltrexx.live (id 216 e.a.) — zie alltrexx_live #27.
