@@ -9,11 +9,26 @@ struct TrackerSleutel: Decodable {
     let token: String
 }
 
-enum AlltrexxAPIError: Error {
+enum AlltrexxAPIError: LocalizedError {
     case ongeldigAntwoord
     /// HTTP 403 — token onbekend, inactief of (gratis) abonnement verlopen.
     case tokenGeweigerd
+    /// HTTP 429 — te veel aanvragen in korte tijd (rate limit van de server).
+    case teVaak
     case server(String)
+
+    var errorDescription: String? {
+        switch self {
+        case .ongeldigAntwoord:
+            return "De server gaf een onverwacht antwoord. Probeer het later opnieuw."
+        case .tokenGeweigerd:
+            return "De sleutel werd geweigerd (onbekend of verlopen)."
+        case .teVaak:
+            return "Je hebt te snel achter elkaar sleutels aangemaakt. Wacht even en probeer het dan opnieuw."
+        case .server(let detail):
+            return "De server meldde een fout (\(detail)). Probeer het later opnieuw."
+        }
+    }
 }
 
 /// Kleine, gerichte netwerkclient voor de Alltrexx Live backend (alltrexx.live).
@@ -27,10 +42,25 @@ enum AlltrexxAPI {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? JSONSerialization.data(withJSONObject: ["naam": naam, "type": type.rawValue])
 
-        URLSession.shared.dataTask(with: request) { data, _, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 DispatchQueue.main.async { completion(.failure(error)) }
                 return
+            }
+            if let http = response as? HTTPURLResponse {
+                switch http.statusCode {
+                case 429:
+                    DispatchQueue.main.async { completion(.failure(AlltrexxAPIError.teVaak)) }
+                    return
+                case 403:
+                    DispatchQueue.main.async { completion(.failure(AlltrexxAPIError.tokenGeweigerd)) }
+                    return
+                case 200...299:
+                    break
+                default:
+                    DispatchQueue.main.async { completion(.failure(AlltrexxAPIError.server("status \(http.statusCode)"))) }
+                    return
+                }
             }
             guard let data = data, let sleutel = try? JSONDecoder().decode(TrackerSleutel.self, from: data) else {
                 DispatchQueue.main.async { completion(.failure(AlltrexxAPIError.ongeldigAntwoord)) }

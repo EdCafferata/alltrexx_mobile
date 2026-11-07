@@ -9,7 +9,6 @@ final class KaartViewController: UIViewController {
 
     private let kaart = MKMapView()
     private let legende = OWMLegendView()
-    private let weerKnop = UIButton(configuration: .filled())
     private let luchtvaartKnop = UIButton(configuration: .filled())
     private let startKnop = UIButton(configuration: .filled())
 
@@ -28,10 +27,6 @@ final class KaartViewController: UIViewController {
         bouwKnoppen()
         pasKaartAanOpCategorie()
         werkWeerWeergaveBij()
-        // Neerslag-laag meteen tonen als dat zo is ingesteld in Instellingen (en er een sleutel is).
-        if OWMSleutel.neerslagStandaard, OWMSleutel.waarde?.isEmpty == false {
-            toonNeerslag(true)
-        }
         LocatieManager.shared.voegWaarnemerToe(self)
     }
 
@@ -76,6 +71,11 @@ final class KaartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         werkStartKnopBij()
+        // Neerslag-laag volgt de instelling (aan/uit staat alleen nog in Instellingen).
+        let neerslagAan = OWMSleutel.neerslagStandaard && (OWMSleutel.waarde?.isEmpty == false)
+        if neerslagAan != (owmOverlay != nil) {
+            toonNeerslag(neerslagAan)
+        }
     }
 
     deinit {
@@ -104,10 +104,6 @@ final class KaartViewController: UIViewController {
     }
 
     private func bouwKnoppen() {
-        weerKnop.configuration?.title = "🌧 Neerslag"
-        weerKnop.configuration?.cornerStyle = .capsule
-        weerKnop.addAction(UIAction { [weak self] _ in self?.tikWeer() }, for: .touchUpInside)
-
         luchtvaartKnop.configuration?.title = "✈️ Luchtvaart"
         luchtvaartKnop.configuration?.cornerStyle = .capsule
         luchtvaartKnop.isHidden = TrackerOpslag.type != .plane
@@ -116,7 +112,7 @@ final class KaartViewController: UIViewController {
         startKnop.configuration?.cornerStyle = .capsule
         startKnop.addAction(UIAction { [weak self] _ in self?.tikStart() }, for: .touchUpInside)
 
-        let stack = UIStackView(arrangedSubviews: [weerKnop, luchtvaartKnop, startKnop])
+        let stack = UIStackView(arrangedSubviews: [luchtvaartKnop, startKnop])
         stack.axis = .horizontal
         stack.spacing = 12
         stack.distribution = .fillEqually
@@ -131,28 +127,21 @@ final class KaartViewController: UIViewController {
 
     // MARK: - Weerlaag
 
-    private func tikWeer() {
-        guard let sleutel = OWMSleutel.waarde, !sleutel.isEmpty else {
-            vraagOWMSleutel()
-            return
+    /// Geen popup meer bij een ontbrekende API-sleutel: open Instellingen en spring
+    /// direct naar het juiste sleutelveld. Na sluiten wordt de laag alsnog getoond
+    /// als de sleutel inmiddels is ingevuld.
+    private func openInstellingen(focus: InstellingenViewController.FocusVeld) {
+        let instellingen = InstellingenViewController(focus: focus)
+        instellingen.bijSluiten = { [weak self] in
+            guard let self else { return }
+            switch focus {
+            case .owm:
+                if OWMSleutel.waarde?.isEmpty == false { self.toonNeerslag(true) }
+            case .openAIP:
+                if OpenAIPSleutel.waarde?.isEmpty == false { self.toonLuchtvaart(true) }
+            }
         }
-        toonNeerslag(!(owmOverlay != nil))
-    }
-
-    private func vraagOWMSleutel() {
-        let alert = UIAlertController(
-            title: "OpenWeatherMap-sleutel",
-            message: "Voor de neerslag-laag is een gratis OpenWeatherMap API-sleutel nodig (dezelfde als in BVK GPX Tracker).",
-            preferredStyle: .alert
-        )
-        alert.addTextField { $0.placeholder = "API-sleutel" }
-        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Opslaan", style: .default) { [weak self, weak alert] _ in
-            guard let sleutel = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines), !sleutel.isEmpty else { return }
-            OWMSleutel.waarde = sleutel
-            self?.toonNeerslag(true)
-        })
-        present(alert, animated: true)
+        present(UINavigationController(rootViewController: instellingen), animated: true)
     }
 
     private func toonNeerslag(_ aan: Bool) {
@@ -169,36 +158,18 @@ final class KaartViewController: UIViewController {
     }
 
     private func werkWeerWeergaveBij() {
-        let aan = owmOverlay != nil
-        weerKnop.configuration?.baseBackgroundColor = aan ? .systemBlue : .secondarySystemBackground
-        weerKnop.configuration?.baseForegroundColor = aan ? .white : .label
-        legende.isHidden = !aan
+        // Legenda alleen tonen als de neerslag-laag actief is (aan/uit via Instellingen).
+        legende.isHidden = (owmOverlay == nil)
     }
 
     // MARK: - Luchtvaartlaag (alleen categorie Vliegtuig)
 
     private func tikLuchtvaart() {
         guard let sleutel = OpenAIPSleutel.waarde, !sleutel.isEmpty else {
-            vraagOpenAIPSleutel()
+            openInstellingen(focus: .openAIP)
             return
         }
         toonLuchtvaart(!(openAIPOverlay != nil))
-    }
-
-    private func vraagOpenAIPSleutel() {
-        let alert = UIAlertController(
-            title: "OpenAIP-sleutel",
-            message: "Voor de luchtvaartlaag (vliegvelden & luchtruim) is een gratis OpenAIP API-sleutel nodig (openaip.net), zelfde als op alltrexx.live.",
-            preferredStyle: .alert
-        )
-        alert.addTextField { $0.placeholder = "API-sleutel" }
-        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Opslaan", style: .default) { [weak self, weak alert] _ in
-            guard let sleutel = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines), !sleutel.isEmpty else { return }
-            OpenAIPSleutel.waarde = sleutel
-            self?.toonLuchtvaart(true)
-        })
-        present(alert, animated: true)
     }
 
     private func toonLuchtvaart(_ aan: Bool) {

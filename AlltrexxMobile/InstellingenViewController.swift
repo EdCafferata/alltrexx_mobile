@@ -6,12 +6,37 @@ import StoreKit
 /// en een knop om de app te beoordelen.
 final class InstellingenViewController: UIViewController {
 
+    /// Welk sleutel-veld meteen in beeld + actief moet zijn bij openen
+    /// (vanaf de kaart, wanneer die laag nog geen sleutel heeft).
+    enum FocusVeld { case owm, openAIP }
+
+    private let focus: FocusVeld?
+    /// Aangeroepen bij sluiten, zodat de kaart z'n lagen kan verversen als er
+    /// zojuist een sleutel is ingevuld.
+    var bijSluiten: (() -> Void)?
+
+    init(focus: FocusVeld? = nil) {
+        self.focus = focus
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        self.focus = nil
+        super.init(coder: coder)
+    }
+
     private let owmStatus = UILabel()
     private let aipStatus = UILabel()
+    private let owmVeld = UITextField()
+    private let aipVeld = UITextField()
     private let neerslagSchakelaar = UISwitch()
     private let fooiStack = UIStackView()
     private let fooiInfo = UILabel()
     private var fooiProducten: [Product] = []
+
+    private let scroll = UIScrollView()
+    private var owmBlok: UIView?
+    private var aipBlok: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +48,26 @@ final class InstellingenViewController: UIViewController {
         laadFooien()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        springNaarFocusVeld()
+    }
+
+    /// Scrollt naar het gevraagde sleutelveld en zet de cursor erin — zodat je
+    /// vanaf de kaart meteen de ontbrekende sleutel kunt invullen, zonder popup.
+    private func springNaarFocusVeld() {
+        guard let focus else { return }
+        let blok = focus == .owm ? owmBlok : aipBlok
+        let veld = focus == .owm ? owmVeld : aipVeld
+        if let blok {
+            scroll.scrollRectToVisible(blok.frame.insetBy(dx: 0, dy: -24), animated: true)
+        }
+        veld.becomeFirstResponder()
+    }
+
     @objc private func sluit() {
+        view.endEditing(true)
+        bijSluiten?()
         dismiss(animated: true)
     }
 
@@ -39,33 +83,30 @@ final class InstellingenViewController: UIViewController {
         let owmBlok = maakBlok(
             titel: "🌧 Neerslag (OpenWeatherMap)",
             statusLabel: owmStatus,
-            instellen: { [weak self] in
-                self?.vraagSleutel(titel: "OpenWeatherMap-sleutel", huidige: OWMSleutel.waarde) {
-                    OWMSleutel.waarde = $0
-                    self?.werkStatusBij()
+            veld: owmVeld,
+            huidige: OWMSleutel.waarde,
+            bewaar: { [weak self] nieuw in
+                OWMSleutel.waarde = nieuw
+                if nieuw == nil {
+                    OWMSleutel.neerslagStandaard = false
+                    self?.neerslagSchakelaar.setOn(false, animated: true)
                 }
-            },
-            wissen: { [weak self] in
-                OWMSleutel.waarde = nil
-                OWMSleutel.neerslagStandaard = false
                 self?.werkStatusBij()
             }
         )
+        self.owmBlok = owmBlok
 
         let aipBlok = maakBlok(
             titel: "✈️ Luchtvaart (OpenAIP)",
             statusLabel: aipStatus,
-            instellen: { [weak self] in
-                self?.vraagSleutel(titel: "OpenAIP-sleutel", huidige: OpenAIPSleutel.waarde) {
-                    OpenAIPSleutel.waarde = $0
-                    self?.werkStatusBij()
-                }
-            },
-            wissen: { [weak self] in
-                OpenAIPSleutel.waarde = nil
+            veld: aipVeld,
+            huidige: OpenAIPSleutel.waarde,
+            bewaar: { [weak self] nieuw in
+                OpenAIPSleutel.waarde = nieuw
                 self?.werkStatusBij()
             }
         )
+        self.aipBlok = aipBlok
 
         let versie = UILabel()
         let kort = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
@@ -81,7 +122,6 @@ final class InstellingenViewController: UIViewController {
         stack.translatesAutoresizingMaskIntoConstraints = false
 
         // In een scrollview zodat de (langere) inhoud ook op kleinere toestellen past.
-        let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.alwaysBounceVertical = true
         view.addSubview(scroll)
@@ -99,7 +139,7 @@ final class InstellingenViewController: UIViewController {
         ])
     }
 
-    private func maakBlok(titel: String, statusLabel: UILabel, instellen: @escaping () -> Void, wissen: @escaping () -> Void) -> UIView {
+    private func maakBlok(titel: String, statusLabel: UILabel, veld: UITextField, huidige: String?, bewaar: @escaping (String?) -> Void) -> UIView {
         let titelLabel = UILabel()
         titelLabel.text = titel
         titelLabel.font = .systemFont(ofSize: 17, weight: .semibold)
@@ -108,22 +148,35 @@ final class InstellingenViewController: UIViewController {
         statusLabel.font = .systemFont(ofSize: 14)
         statusLabel.textColor = .secondaryLabel
 
-        let instelKnop = UIButton(configuration: .tinted())
-        instelKnop.configuration?.title = "Sleutel instellen"
-        instelKnop.addAction(UIAction { _ in instellen() }, for: .touchUpInside)
+        veld.text = huidige
+        veld.placeholder = "Plak hier je gratis API-sleutel"
+        veld.borderStyle = .roundedRect
+        veld.autocapitalizationType = .none
+        veld.autocorrectionType = .no
+        veld.clearButtonMode = .whileEditing
+        veld.returnKeyType = .done
+        veld.font = .systemFont(ofSize: 15)
+        // Opslaan zodra het veld klaar is (Gereed, of focus verliezen).
+        veld.addAction(UIAction { _ in
+            let tekst = veld.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            bewaar(tekst?.isEmpty == false ? tekst : nil)
+        }, for: .editingDidEnd)
+        veld.addAction(UIAction { _ in veld.resignFirstResponder() }, for: .editingDidEndOnExit)
 
         let wisKnop = UIButton(configuration: .plain())
         wisKnop.configuration?.title = "Wissen"
         wisKnop.configuration?.baseForegroundColor = .systemRed
-        wisKnop.addAction(UIAction { _ in wissen() }, for: .touchUpInside)
+        wisKnop.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 0, bottom: 0, trailing: 0)
+        wisKnop.contentHorizontalAlignment = .leading
+        wisKnop.addAction(UIAction { _ in
+            veld.text = nil
+            bewaar(nil)
+        }, for: .touchUpInside)
 
-        let knoppen = UIStackView(arrangedSubviews: [instelKnop, wisKnop, UIView()])
-        knoppen.axis = .horizontal
-        knoppen.spacing = 12
-
-        let blok = UIStackView(arrangedSubviews: [titelLabel, statusLabel, knoppen])
+        let blok = UIStackView(arrangedSubviews: [titelLabel, statusLabel, veld, wisKnop])
         blok.axis = .vertical
         blok.spacing = 8
+        blok.setCustomSpacing(4, after: veld)
         return blok
     }
 
@@ -146,15 +199,12 @@ final class InstellingenViewController: UIViewController {
 
     private func neerslagGewijzigd() {
         if neerslagSchakelaar.isOn, OWMSleutel.waarde?.isEmpty != false {
-            // Geen sleutel: vraag er eerst om; lukt dat niet, zet de schakelaar terug.
-            vraagSleutel(titel: "OpenWeatherMap-sleutel", huidige: OWMSleutel.waarde) { [weak self] sleutel in
-                guard let self else { return }
-                OWMSleutel.waarde = sleutel
-                let heeftSleutel = (sleutel?.isEmpty == false)
-                OWMSleutel.neerslagStandaard = heeftSleutel
-                self.neerslagSchakelaar.setOn(heeftSleutel, animated: true)
-                self.werkStatusBij()
+            // Geen sleutel: geen popup — zet 'm terug en spring naar het sleutelveld.
+            neerslagSchakelaar.setOn(false, animated: true)
+            if let owmBlok {
+                scroll.scrollRectToVisible(owmBlok.frame.insetBy(dx: 0, dy: -24), animated: true)
             }
+            owmVeld.becomeFirstResponder()
             return
         }
         OWMSleutel.neerslagStandaard = neerslagSchakelaar.isOn
@@ -243,27 +293,6 @@ final class InstellingenViewController: UIViewController {
         } else if let scene = view.window?.windowScene {
             AppStore.requestReview(in: scene)
         }
-    }
-
-    // MARK: - Sleutelinvoer
-
-    private func vraagSleutel(titel: String, huidige: String?, opslaan: @escaping (String?) -> Void) {
-        let alert = UIAlertController(title: titel, message: "Plak hier je gratis API-sleutel.", preferredStyle: .alert)
-        alert.addTextField {
-            $0.text = huidige
-            $0.placeholder = "API-sleutel"
-            $0.autocapitalizationType = .none
-            $0.autocorrectionType = .no
-        }
-        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel) { [weak self] _ in
-            // Bij annuleren de neerslag-schakelaar terugzetten als er (nog) geen sleutel is.
-            self?.neerslagSchakelaar.setOn(OWMSleutel.neerslagStandaard, animated: true)
-        })
-        alert.addAction(UIAlertAction(title: "Opslaan", style: .default) { [weak alert] _ in
-            let tekst = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-            opslaan(tekst?.isEmpty == false ? tekst : nil)
-        })
-        present(alert, animated: true)
     }
 
     private func werkStatusBij() {
