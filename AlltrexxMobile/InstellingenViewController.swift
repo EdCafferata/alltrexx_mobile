@@ -4,6 +4,17 @@ import StoreKit
 /// Instellingen / info: optionele kaartlagen (neerslag + luchtvaart), een schakelaar
 /// om de neerslag-laag standaard te tonen, een fooienpot om de ontwikkeling te steunen
 /// en een knop om de app te beoordelen.
+/// Tap-gebaar met een closure, zodat labels/iconen naar een URL kunnen linken.
+private final class SluitingTap: UITapGestureRecognizer {
+    private let actie: () -> Void
+    init(_ actie: @escaping () -> Void) {
+        self.actie = actie
+        super.init(target: nil, action: nil)
+        addTarget(self, action: #selector(vuur))
+    }
+    @objc private func vuur() { actie() }
+}
+
 final class InstellingenViewController: UIViewController {
 
     /// Welk sleutel-veld meteen in beeld + actief moet zijn bij openen
@@ -85,6 +96,8 @@ final class InstellingenViewController: UIViewController {
             statusLabel: owmStatus,
             veld: owmVeld,
             huidige: OWMSleutel.waarde,
+            aanvraagURL: URL(string: "https://home.openweathermap.org/api_keys")!,
+            aanvraagTitel: "Gratis OpenWeatherMap-sleutel aanvragen",
             bewaar: { [weak self] nieuw in
                 OWMSleutel.waarde = nieuw
                 if nieuw == nil {
@@ -101,6 +114,8 @@ final class InstellingenViewController: UIViewController {
             statusLabel: aipStatus,
             veld: aipVeld,
             huidige: OpenAIPSleutel.waarde,
+            aanvraagURL: URL(string: "https://www.openaip.net/")!,
+            aanvraagTitel: "Gratis OpenAIP-sleutel aanvragen",
             bewaar: { [weak self] nieuw in
                 OpenAIPSleutel.waarde = nieuw
                 self?.werkStatusBij()
@@ -139,14 +154,31 @@ final class InstellingenViewController: UIViewController {
         ])
     }
 
-    private func maakBlok(titel: String, statusLabel: UILabel, veld: UITextField, huidige: String?, bewaar: @escaping (String?) -> Void) -> UIView {
+    private func maakBlok(titel: String, statusLabel: UILabel, veld: UITextField, huidige: String?, aanvraagURL: URL, aanvraagTitel: String, bewaar: @escaping (String?) -> Void) -> UIView {
+        let openAanvraag = { UIApplication.shared.open(aanvraagURL) }
+
+        // Titel + icoon: tappable → opent de aanvraagpagina.
         let titelLabel = UILabel()
         titelLabel.text = titel
         titelLabel.font = .systemFont(ofSize: 17, weight: .semibold)
         titelLabel.numberOfLines = 0
+        titelLabel.isUserInteractionEnabled = true
+        titelLabel.addGestureRecognizer(SluitingTap(openAanvraag))
 
+        // Statusregel: ook tappable → aanvraagpagina.
         statusLabel.font = .systemFont(ofSize: 14)
         statusLabel.textColor = .secondaryLabel
+        statusLabel.isUserInteractionEnabled = true
+        statusLabel.addGestureRecognizer(SluitingTap(openAanvraag))
+
+        // Duidelijke aanvraag-link.
+        let aanvraagKnop = UIButton(configuration: .plain())
+        aanvraagKnop.configuration?.title = "🔑 \(aanvraagTitel) →"
+        aanvraagKnop.configuration?.baseForegroundColor = .systemBlue
+        aanvraagKnop.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        aanvraagKnop.contentHorizontalAlignment = .leading
+        aanvraagKnop.titleLabel?.numberOfLines = 0
+        aanvraagKnop.addAction(UIAction { _ in openAanvraag() }, for: .touchUpInside)
 
         veld.text = huidige
         veld.placeholder = "Plak hier je gratis API-sleutel"
@@ -156,6 +188,15 @@ final class InstellingenViewController: UIViewController {
         veld.clearButtonMode = .whileEditing
         veld.returnKeyType = .done
         veld.font = .systemFont(ofSize: 15)
+        // Rechts in het veld een link-knop naar de aanvraagpagina (plakken blijft gewoon werken).
+        let veldLink = UIButton(configuration: .plain())
+        veldLink.configuration?.image = UIImage(systemName: "arrow.up.right.square")
+        veldLink.configuration?.baseForegroundColor = .systemBlue
+        veldLink.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
+        veldLink.addAction(UIAction { _ in openAanvraag() }, for: .touchUpInside)
+        veldLink.sizeToFit()
+        veld.rightView = veldLink
+        veld.rightViewMode = .unlessEditing
         // Opslaan zodra het veld klaar is (Gereed, of focus verliezen).
         veld.addAction(UIAction { _ in
             let tekst = veld.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -173,7 +214,7 @@ final class InstellingenViewController: UIViewController {
             bewaar(nil)
         }, for: .touchUpInside)
 
-        let blok = UIStackView(arrangedSubviews: [titelLabel, statusLabel, veld, wisKnop])
+        let blok = UIStackView(arrangedSubviews: [titelLabel, statusLabel, aanvraagKnop, veld, wisKnop])
         blok.axis = .vertical
         blok.spacing = 8
         blok.setCustomSpacing(4, after: veld)

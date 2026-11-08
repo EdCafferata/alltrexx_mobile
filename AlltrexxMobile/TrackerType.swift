@@ -30,4 +30,17 @@ enum TrackerType: String, CaseIterable {
         case .plane: return "✈️"
         }
     }
+
+    /// Kaart-preset op alltrexx.live (KAART_PRESETS in TrackerKaart.js), zodat de
+    /// live kaart meteen de juiste kaartlaag + opties voor dit type toont.
+    var webPreset: String {
+        switch self {
+        case .person: return "wandel"
+        case .boat: return "boot"
+        case .bike: return "fiets"
+        case .car: return "auto"
+        case .train: return "trein"
+        case .plane: return "vlieg"
+        }
+    }
 }

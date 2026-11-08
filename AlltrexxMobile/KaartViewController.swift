@@ -281,12 +281,36 @@ extension KaartViewController: LocatieWaarnemer {
             kaart.addOverlay(MKPolyline(coordinates: posities, count: posities.count))
         }
 
-        if !heeftKaartGecentreerd {
+        // Tijdens tracking: volg de positie en zoom per categorie + actuele snelheid.
+        // Persoon = strak ingezoomd, vliegtuig = veel groter bereik; sneller = verder uitzoomen.
+        if TrackerOpslag.trackingActief {
+            let straal = gewensteStraal(voorSnelheid: locatie.speed)
+            let regio = MKCoordinateRegion(center: coordinate, latitudinalMeters: straal * 2, longitudinalMeters: straal * 2)
+            kaart.setRegion(regio, animated: heeftKaartGecentreerd)
+            heeftKaartGecentreerd = true
+        } else if !heeftKaartGecentreerd {
             heeftKaartGecentreerd = true
             kaart.setRegion(MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500), animated: false)
         }
 
         werkWindBij(coordinate: coordinate)
+    }
+
+    /// Gewenste straal (meter) rond de positie: per categorie een basis- en maxbereik,
+    /// meeschalend met de actuele snelheid (toont ongeveer zoveel seconden vooruit).
+    private func gewensteStraal(voorSnelheid snelheid: CLLocationSpeed) -> CLLocationDistance {
+        let v = max(0, snelheid) // m/s; -1 = ongeldig → 0
+        let basis: CLLocationDistance, vooruitSec: Double, maximum: CLLocationDistance
+        switch TrackerOpslag.type {
+        case .person: (basis, vooruitSec, maximum) = (200, 45, 1500)      // maximale zoom
+        case .bike:   (basis, vooruitSec, maximum) = (400, 60, 4000)
+        case .car:    (basis, vooruitSec, maximum) = (900, 60, 12000)
+        case .boat:   (basis, vooruitSec, maximum) = (1200, 60, 15000)
+        case .train:  (basis, vooruitSec, maximum) = (1500, 70, 25000)
+        case .plane:  (basis, vooruitSec, maximum) = (6000, 90, 120000)   // veel groter bereik
+        case .none:   (basis, vooruitSec, maximum) = (700, 60, 8000)
+        }
+        return min(maximum, max(basis, v * vooruitSec))
     }
 }
 
