@@ -106,6 +106,12 @@ final class TypeSelectieViewController: UIViewController {
     }
 
     private func vraagNaamEnKies(_ type: TrackerType) {
+        // Al eerder een sleutel voor dit type aangemaakt? Direct hergebruiken —
+        // geen naam-prompt en geen nieuwe server-aanvraag.
+        if TrackerOpslag.sleutelVoor(type) != nil {
+            kiesType(type, naam: TrackerOpslag.laatsteNaam(voor: type) ?? UIDevice.current.name)
+            return
+        }
         let voorstel = TrackerOpslag.laatsteNaam(voor: type) ?? UIDevice.current.name
 
         let alert = UIAlertController(
@@ -126,6 +132,17 @@ final class TypeSelectieViewController: UIViewController {
     }
 
     private func kiesType(_ type: TrackerType, naam: String) {
+        // Bestaat er al een sleutel voor dit type? Hergebruik 'm i.p.v. een nieuwe aan te vragen.
+        if let bestaand = TrackerOpslag.sleutelVoor(type) {
+            TrackerOpslag.token = bestaand.token
+            TrackerOpslag.trackerId = bestaand.trackerId > 0 ? bestaand.trackerId : nil
+            TrackerOpslag.type = type
+            TrackerOpslag.trackingActief = true
+            TrackerOpslag.bewaarNaam(naam, voor: type)
+            view.window?.rootViewController = HoofdTabBarController()
+            return
+        }
+
         activityIndicator.startAnimating()
 
         AlltrexxAPI.maakSleutel(naam: naam, type: type) { [weak self] result in
@@ -139,6 +156,7 @@ final class TypeSelectieViewController: UIViewController {
                 TrackerOpslag.type = type
                 TrackerOpslag.trackingActief = true
                 TrackerOpslag.bewaarNaam(naam, voor: type)
+                TrackerOpslag.bewaarSleutel(token: sleutel.token, trackerId: sleutel.id, voor: type)
                 self.view.window?.rootViewController = HoofdTabBarController()
             case .failure(let error):
                 self.toonMelding(titel: "Mislukt", tekst: "Kon geen sleutel aanmaken: \(error.localizedDescription)")

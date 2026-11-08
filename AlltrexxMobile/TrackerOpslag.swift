@@ -8,6 +8,8 @@ enum TrackerOpslag {
     private static let naamPerTypeKey = "alltrexx-naam-per-type"
     private static let trackerIdKey = "alltrexx-tracker-id"
     private static let onboardingGezienKey = "alltrexx-onboarding-gezien"
+    private static let tokenPerTypeKey = "alltrexx-token-per-type"
+    private static let trackerIdPerTypeKey = "alltrexx-tracker-id-per-type"
 
     static var token: String? {
         get { UserDefaults.standard.string(forKey: tokenKey) }
@@ -58,10 +60,30 @@ enum TrackerOpslag {
         UserDefaults.standard.set(dict, forKey: naamPerTypeKey)
     }
 
+    /// Onthoudt per categorie de aangemaakte sleutel (token + tracker-id), zodat je bij
+    /// het opnieuw kiezen van datzelfde type dezelfde tracker hergebruikt in plaats van
+    /// telkens een nieuwe sleutel bij de server aan te vragen.
+    static func sleutelVoor(_ type: TrackerType) -> (token: String, trackerId: Int)? {
+        let tokens = UserDefaults.standard.dictionary(forKey: tokenPerTypeKey) as? [String: String] ?? [:]
+        guard let token = tokens[type.rawValue], !token.isEmpty else { return nil }
+        let ids = UserDefaults.standard.dictionary(forKey: trackerIdPerTypeKey) as? [String: Int] ?? [:]
+        return (token, ids[type.rawValue] ?? 0)
+    }
+
+    static func bewaarSleutel(token: String, trackerId: Int, voor type: TrackerType) {
+        var tokens = UserDefaults.standard.dictionary(forKey: tokenPerTypeKey) as? [String: String] ?? [:]
+        tokens[type.rawValue] = token
+        UserDefaults.standard.set(tokens, forKey: tokenPerTypeKey)
+        var ids = UserDefaults.standard.dictionary(forKey: trackerIdPerTypeKey) as? [String: Int] ?? [:]
+        ids[type.rawValue] = trackerId
+        UserDefaults.standard.set(ids, forKey: trackerIdPerTypeKey)
+    }
+
     /// Wist alle lokaal bewaarde trackergegevens (voor 'Verwijder mijn gegevens').
     static func wisAlles() {
         let defaults = UserDefaults.standard
-        [tokenKey, typeKey, trackingActiefKey, naamPerTypeKey, trackerIdKey].forEach {
+        [tokenKey, typeKey, trackingActiefKey, naamPerTypeKey, trackerIdKey,
+         tokenPerTypeKey, trackerIdPerTypeKey].forEach {
             defaults.removeObject(forKey: $0)
         }
     }
