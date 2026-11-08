@@ -10,7 +10,13 @@ final class LiveKaartViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         bouwWebView()
-        webView.load(URLRequest(url: URL(string: "https://alltrexx.live")!))
+        // Geef het eigen tracker-type mee, zodat de live kaart meteen de bijbehorende
+        // kaartlaag/opties kiest (persoon → wandelkaart, boot → zeekaart, enz.).
+        var urlStr = "https://alltrexx.live"
+        if let type = TrackerOpslag.type {
+            urlStr += "/?laag=\(type.webPreset)&types=\(type.rawValue)"
+        }
+        webView.load(URLRequest(url: URL(string: urlStr)!))
     }
 
     private func bouwWebView() {
