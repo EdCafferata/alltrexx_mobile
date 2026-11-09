@@ -1,0 +1,33 @@
+Screen recording (physical iPhone, latest iOS): [LINK/ATTACHMENT - TO BE ADDED BY ED]
+
+1. PURPOSE AND AUDIENCE
+Alltrexx Mobile is the companion app of the website https://alltrexx.live, a live map of moving things (aircraft, ships, trains, cyclists, hikers, cars). The app lets an individual share the position of their own iPhone (near) live on that map and see themselves back on it. Audience: hikers, cyclists, sailors, (glider) pilots and travellers who want friends/family to follow their trip, without a social network or account.
+
+2. HOW TO USE / ACCESS THE MAIN FEATURES
+No login or credentials are needed.
+- On first launch: short onboarding, then allow location access.
+- Choose a tracker type (person, bike, car, boat, train, plane) and enter a display name. The app then requests a free anonymous tracker key from alltrexx.live (no e-mail, no password).
+- Status tab: start/stop tracking; shows live status, last position, speed and the offline upload queue.
+- Tracking map tab: your own track on the map, with optional layers.
+- Live map tab: opens alltrexx.live focused on your tracker type.
+- Settings: optional personal map keys (OpenWeatherMap, OpenAIP) for extra map layers, a "Delete my data" button and an optional tip jar.
+- "Delete my data" (Settings) deletes the tracker and all its stored positions on the server and wipes all local data (Guideline 5.1.1(v)).
+- Tip jar: three optional consumable In-App Purchases (tips). They unlock nothing; the app is fully functional without them.
+
+3. EXTERNAL SERVICES
+- alltrexx.live (our own backend): receives the positions and shows the live map.
+- Apple MapKit: base map.
+- Open-Meteo: weather/wind data.
+- OpenStreetMap-based tile services (OpenTopoMap, CyclOSM, Waymarked Trails, OpenSeaMap, OpenRailwayMap): optional map layers.
+- OpenWeatherMap and OpenAIP: optional layers, only with a key the user enters themselves.
+- Apple StoreKit: optional tips.
+No AI services, no third-party authentication, no ads, no tracking/analytics SDKs.
+
+4. USER CONTENT
+The only user-entered content is the display name of the tracker, shown next to the position on alltrexx.live. There is no messaging, chat, photos or other user-generated content.
+
+5. REGIONAL DIFFERENCES
+The app functions identically in all regions.
+
+6. REGULATED INDUSTRY / THIRD-PARTY MATERIAL
+Not applicable. The app is not a navigation or safety-of-life aid; map data comes from the open/public services listed above under their own licences.
