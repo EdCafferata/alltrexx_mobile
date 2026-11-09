@@ -9,7 +9,7 @@ No login or credentials are needed.
 - Choose a tracker type (person, bike, car, boat, train, plane) and enter a display name. The app then requests a free anonymous tracker key from alltrexx.live (no e-mail, no password).
 - Status tab: start/stop tracking; shows live status, last position, speed and the offline upload queue.
 - Tracking map tab: your own track on the map, with optional layers.
-- Live map tab: opens alltrexx.live focused on your tracker type.
+- Live map tab: opens alltrexx.live focused on your tracker type. Each tracker name on this map has a "Report name" (⚠️) button to flag objectionable content.
 - Settings: optional personal map keys (OpenWeatherMap, OpenAIP) for extra map layers, a "Delete my data" button and an optional tip jar.
 - "Delete my data" (Settings) deletes the tracker and all its stored positions on the server and wipes all local data (Guideline 5.1.1(v)).
 - Tip jar: three optional consumable In-App Purchases (tips). They unlock nothing; the app is fully functional without them.
@@ -23,8 +23,12 @@ No login or credentials are needed.
 - Apple StoreKit: optional tips.
 No AI services, no third-party authentication, no ads, no tracking/analytics SDKs.
 
-4. USER CONTENT
-The only user-entered content is the display name of the tracker, shown next to the position on alltrexx.live. There is no messaging, chat, photos or other user-generated content.
+4. USER-GENERATED CONTENT AND MODERATION
+The only user-entered content is the display name of the tracker, shown next to the position on the public map at https://alltrexx.live. There is no messaging, chat, photos or other user-generated content. The following moderation mechanisms are in place (Guideline 1.2):
+- Filtering: objectionable names (profanity, hate speech, sexually explicit terms, in English and Dutch) are rejected by the server when a tracker key is created (HTTP 400). The name is not accepted and the app shows an error.
+- Reporting: every tracker name on the live map has a "Report name" (⚠️) button. It is reachable inside the app through the "Live map" tab (which shows alltrexx.live), and sends a report to our server.
+- Removal / blocking: once a name reaches the report threshold it is automatically masked on the map (shown as "⚠️ Reported name"), and an administrator reviews reported names and can permanently remove the tracker. Users can also delete their own tracker and all its data at any time via "Delete my data" in Settings.
+- Contact: a contact address for abuse reports is published on the support page at https://cafferata.info/alltrexx/.
 
 5. REGIONAL DIFFERENCES
 The app functions identically in all regions.

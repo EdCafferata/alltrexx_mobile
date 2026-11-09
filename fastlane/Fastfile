@@ -40,6 +40,44 @@ platform :ios do
     )
   end
 
+  # ─── Bestaande build indienen voor review (geen nieuwe binary) ─────────────
+  desc "Dien de reeds geuploade build in voor App Store-review"
+  lane :submit_now do
+    upload_to_app_store(
+      api_key:                     API_KEY,
+      app_identifier:              BUNDLE_ID,
+      build_number:                "202611082123",
+      skip_binary_upload:          true,
+      skip_screenshots:            true,
+      skip_metadata:               true,
+      submit_for_review:           true,
+      automatic_release:           false,
+      force:                       true,
+      run_precheck_before_submit:  false,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        add_id_info_uses_idfa: false
+      }
+    )
+  end
+
+  # ─── Alleen listing vullen (metadata + screenshots, geen submit) ───────────
+  desc "Metadata + screenshots uploaden naar de prepare-for-submission-versie"
+  lane :listing do
+    upload_to_app_store(
+      api_key:                            API_KEY,
+      app_identifier:                     BUNDLE_ID,
+      skip_binary_upload:                 true,
+      metadata_path:                      "fastlane/metadata",
+      screenshots_path:                   SCREENSHOTS,
+      overwrite_screenshots:              true,
+      submit_for_review:                  false,
+      force:                              true,
+      run_precheck_before_submit:         false,
+      precheck_include_in_app_purchases:  false
+    )
+  end
+
   # ─── App Store release ─────────────────────────────────────────────────────
   desc "Build, upload naar App Store en dien in ter beoordeling"
   lane :release do
