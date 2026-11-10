@@ -23,6 +23,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Build en upload naar TestFlight
 
+### ios submit_now
+
+```sh
+[bundle exec] fastlane ios submit_now
+```
+
+Dien de reeds geuploade build in voor App Store-review
+
+### ios listing
+
+```sh
+[bundle exec] fastlane ios listing
+```
+
+Metadata + screenshots uploaden naar de prepare-for-submission-versie
+
 ### ios release
 
 ```sh

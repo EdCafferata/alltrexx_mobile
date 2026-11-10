@@ -1,33 +1,38 @@
-Screen recording (physical iPhone, latest iOS): [LINK/ATTACHMENT - TO BE ADDED BY ED]
+Screen recording (physical iPhone, latest iOS): attached to this App Review Information submission.
 
 1. PURPOSE AND AUDIENCE
-Alltrexx Mobile is the companion app of the website https://alltrexx.live, a live map of moving things (aircraft, ships, trains, cyclists, hikers, cars). The app lets an individual share the position of their own iPhone (near) live on that map and see themselves back on it. Audience: hikers, cyclists, sailors, (glider) pilots and travellers who want friends/family to follow their trip, without a social network or account.
+Alltrexx Mobile is the companion app of the website https://alltrexx.live, a live map of moving things (aircraft, ships, trains, cyclists, hikers, cars). The app lets a person share the position of their own iPhone (near) live on that map and see themselves on it. Audience: hikers, cyclists, sailors, pilots and travellers who want friends/family to follow their trip, without a social network or account.
 
 2. HOW TO USE / ACCESS THE MAIN FEATURES
 No login or credentials are needed.
-- On first launch: short onboarding, then allow location access.
-- Choose a tracker type (person, bike, car, boat, train, plane) and enter a display name. The app then requests a free anonymous tracker key from alltrexx.live (no e-mail, no password).
-- Status tab: start/stop tracking; shows live status, last position, speed and the offline upload queue.
-- Tracking map tab: your own track on the map, with optional layers.
-- Live map tab: opens alltrexx.live focused on your tracker type.
-- Settings: optional personal map keys (OpenWeatherMap, OpenAIP) for extra map layers, a "Delete my data" button and an optional tip jar.
-- "Delete my data" (Settings) deletes the tracker and all its stored positions on the server and wipes all local data (Guideline 5.1.1(v)).
-- Tip jar: three optional consumable In-App Purchases (tips). They unlock nothing; the app is fully functional without them.
+- First launch: short onboarding, then allow location access.
+- Choose a tracker type (person, bike, car, boat, train, plane) and a display name. The app then requests a free anonymous tracker key from alltrexx.live (no e-mail, no password).
+- Status tab: start/stop tracking; shows live status, last position, speed and the offline queue.
+- Tracking map tab: your own track, with optional layers.
+- Live map tab: opens alltrexx.live for your tracker type. Each tracker name there has a "Report name" button to flag objectionable content.
+- Settings: optional personal map keys (OpenWeatherMap for precipitation, and a third-party aviation-airspace map service), a "Delete my data" button and an optional tip jar.
+- "Delete my data" removes the tracker and all its stored positions on the server and wipes local data (Guideline 5.1.1(v)).
+- Tip jar: three optional consumable In-App Purchases. They unlock nothing; the app is fully functional without them.
 
 3. EXTERNAL SERVICES
-- alltrexx.live (our own backend): receives the positions and shows the live map.
-- Apple MapKit: base map.
-- Open-Meteo: weather/wind data.
-- OpenStreetMap-based tile services (OpenTopoMap, CyclOSM, Waymarked Trails, OpenSeaMap, OpenRailwayMap): optional map layers.
-- OpenWeatherMap and OpenAIP: optional layers, only with a key the user enters themselves.
+- alltrexx.live (our own backend): receives positions and shows the live map.
+- Apple MapKit: base map. Open-Meteo: weather/wind. OpenStreetMap-based tile services: optional map layers.
+- OpenWeatherMap and a third-party aviation-airspace map service: optional layers, only with a key the user enters.
 - Apple StoreKit: optional tips.
-No AI services, no third-party authentication, no ads, no tracking/analytics SDKs.
+No AI, third-party authentication, ads, or tracking/analytics SDKs.
 
-4. USER CONTENT
-The only user-entered content is the display name of the tracker, shown next to the position on alltrexx.live. There is no messaging, chat, photos or other user-generated content.
+4. USER-GENERATED CONTENT AND MODERATION
+The only user-entered content is the tracker display name, shown next to the position on the public map at https://alltrexx.live. There is no messaging, chat, photos or other UGC. Moderation (Guideline 1.2):
+- Filtering: objectionable names (profanity, hate speech, sexual terms, in English and Dutch) are rejected by the server at key creation (HTTP 400); the name is not accepted and the app shows an error.
+- Reporting: every name on the live map has a "Report name" button, reachable in the app via the "Live map" tab, which sends a report to our server.
+- Removal/blocking: at the report threshold a name is automatically masked ("Reported name"); an administrator reviews reports and can remove the tracker. Users can also delete their own tracker and data anytime via "Delete my data".
+- Contact: an abuse-report address is published on the support page https://cafferata.info/alltrexx/.
 
 5. REGIONAL DIFFERENCES
 The app functions identically in all regions.
 
 6. REGULATED INDUSTRY / THIRD-PARTY MATERIAL
-Not applicable. The app is not a navigation or safety-of-life aid; map data comes from the open/public services listed above under their own licences.
+Not applicable. The app is not a navigation or safety-of-life aid; map data comes from the open/public services above under their own licences.
+
+7. GUIDELINE 5 (LEGAL) — NO AI / DEEP-SYNTHESIS
+This app contains no generative-AI, deep-synthesis, chatbot or large-language-model functionality and is not connected to any such service — it is a GPS location-sharing app. A previous metadata string named a third-party aviation-airspace map-data provider; that name was removed from all metadata to prevent a false automated keyword match. The deep-synthesis/generative-AI regulations therefore do not apply.

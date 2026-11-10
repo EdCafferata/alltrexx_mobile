@@ -13,7 +13,7 @@ Zum Live-Verfolgen gemacht
 Karten, die zu deiner Reise passen
 - Deine eigene Live-Karte mit der Route, die du in dieser Sitzung geteilt hast
 - Kategoriespezifische Ebenen wie auf der alltrexx.live-Webkarte: Seezeichen für Boote, Rad- und Wanderwege, Eisenbahnen für Züge und eine Luftfahrtebene für Flugzeuge
-- Optionale Niederschlags- (OpenWeatherMap) und Luftraum- (OpenAIP) Ebenen mit einem kostenlosen Schlüssel
+- Optionale Niederschlags- (OpenWeatherMap) und Luftraum-Ebenen mit einem kostenlosen Schlüssel
 
 Deine Daten, deine Kontrolle
 - Nur deine Position und der von dir gewählte Name werden geteilt
