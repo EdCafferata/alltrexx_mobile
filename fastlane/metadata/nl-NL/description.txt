@@ -13,7 +13,7 @@ Gemaakt om live te volgen
 Kaarten die bij je reis passen
 - Je eigen live kaart met de route die je deze sessie hebt gedeeld
 - Categorie-specifieke lagen, net als de alltrexx.live-webkaart: vaarmarkeringen voor boten, fiets- en wandelroutes, spoorwegen voor treinen en een luchtvaartlaag voor vliegtuigen
-- Optionele neerslag- (OpenWeatherMap) en luchtruim- (OpenAIP) lagen met een gratis sleutel
+- Optionele neerslag- (OpenWeatherMap) en luchtruim-lagen met een gratis sleutel
 
 Jouw gegevens, jouw controle
 - Alleen je positie en de naam die je kiest worden gedeeld

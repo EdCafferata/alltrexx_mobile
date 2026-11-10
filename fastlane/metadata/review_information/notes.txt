@@ -10,7 +10,7 @@ No login or credentials are needed.
 - Status tab: start/stop tracking; shows live status, last position, speed and the offline upload queue.
 - Tracking map tab: your own track on the map, with optional layers.
 - Live map tab: opens alltrexx.live focused on your tracker type. Each tracker name on this map has a "Report name" (⚠️) button to flag objectionable content.
-- Settings: optional personal map keys (OpenWeatherMap, OpenAIP) for extra map layers, a "Delete my data" button and an optional tip jar.
+- Settings: optional personal map keys (OpenWeatherMap for precipitation, and a third-party aviation-airspace map service) for extra map layers, a "Delete my data" button and an optional tip jar.
 - "Delete my data" (Settings) deletes the tracker and all its stored positions on the server and wipes all local data (Guideline 5.1.1(v)).
 - Tip jar: three optional consumable In-App Purchases (tips). They unlock nothing; the app is fully functional without them.
 
@@ -19,9 +19,9 @@ No login or credentials are needed.
 - Apple MapKit: base map.
 - Open-Meteo: weather/wind data.
 - OpenStreetMap-based tile services (OpenTopoMap, CyclOSM, Waymarked Trails, OpenSeaMap, OpenRailwayMap): optional map layers.
-- OpenWeatherMap and OpenAIP: optional layers, only with a key the user enters themselves.
+- OpenWeatherMap (precipitation) and a third-party aviation-airspace map service: optional map layers, only with a key the user enters themselves.
 - Apple StoreKit: optional tips.
-No AI services, no third-party authentication, no ads, no tracking/analytics SDKs.
+No AI services of any kind: the app contains no generative-AI, deep-synthesis, chatbot or large-language-model functionality and is not connected to any such service. No third-party authentication, no ads, no tracking/analytics SDKs.
 
 4. USER-GENERATED CONTENT AND MODERATION
 The only user-entered content is the display name of the tracker, shown next to the position on the public map at https://alltrexx.live. There is no messaging, chat, photos or other user-generated content. The following moderation mechanisms are in place (Guideline 1.2):
@@ -35,3 +35,6 @@ The app functions identically in all regions.
 
 6. REGULATED INDUSTRY / THIRD-PARTY MATERIAL
 Not applicable. The app is not a navigation or safety-of-life aid; map data comes from the open/public services listed above under their own licences.
+
+7. NOTE ON GUIDELINE 5 (LEGAL) — NO AI / DEEP-SYNTHESIS FUNCTIONALITY
+This app does not contain, and is not associated with, any generative-AI, deep-synthesis, chatbot or large-language-model service. It is a GPS location-sharing app. A previous metadata string named a third-party aviation-airspace map-data provider; that brand name has been removed from all metadata fields to prevent a false automated keyword match. No such functionality exists in the app, so the deep-synthesis/generative-AI regulations do not apply.

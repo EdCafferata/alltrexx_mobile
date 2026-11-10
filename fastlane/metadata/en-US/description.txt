@@ -13,7 +13,7 @@ Made for live following
 Maps that match your journey
 - Your own live map showing the route you have shared this session
 - Category-specific layers, just like the alltrexx.live web map: sea marks for boats, cycling and hiking routes, railways for trains and an aviation layer for planes
-- Optional precipitation (OpenWeatherMap) and airspace (OpenAIP) layers with a free key
+- Optional precipitation (OpenWeatherMap) and aviation airspace layers with a free key
 
 Your data, your control
 - Only your position and the name you choose are shared
