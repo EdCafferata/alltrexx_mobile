@@ -59,9 +59,9 @@ hele UI-flow simulator-getest; live backend-pijplijn getest tegen alltrexx.live)
 
 ## Open punten
 Zie **`APP_STORE_READINESS.md`** (eindstand + TestFlight-afrondlijstje) en de GitHub-issues.
-- **TestFlight geblokkeerd** op eenmalige Apple-setup (needs Ed, interactief/2FA): app-record bestaat nog
-  niet (`APP_EXISTS=false`), bundle-id niet geregistreerd, geen `match`-profiel. Stappen in de readiness-doc.
-  Code bouwt groen in Release; alleen account-/signing-setup ontbreekt.
-- Open issues: #7 (screenshots ✅ gemaakt, upload wacht op app-record), #9 (App Privacy in ASC), #12 (server-delete → backend #25),
-  #17 (focus-op-zelf → backend #26); backend alltrexx_live #25/#26/#27 (mobiele kant voorbereid).
+- **iOS 1.0 LIVE in de App Store sinds 10 nov 2026** ("Ready for Distribution" 22:31; ASC appStoreState READY_FOR_SALE,
+  record 1553691366, versie-id 6391b92d; https://apps.apple.com/nl/app/alltrexx-mobile/id1553691366). #7/#9/#12 daarmee gesloten.
+  ⚠️ Het record heeft ook een lege macOS-1.0-slot (a1574abc, PREPARE_FOR_SUBMISSION) → #22.
+- Open issues: #22 (macOS-versie), #17 (focus-op-zelf → backend #26), #26 (nieuw logo), #5 (site-info), #4 (rate-the-app),
+  #1–#3 (oudere wensen). Nog open in ASC: IAP-fooienproducten aanmaken.
 - Opruimen: TEST-trackers op alltrexx.live (id 216 e.a.) — zie alltrexx_live #27.

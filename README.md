@@ -6,7 +6,7 @@ Alltrexx Mobile — iOS-app voor het Alltrexx platform. Kies bij het openen wat 
 tracker dit toestel is (persoon, boot, fiets, auto, trein, vliegtuig) en volg jezelf
 mee op [alltrexx.live](https://alltrexx.live).
 
-**Status:** 🟢 werkend op fysiek toestel. Typeselectie + sleutel aanmaken, achtergrond-
+**Status:** 🟢 **LIVE in de App Store** sinds 10 nov 2026 (iOS 1.0, [App Store](https://apps.apple.com/nl/app/alltrexx-mobile/id1553691366)). Typeselectie + sleutel aanmaken, achtergrond-
 locatie-tracking (throttled elke 15s), en een tabbar met drie schermen:
 - **Status** — huidig type/naam, tracking starten/stoppen
 - **Tracking** — eigen positie + route op de kaart, met per-categorie kaartlagen

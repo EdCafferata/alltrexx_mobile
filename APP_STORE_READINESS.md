@@ -1,5 +1,8 @@
 # Alltrexx Mobile — App Store-gereedheid & status
 
+> **Update 11 nov 2026:** iOS 1.0 is goedgekeurd en **LIVE in de App Store** (10 nov 2026 22:31, READY_FOR_SALE) —
+> https://apps.apple.com/nl/app/alltrexx-mobile/id1553691366. Onderstaande tekst is historisch (stand 5 nov).
+
 _Bijgewerkt 5 nov 2026 (Claude, autonome sessie). Doel van de app: de positie van
 dit toestel (bijna) live doorsturen naar **alltrexx.live** en jezelf daar terugzien._
 
