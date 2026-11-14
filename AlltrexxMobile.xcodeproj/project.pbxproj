@@ -12,27 +12,28 @@
 		16087F5EA3979A32A287D555 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */; };
 		3450286509CF43324C5C766B /* SpoorwegenOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F1DC4344ED4653B3958CB6 /* SpoorwegenOverlay.swift */; };
 		38014231B7C6C6EC0A845AB9 /* LiveKaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7FD0DF6413AAD60B39BAF /* LiveKaartViewController.swift */; };
+		410C2AB4BE414F6BCB8F45B8 /* SmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E00A4A69653AE81ECA6105 /* SmokeUITests.swift */; };
 		43BE62B36963F2A4CB40FBA3 /* PositieLogboek.swift in Sources */ = {isa = PBXBuildFile; fileRef = A112BD76CFFE3B3A2199769A /* PositieLogboek.swift */; };
 		4491E3437136030052113B25 /* OWMLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8B61090C3379205B06047D /* OWMLegendView.swift */; };
 		4500E4487F9F2191742596E8 /* TrackerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B656274A54961E695C1DEF4B /* TrackerType.swift */; };
 		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
-		A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */; };
-		A11CE50FA571000000000B21 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F21 /* OnboardingViewController.swift */; };
-		A11CE50FA571000000000B22 /* InstellingenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F22 /* InstellingenViewController.swift */; };
 		48B961C3CB2EEB4C1F475B5D /* PositieLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17410F3F384071BC488C0B5 /* PositieLogEntry.swift */; };
 		500BB791B1DFCE5F2AED2987 /* OpenTopoMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8A046B309275BD6942150 /* OpenTopoMapOverlay.swift */; };
 		56715E63BBD4A87E7B9C5EE6 /* CartoLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCB145358BAF08C4B7C07D4 /* CartoLightOverlay.swift */; };
 		5B32E6EB19A55850EE1280C6 /* OpenAIPOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */; };
 		634B2185C53356A65E4E66C1 /* OpenSeaMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2284713A96FC4ED232F4C32 /* OpenSeaMapOverlay.swift */; };
+		671B12BC344D038DCC75A804 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FCC7C17877F6A7CFEB61BF /* Foundation.framework */; };
 		73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */; };
 		898EECDB19C49B5800B4B207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EECDA19C49B5800B4B207 /* AppDelegate.swift */; };
-		ED5CE27E000000000000AA01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CE27E000000000000AA02 /* SceneDelegate.swift */; };
 		898EECE519C49B5800B4B207 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898EECE419C49B5800B4B207 /* Images.xcassets */; };
 		898EECFE19C49DC700B4B207 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFD19C49DC700B4B207 /* MapKit.framework */; };
 		898EED0019C4A15E00B4B207 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFF19C4A15E00B4B207 /* CoreLocation.framework */; };
 		899D677819CF0A9F00C88A0A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D677719CF0A9F00C88A0A /* MessageUI.framework */; };
 		899D678419D3528D00C88A0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D678319D3528D00C88A0A /* WebKit.framework */; };
 		94FAD2CEE723BC165D731750 /* PositieUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16179D8EA12F7BD15869DE4A /* PositieUploader.swift */; };
+		A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */; };
+		A11CE50FA571000000000B21 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F21 /* OnboardingViewController.swift */; };
+		A11CE50FA571000000000B22 /* InstellingenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F22 /* InstellingenViewController.swift */; };
 		A77708A9C25DA0C1D20F045E /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD863FC70B2A552358EBFA99 /* KaartViewController.swift */; };
 		B41A822F5CDAFF4A97AA51FA /* HoofdTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */; };
 		BD8CBF9B9D7B76F044F9B9C5 /* WaymarkedTrailsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038AECF80D36E1FB5ACCB0F /* WaymarkedTrailsOverlay.swift */; };
@@ -40,20 +41,37 @@
 		BF637D132216C5FA0003EC04 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF637D122216C5FA0003EC04 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BFC7063CBAA96FEBEAF86AD2 /* OpenAIPSleutel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE40FDB4785086F9CC65D6 /* OpenAIPSleutel.swift */; };
 		C9F4EDE4803FFBBF79D3EA8E /* LocatieWaarnemer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */; };
+		CF708FEA99567B5ECEF48238 /* TrackerTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CBA6F12C390B70EDE7D92 /* TrackerTypeTests.swift */; };
 		DAC0A43E113CB5B44EFE0DED /* OWMTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84D6E6844E0FAFFB94DE0C /* OWMTileOverlay.swift */; };
 		DCEB8E430FB72398A6B3946F /* CyclOSMOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CC3D1A17810DCF7AE3AC2 /* CyclOSMOverlay.swift */; };
 		E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */; };
+		E6ECF39E95E9571C48D6CCAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FCC7C17877F6A7CFEB61BF /* Foundation.framework */; };
 		ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11819567B86343CC5C46FCD0 /* LocatieManager.swift */; };
+		ED5CE27E000000000000AA01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CE27E000000000000AA02 /* SceneDelegate.swift */; };
 		F0089F14224633351A06094B /* OWMSleutel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9207132F97DB552D8E350EDC /* OWMSleutel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4190083D4A001381557DB1A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898EECCD19C49B5800B4B207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898EECD419C49B5800B4B207;
+			remoteInfo = AlltrexxMobile;
+		};
 		BF692F712209AAFC00F8A0F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 898EECCD19C49B5800B4B207 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF692F562209AAF900F8A0F1;
 			remoteInfo = "AlltrexxMobile-Watch";
+		};
+		FD1BAACA8EEE8DFBBC18CB8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898EECCD19C49B5800B4B207 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898EECD419C49B5800B4B207;
+			remoteInfo = AlltrexxMobile;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,6 +80,7 @@
 		0175AC0323F014EA003323C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0175AC0523F01519003323C3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0175AC0723F01523003323C3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0683C3ACAA37650604D79623 /* AlltrexxMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlltrexxMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1038AECF80D36E1FB5ACCB0F /* WaymarkedTrailsOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WaymarkedTrailsOverlay.swift; sourceTree = "<group>"; };
 		11819567B86343CC5C46FCD0 /* LocatieManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocatieManager.swift; sourceTree = "<group>"; };
 		1262DD9824F9568F00B5C2EA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -84,11 +103,7 @@
 		898E2BE023129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		898EECD519C49B5800B4B207 /* AlltrexxMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlltrexxMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECD919C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		A11CE50FA571000000000F21 /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A11CE50FA571000000000F22 /* InstellingenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InstellingenViewController.swift; sourceTree = "<group>"; };
 		898EECDA19C49B5800B4B207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED5CE27E000000000000AA02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		898EECE419C49B5800B4B207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		898EECED19C49B5800B4B207 /* AlltrexxMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlltrexxMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECFD19C49DC700B4B207 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -104,6 +119,9 @@
 		9207132F97DB552D8E350EDC /* OWMSleutel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OWMSleutel.swift; sourceTree = "<group>"; };
 		9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HoofdTabBarController.swift; sourceTree = "<group>"; };
 		A112BD76CFFE3B3A2199769A /* PositieLogboek.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PositieLogboek.swift; sourceTree = "<group>"; };
+		A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A11CE50FA571000000000F21 /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A11CE50FA571000000000F22 /* InstellingenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InstellingenViewController.swift; sourceTree = "<group>"; };
 		AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlltrexxAPI.swift; sourceTree = "<group>"; };
 		AB8B61090C3379205B06047D /* OWMLegendView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OWMLegendView.swift; sourceTree = "<group>"; };
 		AEFBF5B22A4E7294A7F0F272 /* WindAnnotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WindAnnotation.swift; sourceTree = "<group>"; };
@@ -115,16 +133,29 @@
 		BF692F632209AAFB00F8A0F1 /* AlltrexxMobile-Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AlltrexxMobile-Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3047D2312D8A10012D263 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C17410F3F384071BC488C0B5 /* PositieLogEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PositieLogEntry.swift; sourceTree = "<group>"; };
+		C5E00A4A69653AE81ECA6105 /* SmokeUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SmokeUITests.swift; sourceTree = "<group>"; };
+		C9E6D42CD1AEBF7761C96816 /* AlltrexxMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlltrexxMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39420E523CC1B0500EDC8F6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7E7FD0DF6413AAD60B39BAF /* LiveKaartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LiveKaartViewController.swift; sourceTree = "<group>"; };
 		DDC8A046B309275BD6942150 /* OpenTopoMapOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenTopoMapOverlay.swift; sourceTree = "<group>"; };
 		E2284713A96FC4ED232F4C32 /* OpenSeaMapOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenSeaMapOverlay.swift; sourceTree = "<group>"; };
 		E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		E6FCC7C17877F6A7CFEB61BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypeSelectieViewController.swift; sourceTree = "<group>"; };
+		ED5CE27E000000000000AA02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC6CBA6F12C390B70EDE7D92 /* TrackerTypeTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackerTypeTests.swift; sourceTree = "<group>"; };
 		FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocatieWaarnemer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		74B0BE23834C64309811BE25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6ECF39E95E9571C48D6CCAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898EECD219C49B5800B4B207 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +168,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5F6FC52653972B886BFBE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671B12BC344D038DCC75A804 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -146,6 +185,8 @@
 				898EECD719C49B5800B4B207 /* AlltrexxMobile */,
 				898EED0119C4A16600B4B207 /* Frameworks */,
 				898EECD619C49B5800B4B207 /* Products */,
+				E0C12B5F336A780308A1A93C /* AlltrexxMobileTests */,
+				E45D18396531952A0A3A9247 /* AlltrexxMobileUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +197,8 @@
 				898EECED19C49B5800B4B207 /* AlltrexxMobileTests.xctest */,
 				BF692F572209AAF900F8A0F1 /* AlltrexxMobile-Watch.app */,
 				BF692F632209AAFB00F8A0F1 /* AlltrexxMobile-Watch Extension.appex */,
+				C9E6D42CD1AEBF7761C96816 /* AlltrexxMobileTests.xctest */,
+				0683C3ACAA37650604D79623 /* AlltrexxMobileUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +264,7 @@
 				899D677719CF0A9F00C88A0A /* MessageUI.framework */,
 				898EECFF19C4A15E00B4B207 /* CoreLocation.framework */,
 				898EECFD19C49DC700B4B207 /* MapKit.framework */,
+				F798E8F2E400A28E18D98985 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,9 +280,53 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		E0C12B5F336A780308A1A93C /* AlltrexxMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC6CBA6F12C390B70EDE7D92 /* TrackerTypeTests.swift */,
+			);
+			name = AlltrexxMobileTests;
+			path = AlltrexxMobileTests;
+			sourceTree = "<group>";
+		};
+		E45D18396531952A0A3A9247 /* AlltrexxMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C5E00A4A69653AE81ECA6105 /* SmokeUITests.swift */,
+			);
+			name = AlltrexxMobileUITests;
+			path = AlltrexxMobileUITests;
+			sourceTree = "<group>";
+		};
+		F798E8F2E400A28E18D98985 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCC7C17877F6A7CFEB61BF /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		200480EDE6921B740AC38391 /* AlltrexxMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DE002C96A2C8C531EE34459 /* Build configuration list for PBXNativeTarget "AlltrexxMobileUITests" */;
+			buildPhases = (
+				C3800919ABD385ACD685480E /* Sources */,
+				B5F6FC52653972B886BFBE20 /* Frameworks */,
+				438C1B744F72BE232EC350AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4339A90566B55C7DB589A825 /* PBXTargetDependency */,
+			);
+			name = AlltrexxMobileUITests;
+			productName = AlltrexxMobileUITests;
+			productReference = 0683C3ACAA37650604D79623 /* AlltrexxMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		898EECD419C49B5800B4B207 /* AlltrexxMobile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 898EECF719C49B5800B4B207 /* Build configuration list for PBXNativeTarget "AlltrexxMobile" */;
@@ -257,6 +345,24 @@
 			productName = AlltrexxMobile;
 			productReference = 898EECD519C49B5800B4B207 /* AlltrexxMobile.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C5E66EAF7461326FA4798FD8 /* AlltrexxMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0376EE1F7208E4A5E24C4F7A /* Build configuration list for PBXNativeTarget "AlltrexxMobileTests" */;
+			buildPhases = (
+				C465F19FD778545F3416B254 /* Sources */,
+				74B0BE23834C64309811BE25 /* Frameworks */,
+				AED8EAAAB2DBEE189BBFBAF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4C96F2BC5B6E5B1696CCD40 /* PBXTargetDependency */,
+			);
+			name = AlltrexxMobileTests;
+			productName = AlltrexxMobileTests;
+			productReference = C9E6D42CD1AEBF7761C96816 /* AlltrexxMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -324,11 +430,20 @@
 			projectRoot = "";
 			targets = (
 				898EECD419C49B5800B4B207 /* AlltrexxMobile */,
+				C5E66EAF7461326FA4798FD8 /* AlltrexxMobileTests */,
+				200480EDE6921B740AC38391 /* AlltrexxMobileUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		438C1B744F72BE232EC350AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898EECD319C49B5800B4B207 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +452,13 @@
 				A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */,
 				898EECE519C49B5800B4B207 /* Images.xcassets in Resources */,
 				0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED8EAAAB2DBEE189BBFBAF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +519,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3800919ABD385ACD685480E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410C2AB4BE414F6BCB8F45B8 /* SmokeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C465F19FD778545F3416B254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF708FEA99567B5ECEF48238 /* TrackerTypeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4339A90566B55C7DB589A825 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlltrexxMobile;
+			target = 898EECD419C49B5800B4B207 /* AlltrexxMobile */;
+			targetProxy = 4190083D4A001381557DB1A1 /* PBXContainerItemProxy */;
+		};
 		BF692F722209AAFC00F8A0F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			targetProxy = BF692F712209AAFC00F8A0F1 /* PBXContainerItemProxy */;
+		};
+		D4C96F2BC5B6E5B1696CCD40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlltrexxMobile;
+			target = 898EECD419C49B5800B4B207 /* AlltrexxMobile */;
+			targetProxy = FD1BAACA8EEE8DFBBC18CB8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -495,7 +645,7 @@
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,7 +697,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -573,7 +723,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -598,13 +748,103 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A65A52353A31C518C40B4D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = AlltrexxMobile;
+			};
+			name = Debug;
+		};
+		D46E23C31881A1E3EDDBA219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlltrexxMobile.app/AlltrexxMobile";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7BE9C8DB17388264BFA47A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlltrexxMobile.app/AlltrexxMobile";
+			};
+			name = Debug;
+		};
+		F6BA96FD48EA082E0240B36E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				DEVELOPMENT_TEAM = 9J2S23WJH3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx.UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = AlltrexxMobile;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0376EE1F7208E4A5E24C4F7A /* Build configuration list for PBXNativeTarget "AlltrexxMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D46E23C31881A1E3EDDBA219 /* Release */,
+				D7BE9C8DB17388264BFA47A1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DE002C96A2C8C531EE34459 /* Build configuration list for PBXNativeTarget "AlltrexxMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6BA96FD48EA082E0240B36E /* Release */,
+				A65A52353A31C518C40B4D9B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		898EECD019C49B5800B4B207 /* Build configuration list for PBXProject "AlltrexxMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -41,12 +41,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "898EECEC19C49B5800B4B207"
+               BlueprintIdentifier = "C5E66EAF7461326FA4798FD8"
                BuildableName = "AlltrexxMobileTests.xctest"
                BlueprintName = "AlltrexxMobileTests"
                ReferencedContainer = "container:AlltrexxMobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
+<TestableReference
+   skipped = "NO">
+   <BuildableReference
+      BuildableIdentifier = "primary"
+      BlueprintIdentifier = "200480EDE6921B740AC38391"
+      BuildableName = "AlltrexxMobileUITests.xctest"
+      BlueprintName = "AlltrexxMobileUITests"
+      ReferencedContainer = "container:AlltrexxMobile.xcodeproj">
+   </BuildableReference>
+</TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
