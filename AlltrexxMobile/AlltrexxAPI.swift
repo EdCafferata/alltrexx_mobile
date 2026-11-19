@@ -20,13 +20,13 @@ enum AlltrexxAPIError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .ongeldigAntwoord:
-            return "De server gaf een onverwacht antwoord. Probeer het later opnieuw."
+            return String(localized: "De server gaf een onverwacht antwoord. Probeer het later opnieuw.")
         case .tokenGeweigerd:
-            return "De sleutel werd geweigerd (onbekend of verlopen)."
+            return String(localized: "De sleutel werd geweigerd (onbekend of verlopen).")
         case .teVaak:
-            return "Je hebt te snel achter elkaar sleutels aangemaakt. Wacht even en probeer het dan opnieuw."
+            return String(localized: "Je hebt te snel achter elkaar sleutels aangemaakt. Wacht even en probeer het dan opnieuw.")
         case .server(let detail):
-            return "De server meldde een fout (\(detail)). Probeer het later opnieuw."
+            return String(localized: "De server meldde een fout (\(detail)). Probeer het later opnieuw.")
         }
     }
 }

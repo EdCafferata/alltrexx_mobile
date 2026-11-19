@@ -88,11 +88,11 @@ extension OWMLayer {
         switch self {
         case .precipitation:
             return [
-                (UIColor(red: 0.53, green: 0.81, blue: 0.98, alpha: 1), "0.1 mm/u"),
-                (UIColor(red: 0.27, green: 0.51, blue: 0.96, alpha: 1), "0.5 mm/u"),
-                (UIColor(red: 0.07, green: 0.19, blue: 0.80, alpha: 1), "2 mm/u"),
-                (UIColor(red: 0.49, green: 0.07, blue: 0.60, alpha: 1), "10 mm/u"),
-                (UIColor(red: 0.85, green: 0.00, blue: 0.00, alpha: 1), "50+ mm/u")
+                (UIColor(red: 0.53, green: 0.81, blue: 0.98, alpha: 1), String(localized: "0.1 mm/u")),
+                (UIColor(red: 0.27, green: 0.51, blue: 0.96, alpha: 1), String(localized: "0.5 mm/u")),
+                (UIColor(red: 0.07, green: 0.19, blue: 0.80, alpha: 1), String(localized: "2 mm/u")),
+                (UIColor(red: 0.49, green: 0.07, blue: 0.60, alpha: 1), String(localized: "10 mm/u")),
+                (UIColor(red: 0.85, green: 0.00, blue: 0.00, alpha: 1), String(localized: "50+ mm/u"))
             ]
         case .clouds:
             return [

@@ -29,23 +29,23 @@ final class OnboardingViewController: UIViewController {
         ])
 
         let titel = UILabel()
-        titel.text = "Welkom bij Alltrexx Mobile"
+        titel.text = String(localized: "Welkom bij Alltrexx Mobile")
         let basis = UIFont.systemFont(ofSize: 28, weight: .heavy)
         titel.font = basis.fontDescriptor.withDesign(.rounded).map { UIFont(descriptor: $0, size: 28) } ?? basis
         titel.textAlignment = .center
         titel.numberOfLines = 0
 
         let punten: [(String, String)] = [
-            ("location.fill", "Deel je live positie met alltrexx.live, zodat anderen je op de kaart kunnen volgen."),
-            ("bolt.horizontal.circle", "Je positie wordt (bijna) real-time doorgestuurd, ook als de app op de achtergrond draait."),
-            ("lock.shield", "Alleen je positie en de naam die je kiest worden gedeeld. Je kunt alles op elk moment verwijderen."),
+            ("location.fill", String(localized: "Deel je live positie met alltrexx.live, zodat anderen je op de kaart kunnen volgen.")),
+            ("bolt.horizontal.circle", String(localized: "Je positie wordt (bijna) real-time doorgestuurd, ook als de app op de achtergrond draait.")),
+            ("lock.shield", String(localized: "Alleen je positie en de naam die je kiest worden gedeeld. Je kunt alles op elk moment verwijderen.")),
         ]
         let puntenStack = UIStackView(arrangedSubviews: punten.map { maakPunt(icoon: $0.0, tekst: $0.1) })
         puntenStack.axis = .vertical
         puntenStack.spacing = 16
 
         let knop = UIButton(configuration: .filled())
-        knop.configuration?.title = "Aan de slag"
+        knop.configuration?.title = String(localized: "Aan de slag")
         knop.configuration?.baseBackgroundColor = .systemGreen
         knop.configuration?.cornerStyle = .large
         knop.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)

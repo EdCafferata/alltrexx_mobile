@@ -64,21 +64,21 @@ final class StatusViewController: UIViewController {
 
         configureerKnop(trackingKnop, hoogte: 56) { [weak self] in self?.tikTracking() }
 
-        mijnKaartKnop.configuration?.title = "🗺 Mijn kaart"
+        mijnKaartKnop.configuration?.title = String(localized: "🗺 Mijn kaart")
         mijnKaartKnop.configuration?.baseBackgroundColor = .systemIndigo
         configureerKnop(mijnKaartKnop, hoogte: 50) { [weak self] in self?.tabBarController?.selectedIndex = 1 }
 
-        bekijkLiveKnop.configuration?.title = "🌐 Bekijk mij live"
+        bekijkLiveKnop.configuration?.title = String(localized: "🌐 Bekijk mij live")
         bekijkLiveKnop.configuration?.baseBackgroundColor = .systemBlue
         configureerKnop(bekijkLiveKnop, hoogte: 50) { [weak self] in self?.tabBarController?.selectedIndex = 2 }
 
-        instellingenKnop.configuration?.title = "⚙︎ Instellingen"
+        instellingenKnop.configuration?.title = String(localized: "⚙︎ Instellingen")
         configureerKnop(instellingenKnop, hoogte: 44) { [weak self] in self?.tikInstellingen() }
 
-        wijzigKnop.setTitle("Naam of type wijzigen", for: .normal)
+        wijzigKnop.setTitle(String(localized: "Naam of type wijzigen"), for: .normal)
         wijzigKnop.addAction(UIAction { [weak self] _ in self?.tikWijzigen() }, for: .touchUpInside)
 
-        verwijderKnop.setTitle("Verwijder mijn gegevens", for: .normal)
+        verwijderKnop.setTitle(String(localized: "Verwijder mijn gegevens"), for: .normal)
         verwijderKnop.setTitleColor(.systemRed, for: .normal)
         verwijderKnop.addAction(UIAction { [weak self] _ in self?.tikVerwijderen() }, for: .touchUpInside)
 
@@ -116,7 +116,7 @@ final class StatusViewController: UIViewController {
         naamLabel.text = type.flatMap { TrackerOpslag.laatsteNaam(voor: $0) }
 
         let actief = TrackerOpslag.trackingActief
-        trackingKnop.configuration?.title = actief ? "Tracking stoppen" : "Tracking starten"
+        trackingKnop.configuration?.title = actief ? String(localized: "Tracking stoppen") : String(localized: "Tracking starten")
         trackingKnop.configuration?.baseBackgroundColor = actief ? .systemRed : .systemGreen
         trackingKnop.configuration?.baseForegroundColor = .white
 
@@ -124,25 +124,25 @@ final class StatusViewController: UIViewController {
     }
 
     private func statusTekst(actief: Bool) -> String {
-        var regels: [String] = [actief ? "🟢 Tracking actief" : "⚪️ Tracking gestopt"]
+        var regels: [String] = [actief ? String(localized: "🟢 Tracking actief") : String(localized: "⚪️ Tracking gestopt")]
 
         if let laatste = PositieLogboek.laatste {
-            regels.append("Laatste positie: \(relatieveTijd.localizedString(for: laatste.tijdstip, relativeTo: Date()))")
+            regels.append(String(localized: "Laatste positie: \(relatieveTijd.localizedString(for: laatste.tijdstip, relativeTo: Date()))"))
         }
 
         let wachtrij = PositieLogboek.aantalOnverzonden
         if wachtrij == 0 {
-            if PositieLogboek.laatste != nil { regels.append("✓ Alles doorgestuurd") }
+            if PositieLogboek.laatste != nil { regels.append(String(localized: "✓ Alles doorgestuurd")) }
         } else {
-            regels.append("\(wachtrij) positie(s) wachten op verzending")
+            regels.append(String(localized: "\(wachtrij) positie(s) wachten op verzending"))
         }
 
         if actief, let locatie = laatsteLocatie, locatie.speed >= 0 {
-            regels.append("Snelheid: \(Int((locatie.speed * 3.6).rounded())) km/u")
+            regels.append(String(localized: "Snelheid: \(Int((locatie.speed * 3.6).rounded())) km/u"))
         }
 
-        let tokenKort = TrackerOpslag.token.map { String($0.suffix(6)) } ?? "onbekend"
-        regels.append("Sleutel …\(tokenKort)")
+        let tokenKort = TrackerOpslag.token.map { String($0.suffix(6)) } ?? String(localized: "onbekend")
+        regels.append(String(localized: "Sleutel …\(tokenKort)"))
         return regels.joined(separator: "\n")
     }
 
@@ -163,12 +163,12 @@ final class StatusViewController: UIViewController {
 
     private func tikVerwijderen() {
         let alert = UIAlertController(
-            title: "Gegevens verwijderen?",
-            message: "Dit stopt de tracking en verwijdert je tracker, sleutel en lokaal opgeslagen posities van dit toestel. Dit kan niet ongedaan worden gemaakt.",
+            title: String(localized: "Gegevens verwijderen?"),
+            message: String(localized: "Dit stopt de tracking en verwijdert je tracker, sleutel en lokaal opgeslagen posities van dit toestel. Dit kan niet ongedaan worden gemaakt."),
             preferredStyle: .alert
         )
-        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Verwijderen", style: .destructive) { [weak self] _ in
+        alert.addAction(UIAlertAction(title: String(localized: "Annuleren"), style: .cancel))
+        alert.addAction(UIAlertAction(title: String(localized: "Verwijderen"), style: .destructive) { [weak self] _ in
             self?.verwijderDefinitief()
         })
         present(alert, animated: true)

@@ -36,7 +36,7 @@ final class TypeSelectieViewController: UIViewController {
 
     private let toelichtingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Wat wil je volgen met dit toestel?"
+        label.text = String(localized: "Wat wil je volgen met dit toestel?")
         label.font = .systemFont(ofSize: 17, weight: .regular)
         label.textColor = .secondaryLabel
         label.textAlignment = .center
@@ -116,15 +116,15 @@ final class TypeSelectieViewController: UIViewController {
 
         let alert = UIAlertController(
             title: "\(type.emoji) \(type.label)",
-            message: "Onder welke naam wil je dit toestel laten zien op Alltrexx Live?",
+            message: String(localized: "Onder welke naam wil je dit toestel laten zien op Alltrexx Live?"),
             preferredStyle: .alert
         )
         alert.addTextField { textField in
             textField.text = voorstel
-            textField.placeholder = "Naam"
+            textField.placeholder = String(localized: "Naam")
         }
-        alert.addAction(UIAlertAction(title: "Annuleren", style: .cancel))
-        alert.addAction(UIAlertAction(title: "Kiezen", style: .default) { [weak self, weak alert] _ in
+        alert.addAction(UIAlertAction(title: String(localized: "Annuleren"), style: .cancel))
+        alert.addAction(UIAlertAction(title: String(localized: "Kiezen"), style: .default) { [weak self, weak alert] _ in
             let naam = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             self?.kiesType(type, naam: (naam?.isEmpty == false) ? naam! : voorstel)
         })
@@ -159,7 +159,7 @@ final class TypeSelectieViewController: UIViewController {
                 TrackerOpslag.bewaarSleutel(token: sleutel.token, trackerId: sleutel.id, voor: type)
                 self.view.window?.rootViewController = HoofdTabBarController()
             case .failure(let error):
-                self.toonMelding(titel: "Mislukt", tekst: "Kon geen sleutel aanmaken: \(error.localizedDescription)")
+                self.toonMelding(titel: String(localized: "Mislukt"), tekst: String(localized: "Kon geen sleutel aanmaken: \(error.localizedDescription)"))
             }
         }
     }

@@ -16,23 +16,23 @@
 		4491E3437136030052113B25 /* OWMLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8B61090C3379205B06047D /* OWMLegendView.swift */; };
 		4500E4487F9F2191742596E8 /* TrackerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B656274A54961E695C1DEF4B /* TrackerType.swift */; };
 		4588D66B230D23AA009AA75F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4588D66D230D23AA009AA75F /* InfoPlist.strings */; };
-		A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */; };
-		A11CE50FA571000000000B21 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F21 /* OnboardingViewController.swift */; };
-		A11CE50FA571000000000B22 /* InstellingenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F22 /* InstellingenViewController.swift */; };
 		48B961C3CB2EEB4C1F475B5D /* PositieLogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17410F3F384071BC488C0B5 /* PositieLogEntry.swift */; };
 		500BB791B1DFCE5F2AED2987 /* OpenTopoMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8A046B309275BD6942150 /* OpenTopoMapOverlay.swift */; };
 		56715E63BBD4A87E7B9C5EE6 /* CartoLightOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCB145358BAF08C4B7C07D4 /* CartoLightOverlay.swift */; };
 		5B32E6EB19A55850EE1280C6 /* OpenAIPOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */; };
+		5EB86C042A17DCACB98AE770 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 507A4C4FFE7F9F70A0D075CD /* Localizable.xcstrings */; };
 		634B2185C53356A65E4E66C1 /* OpenSeaMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2284713A96FC4ED232F4C32 /* OpenSeaMapOverlay.swift */; };
 		73C93414ECADA1CA9D9B5A07 /* TypeSelectieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */; };
 		898EECDB19C49B5800B4B207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898EECDA19C49B5800B4B207 /* AppDelegate.swift */; };
-		ED5CE27E000000000000AA01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CE27E000000000000AA02 /* SceneDelegate.swift */; };
 		898EECE519C49B5800B4B207 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898EECE419C49B5800B4B207 /* Images.xcassets */; };
 		898EECFE19C49DC700B4B207 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFD19C49DC700B4B207 /* MapKit.framework */; };
 		898EED0019C4A15E00B4B207 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898EECFF19C4A15E00B4B207 /* CoreLocation.framework */; };
 		899D677819CF0A9F00C88A0A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D677719CF0A9F00C88A0A /* MessageUI.framework */; };
 		899D678419D3528D00C88A0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899D678319D3528D00C88A0A /* WebKit.framework */; };
 		94FAD2CEE723BC165D731750 /* PositieUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16179D8EA12F7BD15869DE4A /* PositieUploader.swift */; };
+		A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */; };
+		A11CE50FA571000000000B21 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F21 /* OnboardingViewController.swift */; };
+		A11CE50FA571000000000B22 /* InstellingenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CE50FA571000000000F22 /* InstellingenViewController.swift */; };
 		A77708A9C25DA0C1D20F045E /* KaartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD863FC70B2A552358EBFA99 /* KaartViewController.swift */; };
 		B41A822F5CDAFF4A97AA51FA /* HoofdTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */; };
 		BD8CBF9B9D7B76F044F9B9C5 /* WaymarkedTrailsOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038AECF80D36E1FB5ACCB0F /* WaymarkedTrailsOverlay.swift */; };
@@ -44,6 +44,7 @@
 		DCEB8E430FB72398A6B3946F /* CyclOSMOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CC3D1A17810DCF7AE3AC2 /* CyclOSMOverlay.swift */; };
 		E3C5649AF0B198517ABD933F /* AlltrexxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */; };
 		ECD1A1680F901FAF6C55202C /* LocatieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11819567B86343CC5C46FCD0 /* LocatieManager.swift */; };
+		ED5CE27E000000000000AA01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5CE27E000000000000AA02 /* SceneDelegate.swift */; };
 		F0089F14224633351A06094B /* OWMSleutel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9207132F97DB552D8E350EDC /* OWMSleutel.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		16179D8EA12F7BD15869DE4A /* PositieUploader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PositieUploader.swift; sourceTree = "<group>"; };
 		4588D66C230D23AA009AA75F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4588D66E230D23AD009AA75F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		507A4C4FFE7F9F70A0D075CD /* Localizable.xcstrings */ = {isa = PBXFileReference; includeInIndex = 1; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenAIPOverlay.swift; sourceTree = "<group>"; };
 		62F1DC4344ED4653B3958CB6 /* SpoorwegenOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpoorwegenOverlay.swift; sourceTree = "<group>"; };
 		69BE40FDB4785086F9CC65D6 /* OpenAIPSleutel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenAIPSleutel.swift; sourceTree = "<group>"; };
@@ -84,11 +86,7 @@
 		898E2BE023129FE000DC4E3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		898EECD519C49B5800B4B207 /* AlltrexxMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlltrexxMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECD919C49B5800B4B207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		A11CE50FA571000000000F21 /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A11CE50FA571000000000F22 /* InstellingenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InstellingenViewController.swift; sourceTree = "<group>"; };
 		898EECDA19C49B5800B4B207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED5CE27E000000000000AA02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		898EECE419C49B5800B4B207 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		898EECED19C49B5800B4B207 /* AlltrexxMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlltrexxMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		898EECFD19C49DC700B4B207 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -104,6 +102,9 @@
 		9207132F97DB552D8E350EDC /* OWMSleutel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OWMSleutel.swift; sourceTree = "<group>"; };
 		9701C641CE0B1F85071EDAF9 /* HoofdTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HoofdTabBarController.swift; sourceTree = "<group>"; };
 		A112BD76CFFE3B3A2199769A /* PositieLogboek.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PositieLogboek.swift; sourceTree = "<group>"; };
+		A11CE50FA571000000000F11 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A11CE50FA571000000000F21 /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A11CE50FA571000000000F22 /* InstellingenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InstellingenViewController.swift; sourceTree = "<group>"; };
 		AA8F6AD6545EA611021E54BC /* AlltrexxAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlltrexxAPI.swift; sourceTree = "<group>"; };
 		AB8B61090C3379205B06047D /* OWMLegendView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OWMLegendView.swift; sourceTree = "<group>"; };
 		AEFBF5B22A4E7294A7F0F272 /* WindAnnotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WindAnnotation.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		E2284713A96FC4ED232F4C32 /* OpenSeaMapOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OpenSeaMapOverlay.swift; sourceTree = "<group>"; };
 		E4E0523405E7F38E761BBEC5 /* StatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		E9FC9802DF02AC93457FDA5D /* TypeSelectieViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypeSelectieViewController.swift; sourceTree = "<group>"; };
+		ED5CE27E000000000000AA02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FD92A3557885C79EAADE803D /* LocatieWaarnemer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocatieWaarnemer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 				58EB5EF0BC1A59C525F3C1EF /* OpenAIPOverlay.swift */,
 				A11CE50FA571000000000F21 /* OnboardingViewController.swift */,
 				A11CE50FA571000000000F22 /* InstellingenViewController.swift */,
+				507A4C4FFE7F9F70A0D075CD /* Localizable.xcstrings */,
 			);
 			path = AlltrexxMobile;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				A11CE50FA571000000000B11 /* PrivacyInfo.xcprivacy in Resources */,
 				898EECE519C49B5800B4B207 /* Images.xcassets in Resources */,
 				0175ABFF23F014C7003323C3 /* LaunchScreen.storyboard in Resources */,
+				5EB86C042A17DCACB98AE770 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +499,7 @@
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,7 +551,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -573,7 +577,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -598,7 +602,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

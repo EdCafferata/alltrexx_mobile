@@ -11,12 +11,12 @@ enum TrackerType: String, CaseIterable {
 
     var label: String {
         switch self {
-        case .person: return "Persoon"
-        case .boat: return "Boot"
-        case .bike: return "Fiets"
-        case .car: return "Auto"
-        case .train: return "Trein"
-        case .plane: return "Vliegtuig"
+        case .person: return String(localized: "Persoon")
+        case .boat: return String(localized: "Boot")
+        case .bike: return String(localized: "Fiets")
+        case .car: return String(localized: "Auto")
+        case .train: return String(localized: "Trein")
+        case .plane: return String(localized: "Vliegtuig")
         }
     }
 

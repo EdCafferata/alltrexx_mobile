@@ -52,7 +52,7 @@ final class InstellingenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        title = "Instellingen"
+        title = String(localized: "Instellingen")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(sluit))
         bouwLayout()
         werkStatusBij()
@@ -86,18 +86,18 @@ final class InstellingenViewController: UIViewController {
 
     private func bouwLayout() {
         let uitleg = UILabel()
-        uitleg.text = "Optionele kaartlagen. Zonder sleutel worden deze lagen verborgen; de app werkt verder gewoon."
+        uitleg.text = String(localized: "Optionele kaartlagen. Zonder sleutel worden deze lagen verborgen; de app werkt verder gewoon.")
         uitleg.font = .systemFont(ofSize: 14)
         uitleg.textColor = .secondaryLabel
         uitleg.numberOfLines = 0
 
         let owmBlok = maakBlok(
-            titel: "🌧 Neerslag (OpenWeatherMap)",
+            titel: String(localized: "🌧 Neerslag (OpenWeatherMap)"),
             statusLabel: owmStatus,
             veld: owmVeld,
             huidige: OWMSleutel.waarde,
             aanvraagURL: URL(string: "https://home.openweathermap.org/api_keys")!,
-            aanvraagTitel: "Gratis OpenWeatherMap-sleutel aanvragen",
+            aanvraagTitel: String(localized: "Gratis OpenWeatherMap-sleutel aanvragen"),
             bewaar: { [weak self] nieuw in
                 OWMSleutel.waarde = nieuw
                 if nieuw == nil {
@@ -110,12 +110,12 @@ final class InstellingenViewController: UIViewController {
         self.owmBlok = owmBlok
 
         let aipBlok = maakBlok(
-            titel: "✈️ Luchtvaart (OpenAIP)",
+            titel: String(localized: "✈️ Luchtvaart (OpenAIP)"),
             statusLabel: aipStatus,
             veld: aipVeld,
             huidige: OpenAIPSleutel.waarde,
             aanvraagURL: URL(string: "https://www.openaip.net/")!,
-            aanvraagTitel: "Gratis OpenAIP-sleutel aanvragen",
+            aanvraagTitel: String(localized: "Gratis OpenAIP-sleutel aanvragen"),
             bewaar: { [weak self] nieuw in
                 OpenAIPSleutel.waarde = nieuw
                 self?.werkStatusBij()
@@ -181,7 +181,7 @@ final class InstellingenViewController: UIViewController {
         aanvraagKnop.addAction(UIAction { _ in openAanvraag() }, for: .touchUpInside)
 
         veld.text = huidige
-        veld.placeholder = "Plak hier je gratis API-sleutel"
+        veld.placeholder = String(localized: "Plak hier je gratis API-sleutel")
         veld.borderStyle = .roundedRect
         veld.autocapitalizationType = .none
         veld.autocorrectionType = .no
@@ -205,7 +205,7 @@ final class InstellingenViewController: UIViewController {
         veld.addAction(UIAction { _ in veld.resignFirstResponder() }, for: .editingDidEndOnExit)
 
         let wisKnop = UIButton(configuration: .plain())
-        wisKnop.configuration?.title = "Wissen"
+        wisKnop.configuration?.title = String(localized: "Wissen")
         wisKnop.configuration?.baseForegroundColor = .systemRed
         wisKnop.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 0, bottom: 0, trailing: 0)
         wisKnop.contentHorizontalAlignment = .leading
@@ -224,7 +224,7 @@ final class InstellingenViewController: UIViewController {
     /// Schakelaar om de neerslag-laag standaard te tonen zodra je de Tracking-kaart opent.
     private func maakNeerslagRij() -> UIView {
         let label = UILabel()
-        label.text = "Neerslag tonen op de kaart"
+        label.text = String(localized: "Neerslag tonen op de kaart")
         label.font = .systemFont(ofSize: 16)
         label.numberOfLines = 0
 
@@ -255,20 +255,20 @@ final class InstellingenViewController: UIViewController {
 
     private func maakSteunBlok() -> UIView {
         let titel = UILabel()
-        titel.text = "❤️ Steun Alltrexx"
+        titel.text = String(localized: "❤️ Steun Alltrexx")
         titel.font = .systemFont(ofSize: 17, weight: .semibold)
 
-        fooiInfo.text = "Alltrexx Mobile is gratis. Met een kleine fooi steun je de verdere ontwikkeling — helemaal vrijblijvend."
+        fooiInfo.text = String(localized: "Alltrexx Mobile is gratis. Met een kleine fooi steun je de verdere ontwikkeling — helemaal vrijblijvend.")
         fooiInfo.font = .systemFont(ofSize: 14)
         fooiInfo.textColor = .secondaryLabel
         fooiInfo.numberOfLines = 0
 
         fooiStack.axis = .vertical
         fooiStack.spacing = 10
-        toonFooiPlaatshouder("Donaties laden…")
+        toonFooiPlaatshouder(String(localized: "Donaties laden…"))
 
         let reviewKnop = UIButton(configuration: .gray())
-        reviewKnop.configuration?.title = "⭐ Beoordeel Alltrexx Mobile"
+        reviewKnop.configuration?.title = String(localized: "⭐ Beoordeel Alltrexx Mobile")
         reviewKnop.configuration?.cornerStyle = .large
         reviewKnop.addAction(UIAction { [weak self] _ in self?.vraagReview() }, for: .touchUpInside)
 
@@ -290,7 +290,7 @@ final class InstellingenViewController: UIViewController {
     private func bouwFooiKnoppen() {
         fooiStack.arrangedSubviews.forEach { $0.removeFromSuperview() }
         guard !fooiProducten.isEmpty else {
-            toonFooiPlaatshouder("Donaties zijn binnenkort beschikbaar.")
+            toonFooiPlaatshouder(String(localized: "Donaties zijn binnenkort beschikbaar."))
             return
         }
         for product in fooiProducten {
@@ -318,8 +318,8 @@ final class InstellingenViewController: UIViewController {
         Task { @MainActor in
             let gelukt = await Fooienpot.koop(product)
             if gelukt {
-                let alert = UIAlertController(title: "Bedankt! 🙏", message: "Je bijdrage helpt Alltrexx verder te ontwikkelen.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Graag gedaan", style: .default))
+                let alert = UIAlertController(title: String(localized: "Bedankt! 🙏"), message: String(localized: "Je bijdrage helpt Alltrexx verder te ontwikkelen."), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: String(localized: "Graag gedaan"), style: .default))
                 present(alert, animated: true)
             }
         }
@@ -337,8 +337,8 @@ final class InstellingenViewController: UIViewController {
     }
 
     private func werkStatusBij() {
-        owmStatus.text = (OWMSleutel.waarde?.isEmpty == false) ? "✓ Sleutel ingesteld" : "Geen sleutel — laag verborgen"
-        aipStatus.text = (OpenAIPSleutel.waarde?.isEmpty == false) ? "✓ Sleutel ingesteld" : "Geen sleutel — laag verborgen"
+        owmStatus.text = (OWMSleutel.waarde?.isEmpty == false) ? String(localized: "✓ Sleutel ingesteld") : String(localized: "Geen sleutel — laag verborgen")
+        aipStatus.text = (OpenAIPSleutel.waarde?.isEmpty == false) ? String(localized: "✓ Sleutel ingesteld") : String(localized: "Geen sleutel — laag verborgen")
     }
 }
 
@@ -373,9 +373,9 @@ enum Fooienpot {
 
     static func label(voor product: Product) -> String {
         let naam: String
-        if product.id.hasSuffix(".klein") { naam = "☕️ Kleine fooi" }
-        else if product.id.hasSuffix(".gemiddeld") { naam = "🥐 Gemiddelde fooi" }
-        else if product.id.hasSuffix(".groot") { naam = "🍰 Grote fooi" }
+        if product.id.hasSuffix(".klein") { naam = String(localized: "☕️ Kleine fooi") }
+        else if product.id.hasSuffix(".gemiddeld") { naam = String(localized: "🥐 Gemiddelde fooi") }
+        else if product.id.hasSuffix(".groot") { naam = String(localized: "🍰 Grote fooi") }
         else { naam = product.displayName }
         return "\(naam) — \(product.displayPrice)"
     }

@@ -104,7 +104,7 @@ final class KaartViewController: UIViewController {
     }
 
     private func bouwKnoppen() {
-        luchtvaartKnop.configuration?.title = "✈️ Luchtvaart"
+        luchtvaartKnop.configuration?.title = String(localized: "✈️ Luchtvaart")
         luchtvaartKnop.configuration?.cornerStyle = .capsule
         luchtvaartKnop.isHidden = TrackerOpslag.type != .plane
         luchtvaartKnop.addAction(UIAction { [weak self] _ in self?.tikLuchtvaart() }, for: .touchUpInside)
@@ -316,8 +316,8 @@ extension KaartViewController: LocatieWaarnemer {
 
 extension KaartViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if overlay is OWMTileOverlay {
-            return OWMTileRenderer(tileOverlay: overlay as! MKTileOverlay)
+        if let owm = overlay as? OWMTileOverlay {
+            return OWMTileRenderer(tileOverlay: owm)
         }
         if let tileOverlay = overlay as? MKTileOverlay {
             return MKTileOverlayRenderer(tileOverlay: tileOverlay)

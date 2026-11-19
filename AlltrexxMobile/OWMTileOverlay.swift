@@ -17,11 +17,11 @@ enum OWMLayer: String, CaseIterable {
 
     var displayName: String {
         switch self {
-        case .precipitation: return "Neerslag"
-        case .clouds:        return "Bewolking"
+        case .precipitation: return String(localized: "Neerslag")
+        case .clouds:        return String(localized: "Bewolking")
         case .wind:          return "Wind"
-        case .pressure:      return "Luchtdruk"
-        case .temperature:   return "Temperatuur"
+        case .pressure:      return String(localized: "Luchtdruk")
+        case .temperature:   return String(localized: "Temperatuur")
         }
     }
 }

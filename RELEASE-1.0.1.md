@@ -9,9 +9,8 @@
 
 **Verbeterpunten:**
 
-- [ ] **De app-interface is volledig Nederlands** (0 `NSLocalizedString`-aanroepen), terwijl de store-listing ook
-      Engels en Duits is en de `.lproj`-mappen alleen de permissieteksten vertalen. Minimaal EN + DE toevoegen
-      (meldingen, knoppen, instellingen, fooienpot).
+- [x] **App-interface vertaald** (19 nov): alle ~70 UI-teksten via `String(localized:)` + `Localizable.xcstrings`
+      in NL/EN/DE/FR/ES; in de simulator gecontroleerd (DE/FR). Optioneel: store-listing ook in FR/ES toevoegen.
 - [ ] Versie + build ophogen (`MARKETING_VERSION` 1.0.1) en release-notes invullen (nl/en/de).
 - [ ] Testen op een echt toestel: tracking op de achtergrond, Live-kaart, fooi kopen (sandbox), "Verwijder mijn gegevens".
 - [ ] Pre-release-check draaien (skill `pre-release-app-review`) vóór indienen.

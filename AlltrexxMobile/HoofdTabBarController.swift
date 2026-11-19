@@ -8,13 +8,13 @@ final class HoofdTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let status = StatusViewController()
-        status.tabBarItem = UITabBarItem(title: "Status", image: UIImage(systemName: "info.circle"), tag: 0)
+        status.tabBarItem = UITabBarItem(title: String(localized: "Status"), image: UIImage(systemName: "info.circle"), tag: 0)
 
         let kaart = KaartViewController()
         kaart.tabBarItem = UITabBarItem(title: "Tracking", image: UIImage(systemName: "map"), tag: 1)
 
         let liveKaart = LiveKaartViewController()
-        liveKaart.tabBarItem = UITabBarItem(title: "Live kaart", image: UIImage(systemName: "globe.europe.africa"), tag: 2)
+        liveKaart.tabBarItem = UITabBarItem(title: String(localized: "Live kaart"), image: UIImage(systemName: "globe.europe.africa"), tag: 2)
 
         viewControllers = [status, kaart, liveKaart]
     }
