@@ -1,17 +1,17 @@
 # Alltrexx Mobile 1.0.1 — iOS + eerste macOS-versie
 
 Stand 20 nov 2026: beide versies staan op **1.0.1 / PREPARE_FOR_SUBMISSION** in App Store Connect (record 1553691366),
-build geüpload, metadata + screenshots gevuld. **Ed dient in** (na de pre-release-check).
+**20 nov 21:53 door Ed ingediend: iOS 1.0.1 + macOS 1.0.1 + 3 fooien-IAP's → WAITING_FOR_REVIEW.**
 
 **Moet Ed doen bij het indienen:**
 
-- [ ] **iOS 1.0.1: de 3 fooien-IAP's koppelen.** App Store Connect → iOS 1.0.1 → "In-App Purchases" →
+- [x] **iOS 1.0.1: de 3 fooien-IAP's koppelen.** App Store Connect → iOS 1.0.1 → "In-App Purchases" →
       Kleine fooi, Gemiddelde fooi en Grote fooi aanvinken vóór je indient (staan op READY_TO_SUBMIT).
       Via de API kan dit niet; de eerste consumable moet samen met een app-versie mee. Tot dan toont de app
       "Donaties zijn binnenkort beschikbaar."
-- [ ] **App Privacy** (geldt voor iOS én macOS, zelfde record): staat al gepubliceerd (locatie + naam, app-functionaliteit,
+- [x] **App Privacy** (geldt voor iOS én macOS, zelfde record): staat al gepubliceerd (locatie + naam, app-functionaliteit,
       niet gekoppeld, geen tracking) — alleen even nakijken.
-- [ ] Beide versies indienen (iOS en macOS kunnen samen in één indiening).
+- [x] Beide versies indienen (iOS en macOS kunnen samen in één indiening).
 
 **Gedaan:**
 
