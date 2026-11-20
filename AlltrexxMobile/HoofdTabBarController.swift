@@ -17,5 +17,11 @@ final class HoofdTabBarController: UITabBarController {
         liveKaart.tabBarItem = UITabBarItem(title: String(localized: "Live kaart"), image: UIImage(systemName: "globe.europe.africa"), tag: 2)
 
         viewControllers = [status, kaart, liveKaart]
+
+        #if DEBUG
+        // Alleen voor store-screenshots: `-screenshot-tab <n>` opent direct dat tabblad.
+        let tab = UserDefaults.standard.integer(forKey: "screenshot-tab")
+        if (0..<3).contains(tab) { selectedIndex = tab }
+        #endif
     }
 }
