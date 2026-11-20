@@ -17,11 +17,19 @@ final class HoofdTabBarController: UITabBarController {
         liveKaart.tabBarItem = UITabBarItem(title: String(localized: "Live kaart"), image: UIImage(systemName: "globe.europe.africa"), tag: 2)
 
         viewControllers = [status, kaart, liveKaart]
+    }
 
-        #if DEBUG
+    // Alleen actief met het startargument `-screenshot-tab` (store-screenshots); anders geen effect.
+    private var screenshotTabGezet = false
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // Alleen voor store-screenshots: `-screenshot-tab <n>` opent direct dat tabblad.
+        guard !screenshotTabGezet else { return }
+        screenshotTabGezet = true
         let tab = UserDefaults.standard.integer(forKey: "screenshot-tab")
-        if (0..<3).contains(tab) { selectedIndex = tab }
-        #endif
+        guard (1..<3).contains(tab), let vcs = viewControllers else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.selectedViewController = vcs[tab]
+        }
     }
 }
