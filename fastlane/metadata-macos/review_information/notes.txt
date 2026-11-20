@@ -1,3 +1,5 @@
+MAC VERSION (Mac Catalyst, same app and record as the iPhone app): on the Mac the app asks for location access only while in use (no background location mode) and uses the Mac's Wi-Fi-based location. Everything else is identical: choose a tracker type and name, start tracking, view the live map (alltrexx.live in a web view), optional map-layer keys in Settings, and 'Delete my data' on the Status tab. No account or login is required.
+
 Screen recording (physical iPhone, latest iOS): attached to this App Review Information submission.
 
 1. PURPOSE AND AUDIENCE
@@ -35,4 +37,4 @@ The app functions identically in all regions.
 Not applicable. The app is not a navigation or safety-of-life aid; map data comes from the open/public services above under their own licences.
 
 7. GUIDELINE 5 (LEGAL) — NO AI / DEEP-SYNTHESIS
-This app contains no generative-AI, deep-synthesis, chatbot or large-language-model functionality and is not connected to any such service — it is a GPS location-sharing app. A previous metadata string named a third-party aviation-airspace map-data provider; that name was removed from all metadata to prevent a false automated keyword match. The deep-synthesis/generative-AI regulations therefore do not apply.
+This app contains no generative-AI, deep-synthesis, chatbot or large-language-model functionality and is not connected to any such service — it is a GPS location-sharing app. The deep-synthesis/generative-AI regulations therefore do not apply.

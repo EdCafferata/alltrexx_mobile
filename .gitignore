@@ -49,3 +49,6 @@ fastlane/README.md
 *.dSYM.zip
 *.ipa
 *.xcarchive
+
+# Lokale build-output (per ongeluk gecommit in 16e344b)
+*.app/
