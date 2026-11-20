@@ -16,6 +16,14 @@ final class LiveKaartViewController: UIViewController {
         if let type = TrackerOpslag.type {
             urlStr += "/?laag=\(type.webPreset)&types=\(type.rawValue)"
         }
+        // Alleen voor store-screenshots (startargument `-screenshot-centrum "lat,lon,z"`):
+        // vaste kaartuitsnede i.p.v. de eigen locatie. Zonder argument geen effect.
+        if let centrum = UserDefaults.standard.string(forKey: "screenshot-centrum") {
+            let d = centrum.split(separator: ",")
+            if d.count == 3 {
+                urlStr += (urlStr.contains("?") ? "&" : "/?") + "lat=\(d[0])&lon=\(d[1])&z=\(d[2])"
+            }
+        }
         webView.load(URLRequest(url: URL(string: urlStr)!))
     }
 

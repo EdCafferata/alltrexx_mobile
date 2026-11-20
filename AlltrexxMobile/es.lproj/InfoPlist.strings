@@ -5,3 +5,4 @@
 
 NSLocationWhenInUseUsageDescription = "Tu ubicación se usa para compartir tu posición en alltrexx.live.";
 NSLocationAlwaysAndWhenInUseUsageDescription = "Tu ubicación se usa para compartir tu posición en directo en alltrexx.live, también cuando la app está en segundo plano.";
+NSLocationUsageDescription = "Tu ubicación se usa para compartir tu posición en alltrexx.live.";

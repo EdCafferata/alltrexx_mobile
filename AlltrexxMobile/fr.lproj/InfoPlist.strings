@@ -5,3 +5,4 @@
 
 NSLocationWhenInUseUsageDescription = "Votre position est utilisée pour la partager sur alltrexx.live.";
 NSLocationAlwaysAndWhenInUseUsageDescription = "Votre position est utilisée pour la partager en direct sur alltrexx.live, même lorsque l'application fonctionne en arrière-plan.";
+NSLocationUsageDescription = "Votre position est utilisée pour la partager sur alltrexx.live.";

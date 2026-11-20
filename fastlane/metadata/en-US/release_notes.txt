@@ -1,1 +1,1 @@
-First release of Alltrexx Mobile — share your live location on alltrexx.live for person, boat, bike, car, train or plane.
+Alltrexx Mobile now speaks English, German, French and Spanish. You can now also support further development with a tip (Settings → Support Alltrexx). Plus small improvements.

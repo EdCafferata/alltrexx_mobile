@@ -24,10 +24,14 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.navigation</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Je locatie wordt gebruikt om je positie door te geven aan Alltrexx Live, ook als de app op de achtergrond draait.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Je locatie wordt gebruikt om je positie door te geven aan Alltrexx Live.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Je locatie wordt gebruikt om je positie door te geven aan Alltrexx Live.</string>
 	<key>UIApplicationSceneManifest</key>

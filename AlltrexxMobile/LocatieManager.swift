@@ -34,17 +34,25 @@ final class LocatieManager: NSObject {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.distanceFilter = 25
+        #if !targetEnvironment(macCatalyst)
+        // iOS: doorlopend op de achtergrond. Een Mac-app wordt niet gepauzeerd, dus daar niet nodig.
         manager.allowsBackgroundLocationUpdates = true
+        #endif
         manager.pausesLocationUpdatesAutomatically = false
     }
 
     func start() {
         guard !actief else { return }
         actief = true
+        #if targetEnvironment(macCatalyst)
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        #else
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         // Laat iOS de app opnieuw opstarten na beëindiging zodra je weer beweegt.
         manager.startMonitoringSignificantLocationChanges()
+        #endif
         startVeiligheidsTimer()
     }
 

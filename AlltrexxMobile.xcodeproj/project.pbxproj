@@ -572,12 +572,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				"TARGETED_DEVICE_FAMILY[sdk=macosx*]" = 2;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "AlltrexxMobile/AlltrexxMobile-macOS.entitlements";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -597,12 +603,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = info.cafferata.alltrexx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AlltrexxMobile/ObjectiveCBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				"TARGETED_DEVICE_FAMILY[sdk=macosx*]" = 2;
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = "AlltrexxMobile/AlltrexxMobile-macOS.entitlements";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};

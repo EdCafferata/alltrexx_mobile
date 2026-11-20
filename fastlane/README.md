@@ -23,6 +23,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Build en upload naar TestFlight
 
+### ios mac_beta
+
+```sh
+[bundle exec] fastlane ios mac_beta
+```
+
+Bouw Mac Catalyst-archive en upload naar App Store Connect (macOS)
+
+### ios mac_listing
+
+```sh
+[bundle exec] fastlane ios mac_listing
+```
+
+macOS-listing: metadata + Mac-screenshots naar de macOS-versie (geen submit)
+
 ### ios submit_now
 
 ```sh

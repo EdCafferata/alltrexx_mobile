@@ -1,0 +1,22 @@
+Alltrexx Mobile turns your Mac (and your iPhone) into a live location tracker. Pick what you are — person, boat, bike, car, train or plane — and your position is shared live on alltrexx.live, so friends, family or your crew can follow you on the map in real time.
+
+Free and simple
+- No subscription and no account — just choose a name for your tracker and go
+- Your position appears on alltrexx.live within seconds
+
+Made for live following
+- Near real-time updates, also while the app runs in the background
+- A smart offline queue bridges gaps in coverage and catches up automatically
+- Battery-friendly: GPS accuracy and update rate adapt to your speed, so standing still barely uses power
+
+Maps that match your journey
+- Your own live map showing the route you have shared this session
+- Category-specific layers, just like the alltrexx.live web map: sea marks for boats, cycling and hiking routes, railways for trains and an aviation layer for planes
+- Optional precipitation (OpenWeatherMap) and aviation airspace layers with a free key
+
+Your data, your control
+- Only your position and the name you choose are shared
+- Delete your tracker and all local data from the app at any time
+- No third-party tracking and no advertising
+
+Tap the live button to jump straight to yourself on alltrexx.live.
