@@ -61,6 +61,8 @@ hele UI-flow simulator-getest; live backend-pijplijn getest tegen alltrexx.live)
 Zie **`APP_STORE_READINESS.md`** (eindstand + TestFlight-afrondlijstje) en de GitHub-issues.
 - **iOS 1.0 LIVE in de App Store sinds 10 nov 2026** ("Ready for Distribution" 22:31; ASC appStoreState READY_FOR_SALE,
   record 1553691366, versie-id 6391b92d; https://apps.apple.com/nl/app/alltrexx-mobile/id1553691366). #7/#9/#12 daarmee gesloten.
+  **iOS 1.0.1 LIVE sinds 21 nov 2026 18:30 CET** (Ed releasete na Pending Developer Release; iTunes-lookup bevestigt 1.0.1).
+  macOS 1.0.1 (Mac Catalyst) nog **In Review** (sinds 21 nov 14:50).
   ⚠️ Het record heeft ook een lege macOS-1.0-slot (a1574abc, PREPARE_FOR_SUBMISSION) → #22.
 - Open issues: #22 (macOS-versie — 1.0.1 klaar in ASC, zie RELEASE-1.0.1.md), #17 (focus-op-zelf → backend #26), #26 (nieuw logo), #5 (site-info), #4 (rate-the-app),
   #1–#3 (oudere wensen). Fooien-IAP's staan READY_TO_SUBMIT en moeten bij **1.0.1** op de versiepagina worden aangevinkt — zie **`RELEASE-1.0.1.md`** (ook: UI is nog volledig NL).
